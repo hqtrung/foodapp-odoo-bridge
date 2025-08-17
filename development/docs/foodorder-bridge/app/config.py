@@ -6,9 +6,9 @@ class Settings(BaseSettings):
     """Application settings loaded from environment variables"""
     
     # Odoo connection settings
-    ODOO_URL: str = "http://localhost:8069"
-    ODOO_DB: str = "odoo_database"
-    ODOO_USERNAME: str = "admin"
+    ODOO_URL: str = "https://your-odoo-instance.com"
+    ODOO_DB: str = "your_database_name"
+    ODOO_USERNAME: str = "your_username@company.com"
     ODOO_PASSWORD: str = ""  # Optional - use if not using API key
     ODOO_API_KEY: str = ""   # Recommended - more secure than password
     

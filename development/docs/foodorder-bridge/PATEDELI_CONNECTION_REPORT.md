@@ -33,8 +33,8 @@ The FoodOrder Bridge API has been successfully updated to support **API key auth
 
 ### 🧪 **Connection Test Results**
 
-**Target System:** `https://erp.patedeli.com`
-**API Key:** `5e4e018a4d525609eb91730162a0818a76a0460c`
+**Target System:** `<YOUR_ODOO_URL>`
+**API Key:** `<YOUR_API_KEY>`
 **Odoo Version:** 16.0+e-20230416
 
 #### ✅ **Working:**
@@ -52,7 +52,7 @@ The FoodOrder Bridge API has been successfully updated to support **API key auth
 The API key authentication system is **fully implemented and working**, but the specific credentials need verification:
 
 1. **Verify API Key Status:**
-   - Confirm the API key `5e4e018a4d525609eb91730162a0818a76a0460c` is active
+   - Confirm your API key is active in Odoo settings
    - Check if it has external API access permissions
    - Verify it's not expired or revoked
 
@@ -90,7 +90,7 @@ To complete the integration, you need to:
 
 2. **Update .env file** with correct credentials:
    ```bash
-   ODOO_URL=https://erp.patedeli.com
+   ODOO_URL=https://your-odoo-instance.com
    ODOO_DB=correct_database_name
    ODOO_USERNAME=correct_username
    ODOO_API_KEY=working_api_key

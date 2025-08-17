@@ -12,11 +12,13 @@ def check_model_fields():
     print("🔍 Checking Model Fields")
     print("=" * 50)
     
-    # Connection details from working test
-    url = 'https://erp.patedeli.com'
-    db_name = 'patedeli'
-    username = 'trung@patedeli.com'
-    api_key = '5e4e018a4d525609eb91730162a0818a76a0460c'
+    # Connection details from environment
+    from app.config import get_settings
+    settings = get_settings()
+    url = settings.ODOO_URL
+    db_name = settings.ODOO_DB
+    username = settings.ODOO_USERNAME
+    api_key = settings.ODOO_API_KEY
     
     try:
         # Authenticate

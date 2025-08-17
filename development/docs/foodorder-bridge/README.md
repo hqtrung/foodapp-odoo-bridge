@@ -41,7 +41,7 @@ nano .env
 
 Required environment variables:
 ```bash
-ODOO_URL=https://erp.patedeli.com
+ODOO_URL=https://your-odoo-instance.com
 ODOO_DB=your_database_name
 ODOO_USERNAME=admin
 

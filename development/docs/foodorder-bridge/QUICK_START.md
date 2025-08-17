@@ -66,7 +66,7 @@ The system comes with sample Vietnamese food data:
 
 1. **Connect to Real Odoo**:
    - Update `.env` with your Odoo API key (recommended) or credentials
-   - For Patedeli ERP: Use provided API key `5e4e018a4d525609eb91730162a0818a76a0460c`
+   - Use your ERP API key from the .env file
    - Call `POST /api/v1/cache/reload` to load real data
 
 2. **Integrate with Frontend**:

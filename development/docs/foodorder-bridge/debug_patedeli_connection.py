@@ -16,8 +16,11 @@ def test_patedeli_connection():
     print("=" * 50)
     
     # Connection details
-    url = 'https://erp.patedeli.com'
-    api_key = '5e4e018a4d525609eb91730162a0818a76a0460c'
+    # Connection details from environment
+    from app.config import get_settings
+    settings = get_settings()
+    url = settings.ODOO_URL
+    api_key = settings.ODOO_API_KEY
     
     print(f"Target URL: {url}")
     print(f"API Key: ...{api_key[-8:]}")
@@ -35,8 +38,8 @@ def test_patedeli_connection():
         
         # Step 2: Test authentication with correct credentials
         print("🔍 Step 2: Testing authentication with provided credentials...")
-        db_name = 'patedeli'
-        username = 'trung@patedeli.com'
+        db_name = settings.ODOO_DB
+        username = settings.ODOO_USERNAME
         
         print(f"   Database: {db_name}")
         print(f"   Username: {username}")
@@ -102,7 +105,7 @@ def test_patedeli_connection():
                 
                 print("\\n🎯 Step 5: Creating .env configuration...")
                 env_content = f"""# Patedeli ERP Configuration
-ODOO_URL=https://erp.patedeli.com
+ODOO_URL=https://your-odoo-instance.com
 ODOO_DB={found_db}
 ODOO_USERNAME={username}
 ODOO_API_KEY={api_key}
