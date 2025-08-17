@@ -24,6 +24,10 @@ class Settings(BaseSettings):
     # Security settings
     ALLOWED_HOSTS: list = ["*"]
     
+    # Cache settings
+    CACHE_TTL_HOURS: int = 24
+    FIRESTORE_COLLECTION_PREFIX: str = "foodorder_cache"
+    
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"

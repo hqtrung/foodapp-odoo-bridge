@@ -1,26 +1,26 @@
 from fastapi import APIRouter, HTTPException, Depends, Query
 from typing import List, Dict, Optional
-from app.services.odoo_cache_service import OdooCacheService
+from app.services.cache_factory import get_cache_service as get_hybrid_cache_service, HybridCacheService
 from app.config import get_settings
 
 
 router = APIRouter(prefix="/api/v1", tags=["menu"])
 
 
-def get_cache_service() -> OdooCacheService:
-    """Dependency to get cache service instance"""
+def get_cache_service() -> HybridCacheService:
+    """Dependency to get hybrid cache service instance"""
     settings = get_settings()
     
     # Use API key if provided, otherwise fall back to username/password
     if settings.ODOO_API_KEY:
-        return OdooCacheService(
+        return get_hybrid_cache_service(
             odoo_url=settings.ODOO_URL,
             db=settings.ODOO_DB,
             username=settings.ODOO_USERNAME,
             api_key=settings.ODOO_API_KEY
         )
     else:
-        return OdooCacheService(
+        return get_hybrid_cache_service(
             odoo_url=settings.ODOO_URL,
             db=settings.ODOO_DB,
             username=settings.ODOO_USERNAME,
@@ -29,7 +29,7 @@ def get_cache_service() -> OdooCacheService:
 
 
 @router.get("/categories", response_model=Dict[str, List[Dict]])
-async def get_categories(cache_service: OdooCacheService = Depends(get_cache_service)):
+async def get_categories(cache_service: HybridCacheService = Depends(get_cache_service)):
     """Get all POS categories from cache"""
     try:
         categories = cache_service.get_categories()
@@ -46,7 +46,7 @@ async def get_categories(cache_service: OdooCacheService = Depends(get_cache_ser
 @router.get("/products", response_model=Dict[str, List[Dict]])
 async def get_products(
     category_id: Optional[int] = Query(None, description="Filter products by category ID"),
-    cache_service: OdooCacheService = Depends(get_cache_service)
+    cache_service: HybridCacheService = Depends(get_cache_service)
 ):
     """Get all POS products from cache, optionally filtered by category"""
     try:
@@ -69,7 +69,7 @@ async def get_products(
 @router.get("/products/{product_id}", response_model=Dict)
 async def get_product(
     product_id: int,
-    cache_service: OdooCacheService = Depends(get_cache_service)
+    cache_service: HybridCacheService = Depends(get_cache_service)
 ):
     """Get a specific product by ID"""
     try:
@@ -87,7 +87,7 @@ async def get_product(
 
 
 @router.post("/cache/reload", response_model=Dict)
-async def reload_cache(cache_service: OdooCacheService = Depends(get_cache_service)):
+async def reload_cache(cache_service: HybridCacheService = Depends(get_cache_service)):
     """Manually reload cache from Odoo"""
     try:
         print("Starting cache reload...")
@@ -104,7 +104,7 @@ async def reload_cache(cache_service: OdooCacheService = Depends(get_cache_servi
 
 
 @router.get("/cache/status", response_model=Dict)
-async def get_cache_status(cache_service: OdooCacheService = Depends(get_cache_service)):
+async def get_cache_status(cache_service: HybridCacheService = Depends(get_cache_service)):
     """Get cache status and metadata"""
     try:
         status = cache_service.get_cache_status()
@@ -117,7 +117,7 @@ async def get_cache_status(cache_service: OdooCacheService = Depends(get_cache_s
 
 
 @router.get("/cache/test-connection", response_model=Dict)
-async def test_odoo_connection(cache_service: OdooCacheService = Depends(get_cache_service)):
+async def test_odoo_connection(cache_service: HybridCacheService = Depends(get_cache_service)):
     """Test connection to Odoo server without modifying cache"""
     try:
         result = cache_service.test_connection()
@@ -131,7 +131,7 @@ async def test_odoo_connection(cache_service: OdooCacheService = Depends(get_cac
 
 
 @router.delete("/cache/clear")
-async def clear_cache(cache_service: OdooCacheService = Depends(get_cache_service)):
+async def clear_cache(cache_service: HybridCacheService = Depends(get_cache_service)):
     """Clear all cache files (for development/testing)"""
     try:
         # Remove JSON cache files
@@ -155,7 +155,7 @@ async def clear_cache(cache_service: OdooCacheService = Depends(get_cache_servic
 
 
 @router.get("/menu/summary", response_model=Dict)
-async def get_menu_summary(cache_service: OdooCacheService = Depends(get_cache_service)):
+async def get_menu_summary(cache_service: HybridCacheService = Depends(get_cache_service)):
     """Get a summary of categories with product counts"""
     try:
         categories = cache_service.get_categories()
@@ -194,7 +194,7 @@ async def get_menu_summary(cache_service: OdooCacheService = Depends(get_cache_s
 
 
 @router.get("/attributes", response_model=Dict[str, List[Dict]])
-async def get_attributes(cache_service: OdooCacheService = Depends(get_cache_service)):
+async def get_attributes(cache_service: HybridCacheService = Depends(get_cache_service)):
     """Get all product attributes from cache"""
     try:
         attributes = cache_service.get_attributes()
@@ -209,7 +209,7 @@ async def get_attributes(cache_service: OdooCacheService = Depends(get_cache_ser
 
 
 @router.get("/attribute-values", response_model=Dict[str, List[Dict]])
-async def get_attribute_values(cache_service: OdooCacheService = Depends(get_cache_service)):
+async def get_attribute_values(cache_service: HybridCacheService = Depends(get_cache_service)):
     """Get all attribute values from cache"""
     try:
         attribute_values = cache_service.get_attribute_values()
@@ -226,7 +226,7 @@ async def get_attribute_values(cache_service: OdooCacheService = Depends(get_cac
 @router.get("/products/{product_id}/attributes", response_model=Dict)
 async def get_product_attributes(
     product_id: int,
-    cache_service: OdooCacheService = Depends(get_cache_service)
+    cache_service: HybridCacheService = Depends(get_cache_service)
 ):
     """Get attributes for a specific product (toppings, options, etc.)"""
     try:
@@ -257,7 +257,7 @@ async def get_product_attributes(
 @router.get("/products/{product_id}/toppings", response_model=Dict)
 async def get_product_toppings(
     product_id: int,
-    cache_service: OdooCacheService = Depends(get_cache_service)
+    cache_service: HybridCacheService = Depends(get_cache_service)
 ):
     """Get topping options for a specific product (convenience endpoint)"""
     try:
@@ -301,3 +301,105 @@ async def get_product_toppings(
         raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error retrieving product toppings: {str(e)}")
+
+
+@router.get("/categories/{category_id}/image", response_model=Dict)
+async def get_category_image(
+    category_id: int,
+    size: str = Query("image_256", description="Image size: image_128, image_256, image_512, image_1024"),
+    cache_service: HybridCacheService = Depends(get_cache_service)
+):
+    """Get direct Odoo image URL for a category"""
+    try:
+        categories = cache_service.get_categories()
+        category = next((c for c in categories if c['id'] == category_id), None)
+        
+        if not category:
+            raise HTTPException(status_code=404, detail=f"Category with ID {category_id} not found")
+        
+        # Generate direct Odoo image URL
+        from app.config import get_settings
+        settings = get_settings()
+        image_url = f"{settings.ODOO_URL}/web/image/pos.category/{category_id}/{size}"
+        
+        return {
+            "category_id": category_id,
+            "category_name": category.get('name', ''),
+            "image_url": image_url,
+            "size": size
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error retrieving category image: {str(e)}")
+
+
+@router.get("/products/{product_id}/image", response_model=Dict)
+async def get_product_image(
+    product_id: int,
+    size: str = Query("image_512", description="Image size: image_128, image_256, image_512, image_1024"),
+    cache_service: HybridCacheService = Depends(get_cache_service)
+):
+    """Get direct Odoo image URL for a product"""
+    try:
+        products = cache_service.get_products()
+        product = next((p for p in products if p['id'] == product_id), None)
+        
+        if not product:
+            raise HTTPException(status_code=404, detail=f"Product with ID {product_id} not found")
+        
+        # Generate direct Odoo image URL
+        from app.config import get_settings
+        settings = get_settings()
+        image_url = f"{settings.ODOO_URL}/web/image/product.product/{product_id}/{size}"
+        
+        return {
+            "product_id": product_id,
+            "product_name": product.get('name', ''),
+            "image_url": image_url,
+            "size": size
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error retrieving product image: {str(e)}")
+
+
+@router.get("/images/test", response_model=Dict)
+async def test_image_urls(cache_service: HybridCacheService = Depends(get_cache_service)):
+    """Test endpoint to get sample image URLs for categories and products"""
+    try:
+        categories = cache_service.get_categories()
+        products = cache_service.get_products()
+        
+        from app.config import get_settings
+        settings = get_settings()
+        
+        sample_data = {
+            "odoo_base_url": settings.ODOO_URL,
+            "categories": [],
+            "products": []
+        }
+        
+        # Get first 3 categories with images
+        for category in categories[:3]:
+            if category.get('has_image') and category.get('image_urls'):
+                sample_data["categories"].append({
+                    "id": category['id'],
+                    "name": category['name'],
+                    "image_urls": category['image_urls']
+                })
+        
+        # Get first 3 products with images  
+        products_with_images = [p for p in products if p.get('has_image') and p.get('image_urls')]
+        for product in products_with_images[:3]:
+            sample_data["products"].append({
+                "id": product['id'],
+                "name": product['name'],
+                "image_urls": product['image_urls']
+            })
+        
+        return sample_data
+        
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error generating test image URLs: {str(e)}")

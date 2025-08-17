@@ -7,6 +7,7 @@ import xmlrpc.client
 from typing import Dict, List, Any, Optional
 from PIL import Image
 from io import BytesIO
+from app.services.cloud_storage_service import CloudStorageService
 
 
 class OdooCacheService:
@@ -31,14 +32,13 @@ class OdooCacheService:
         self.cache_dir = Path("cache")
         self.cache_dir.mkdir(exist_ok=True)
         
-        # Setup image directories
-        self.images_dir = Path("public/images")
-        self.categories_img_dir = self.images_dir / "categories"
-        self.products_img_dir = self.images_dir / "products"
-        
-        # Create directories
-        self.categories_img_dir.mkdir(parents=True, exist_ok=True)
-        self.products_img_dir.mkdir(parents=True, exist_ok=True)
+        # Initialize Cloud Storage service for image handling
+        try:
+            self.storage_service = CloudStorageService()
+            print("✅ Cloud Storage service initialized")
+        except Exception as e:
+            print(f"⚠️ Cloud Storage service initialization failed: {e}")
+            self.storage_service = None
         
     def reload_cache(self) -> Dict[str, Any]:
         """Fetch data from Odoo, save images locally, and update JSON cache"""
@@ -70,20 +70,40 @@ class OdooCacheService:
         # Process categories and save images
         categories = []
         for cat in odoo_categories:
-            image_url = None
-            if cat.get('image_128'):
-                image_url = self._save_image(
-                    cat['image_128'], 
-                    'category', 
-                    cat['id']
-                )
+            # Upload image to Cloud Storage if it exists
+            image_urls = None
+            has_image = bool(cat.get('image_128'))
+            
+            if has_image and self.storage_service:
+                try:
+                    # Generate multiple sizes from base64 image
+                    image_urls = self.storage_service.generate_multiple_sizes(
+                        base64_data=cat['image_128'],
+                        filename=f"category_{cat['id']}",
+                        folder="categories"
+                    )
+                    
+                    # If generation failed, fallback to single size
+                    if not image_urls and cat.get('image_128'):
+                        single_url = self.storage_service.upload_image_from_base64(
+                            base64_data=cat['image_128'],
+                            filename=f"category_{cat['id']}",
+                            folder="categories"
+                        )
+                        if single_url:
+                            image_urls = {'medium': single_url}
+                            
+                except Exception as e:
+                    print(f"❌ Error uploading category {cat['id']} image: {e}")
             
             categories.append({
                 'id': cat['id'],
                 'name': cat['name'],
                 'parent_id': cat['parent_id'],
                 'sequence': cat['sequence'],
-                'image_url': image_url  # Relative URL instead of base64
+                'has_image': has_image,
+                'image_url': image_urls.get('medium') if image_urls else None,  # Default medium size
+                'image_urls': image_urls  # All available sizes
             })
         
         print(f"Processed {len(categories)} categories")
@@ -117,13 +137,31 @@ class OdooCacheService:
         # Store basic product data for later attribute enrichment
         basic_products = []
         for prod in odoo_products:
-            image_url = None
-            if prod.get('image_512'):
-                image_url = self._save_image(
-                    prod['image_512'], 
-                    'product', 
-                    prod['id']
-                )
+            # Upload image to Cloud Storage if it exists
+            image_urls = None
+            has_image = bool(prod.get('image_512'))
+            
+            if has_image and self.storage_service:
+                try:
+                    # Generate multiple sizes from base64 image
+                    image_urls = self.storage_service.generate_multiple_sizes(
+                        base64_data=prod['image_512'],
+                        filename=f"product_{prod['id']}",
+                        folder="products"
+                    )
+                    
+                    # If generation failed, fallback to single size
+                    if not image_urls and prod.get('image_512'):
+                        single_url = self.storage_service.upload_image_from_base64(
+                            base64_data=prod['image_512'],
+                            filename=f"product_{prod['id']}",
+                            folder="products"
+                        )
+                        if single_url:
+                            image_urls = {'large': single_url}
+                            
+                except Exception as e:
+                    print(f"❌ Error uploading product {prod['id']} image: {e}")
             
             # Get list_price from template
             template_id = prod['product_tmpl_id'][0] if prod.get('product_tmpl_id') else None
@@ -136,7 +174,9 @@ class OdooCacheService:
                 'list_price': list_price,
                 'description_sale': prod['description_sale'],
                 'barcode': prod['barcode'],
-                'image_url': image_url,  # Relative URL instead of base64
+                'has_image': has_image,
+                'image_url': image_urls.get('large') if image_urls else None,  # Default large size for products
+                'image_urls': image_urls,  # All available sizes
                 'product_tmpl_id': prod.get('product_tmpl_id'),
                 'available_in_pos': prod.get('available_in_pos', True),
                 'categ_id': prod.get('categ_id')
@@ -261,8 +301,7 @@ class OdooCacheService:
         self._save_json('attribute_values.json', attributes_data['attribute_values'])
         self._save_json('product_attributes.json', attributes_data['product_attributes'])
         
-        # Clean up old images not in current data
-        self._cleanup_old_images(enriched_categories, products)
+        # Note: No image cleanup needed - using direct Odoo URLs
         
         # Save metadata
         metadata = {
@@ -272,86 +311,18 @@ class OdooCacheService:
             'attributes_count': len(attributes_data['attributes']),
             'attribute_values_count': len(attributes_data['attribute_values']),
             'products_with_attributes_count': len(attributes_data['product_attributes']),
-            'total_images': self._count_images()
+            'images_source': 'odoo_direct_urls'
         }
         self._save_json('metadata.json', metadata)
         
-        print(f"Cache reload completed. Categories: {len(categories)}, Products: {len(products)}, Attributes: {len(attributes_data['attributes'])}, Images: {metadata['total_images']}")
+        print(f"Cache reload completed. Categories: {len(categories)}, Products: {len(products)}, Attributes: {len(attributes_data['attributes'])}, Images: Direct Odoo URLs")
         return metadata
     
-    def _save_image(self, base64_data: str, image_type: str, item_id: int) -> Optional[str]:
-        """Save base64 image to file and return relative URL"""
-        if not base64_data:
-            return None
-        
-        try:
-            # Decode base64
-            image_data = base64.b64decode(base64_data)
-            
-            # Open image with PIL to validate and optimize
-            img = Image.open(BytesIO(image_data))
-            
-            # Convert RGBA to RGB if needed (for JPEG)
-            if img.mode in ('RGBA', 'LA', 'P'):
-                # Create a white background
-                background = Image.new('RGB', img.size, (255, 255, 255))
-                if img.mode == 'P':
-                    img = img.convert('RGBA')
-                background.paste(img, mask=img.split()[-1] if img.mode == 'RGBA' else None)
-                img = background
-            
-            # Resize if too large (max 800x800)
-            max_size = (800, 800)
-            img.thumbnail(max_size, Image.Resampling.LANCZOS)
-            
-            # Determine directory and filename
-            if image_type == 'category':
-                img_dir = self.categories_img_dir
-                url_path = f"/images/categories/{item_id}.jpg"
-            else:  # product
-                img_dir = self.products_img_dir
-                url_path = f"/images/products/{item_id}.jpg"
-            
-            # Save optimized image
-            img_path = img_dir / f"{item_id}.jpg"
-            img.save(img_path, 'JPEG', quality=85, optimize=True)
-            
-            return url_path
-            
-        except Exception as e:
-            print(f"Error saving image for {image_type} {item_id}: {e}")
-            return None
+    def _get_odoo_image_url(self, model: str, record_id: int, field: str = 'image_512') -> str:
+        """Generate direct Odoo image URL"""
+        return f"{self.odoo_url}/web/image/{model}/{record_id}/{field}"
     
-    def _cleanup_old_images(self, categories: List[Dict], products: List[Dict]):
-        """Remove images that are no longer in use"""
-        # Get current IDs
-        category_ids = {str(cat['id']) for cat in categories}
-        product_ids = {str(prod['id']) for prod in products}
-        
-        # Clean category images
-        cleaned_categories = 0
-        for img_file in self.categories_img_dir.glob("*.jpg"):
-            img_id = img_file.stem
-            if img_id not in category_ids:
-                img_file.unlink()
-                cleaned_categories += 1
-        
-        # Clean product images
-        cleaned_products = 0
-        for img_file in self.products_img_dir.glob("*.jpg"):
-            img_id = img_file.stem
-            if img_id not in product_ids:
-                img_file.unlink()
-                cleaned_products += 1
-        
-        if cleaned_categories > 0 or cleaned_products > 0:
-            print(f"Cleaned up {cleaned_categories} category images and {cleaned_products} product images")
-    
-    def _count_images(self) -> int:
-        """Count total number of cached images"""
-        cat_images = len(list(self.categories_img_dir.glob("*.jpg")))
-        prod_images = len(list(self.products_img_dir.glob("*.jpg")))
-        return cat_images + prod_images
+    # Note: Image cleanup no longer needed - images served directly from Odoo
     
     def get_categories(self) -> List[Dict]:
         """Load categories from cache"""
@@ -394,7 +365,7 @@ class OdooCacheService:
             'products_count': 0,
             'total_images': 0
         })
-        metadata['current_images'] = self._count_images()
+        metadata['images_source'] = 'odoo_direct_urls'
         
         # Add cache file sizes
         try:
