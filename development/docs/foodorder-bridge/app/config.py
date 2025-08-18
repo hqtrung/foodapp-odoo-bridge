@@ -28,6 +28,13 @@ class Settings(BaseSettings):
     CACHE_TTL_HOURS: int = 24
     FIRESTORE_COLLECTION_PREFIX: str = "foodorder_cache"
     
+    # Translation settings
+    ENABLE_TRANSLATION: bool = True
+    DEFAULT_LANGUAGE: str = "vi"
+    SUPPORTED_LANGUAGES: list = ["vi", "en", "zh", "zh-TW", "th"]
+    GOOGLE_CLOUD_PROJECT: str = ""  # Required for Translation API
+    TRANSLATION_CACHE_TTL_DAYS: int = 7
+    
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"

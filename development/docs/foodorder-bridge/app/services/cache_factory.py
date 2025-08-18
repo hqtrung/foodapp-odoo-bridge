@@ -199,6 +199,14 @@ class HybridCacheService:
                 result['firestore'] = {'status': 'error', 'error': str(e)}
         
         return result
+    
+    def get_translation_status(self) -> dict:
+        """Get translation service status"""
+        return self.odoo_service.get_translation_status()
+    
+    def clear_translation_cache(self, older_than_days: int = None):
+        """Clear translation cache"""
+        return self.odoo_service.clear_translation_cache(older_than_days=older_than_days)
 
 
 def get_cache_service(odoo_url: str, db: str, username: str = None, password: str = None, api_key: str = None) -> HybridCacheService:

@@ -29,8 +29,11 @@ def get_cache_service() -> HybridCacheService:
 
 
 @router.get("/categories", response_model=Dict[str, List[Dict]])
-async def get_categories(cache_service: HybridCacheService = Depends(get_cache_service)):
-    """Get all POS categories from cache"""
+async def get_categories(
+    lang: Optional[str] = Query(None, description="Language code for translations (vi, en, zh, zh-TW, th)"),
+    cache_service: HybridCacheService = Depends(get_cache_service)
+):
+    """Get all POS categories from cache with optional translation"""
     try:
         categories = cache_service.get_categories()
         if not categories:
@@ -38,6 +41,13 @@ async def get_categories(cache_service: HybridCacheService = Depends(get_cache_s
                 status_code=503, 
                 detail="Cache is empty. Please reload cache first using POST /api/v1/cache/reload"
             )
+        
+        # Apply language translation if requested
+        if lang and lang != 'vi':
+            settings = get_settings()
+            if lang in settings.SUPPORTED_LANGUAGES:
+                categories = _apply_category_translations(categories, lang)
+            
         return {"categories": categories}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error retrieving categories: {str(e)}")
@@ -46,9 +56,10 @@ async def get_categories(cache_service: HybridCacheService = Depends(get_cache_s
 @router.get("/products", response_model=Dict[str, List[Dict]])
 async def get_products(
     category_id: Optional[int] = Query(None, description="Filter products by category ID"),
+    lang: Optional[str] = Query(None, description="Language code for translations (vi, en, zh, zh-TW, th)"),
     cache_service: HybridCacheService = Depends(get_cache_service)
 ):
-    """Get all POS products from cache, optionally filtered by category"""
+    """Get all POS products from cache, optionally filtered by category with optional translation"""
     try:
         if category_id:
             products = cache_service.get_products_by_category(category_id)
@@ -61,6 +72,12 @@ async def get_products(
                 detail="Cache is empty. Please reload cache first using POST /api/v1/cache/reload"
             )
         
+        # Apply language translation if requested
+        if lang and lang != 'vi':
+            settings = get_settings()
+            if lang in settings.SUPPORTED_LANGUAGES:
+                products = _apply_product_translations(products, lang)
+        
         return {"products": products}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error retrieving products: {str(e)}")
@@ -69,15 +86,22 @@ async def get_products(
 @router.get("/products/{product_id}", response_model=Dict)
 async def get_product(
     product_id: int,
+    lang: Optional[str] = Query(None, description="Language code for translations (vi, en, zh, zh-TW, th)"),
     cache_service: HybridCacheService = Depends(get_cache_service)
 ):
-    """Get a specific product by ID"""
+    """Get a specific product by ID with optional translation"""
     try:
         products = cache_service.get_products()
         product = next((p for p in products if p['id'] == product_id), None)
         
         if not product:
             raise HTTPException(status_code=404, detail=f"Product with ID {product_id} not found")
+        
+        # Apply language translation if requested
+        if lang and lang != 'vi':
+            settings = get_settings()
+            if lang in settings.SUPPORTED_LANGUAGES:
+                product = _apply_product_translations([product], lang)[0]
         
         return {"product": product}
     except HTTPException:
@@ -403,3 +427,97 @@ async def test_image_urls(cache_service: HybridCacheService = Depends(get_cache_
         
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error generating test image URLs: {str(e)}")
+
+
+# Translation Management Endpoints
+@router.get("/translations/languages", response_model=Dict)
+async def get_supported_languages():
+    """Get list of supported languages for translation"""
+    try:
+        settings = get_settings()
+        return {
+            "supported_languages": {
+                "vi": "Vietnamese (Default)",
+                "en": "English",
+                "zh": "Chinese (Simplified)",
+                "zh-TW": "Chinese (Traditional)",
+                "th": "Thai"
+            },
+            "default_language": settings.DEFAULT_LANGUAGE,
+            "translation_enabled": settings.ENABLE_TRANSLATION
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error retrieving languages: {str(e)}")
+
+
+@router.get("/translations/status", response_model=Dict)
+async def get_translation_status(cache_service: HybridCacheService = Depends(get_cache_service)):
+    """Get translation service status and cache statistics"""
+    try:
+        status = cache_service.get_translation_status()
+        return {
+            "status": "success",
+            "translation_service": status
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error retrieving translation status: {str(e)}")
+
+
+@router.post("/translations/refresh", response_model=Dict)
+async def refresh_translations(cache_service: HybridCacheService = Depends(get_cache_service)):
+    """Refresh translation cache by clearing old translations and reloading cache"""
+    try:
+        # Clear old translation cache
+        cache_service.clear_translation_cache(older_than_days=7)
+        
+        # Reload cache with fresh translations
+        metadata = cache_service.reload_cache()
+        
+        return {
+            "status": "success",
+            "message": "Translation cache refreshed successfully",
+            "metadata": metadata
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error refreshing translations: {str(e)}")
+
+
+# Helper functions for applying translations
+def _apply_product_translations(products: List[Dict], target_language: str) -> List[Dict]:
+    """Apply translations to product list"""
+    translated_products = []
+    
+    for product in products:
+        translated_product = product.copy()
+        
+        # Apply name translation if available
+        if 'name_translations' in product and target_language in product['name_translations']:
+            translated_product['name'] = product['name_translations'][target_language]
+        
+        # Apply description translation if available
+        if 'description_translations' in product and target_language in product['description_translations']:
+            translated_product['description_sale'] = product['description_translations'][target_language]
+        
+        translated_products.append(translated_product)
+    
+    return translated_products
+
+
+def _apply_category_translations(categories: List[Dict], target_language: str) -> List[Dict]:
+    """Apply translations to category list"""
+    translated_categories = []
+    
+    for category in categories:
+        translated_category = category.copy()
+        
+        # Apply name translation if available
+        if 'name_translations' in category and target_language in category['name_translations']:
+            translated_category['name'] = category['name_translations'][target_language]
+        
+        # Apply description translation if available  
+        if 'description_translations' in category and target_language in category['description_translations']:
+            translated_category['description'] = category['description_translations'][target_language]
+        
+        translated_categories.append(translated_category)
+    
+    return translated_categories
