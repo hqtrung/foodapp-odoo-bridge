@@ -21,8 +21,21 @@ class Settings(BaseSettings):
     CACHE_DIR: str = "cache"
     IMAGES_DIR: str = "public/images"
     
-    # Security settings
-    ALLOWED_HOSTS: list = ["*"]
+    # Security settings - CORS configuration
+    CORS_ALLOW_ORIGINS: list = [
+        "http://localhost:3000", 
+        "http://localhost:8080",
+        "https://*.patedeli.com",  # Handled via regex pattern in main.py
+        "https://patedeli.com"     # Root domain handled directly
+    ]
+    CORS_ALLOW_CREDENTIALS: bool = True
+    CORS_ALLOW_METHODS: list = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+    CORS_ALLOW_HEADERS: list = ["*"]
+    
+    # Additional security settings
+    MAX_REQUESTS_PER_MINUTE: int = 100
+    REQUEST_TIMEOUT_SECONDS: int = 30
+    CONNECTION_POOL_SIZE: int = 10
     
     # Cache settings
     CACHE_TTL_HOURS: int = 24
@@ -31,9 +44,26 @@ class Settings(BaseSettings):
     # Translation settings
     ENABLE_TRANSLATION: bool = True
     DEFAULT_LANGUAGE: str = "vi"
-    SUPPORTED_LANGUAGES: list = ["vi", "en", "zh", "zh-TW", "th"]
+    SUPPORTED_LANGUAGES: list = ["vi", "en", "fr", "it", "es", "zh", "zh-TW", "th", "ja"]
     GOOGLE_CLOUD_PROJECT: str = ""  # Required for Translation API
     TRANSLATION_CACHE_TTL_DAYS: int = 7
+    
+    # Logging settings
+    LOG_LEVEL: str = "INFO"
+    LOG_FORMAT: str = "json"
+    ENABLE_ACCESS_LOGS: bool = True
+    
+    # Performance settings
+    MAX_IMAGE_SIZE_BYTES: int = 5242880  # 5MB
+    MAX_TRANSLATION_BATCH_SIZE: int = 50
+    CACHE_CLEANUP_INTERVAL_HOURS: int = 24
+    
+    # Development settings
+    DEBUG: bool = False
+    RELOAD: bool = False
+    
+    # Health check settings
+    HEALTH_CHECK_TIMEOUT: int = 30
     
     class Config:
         env_file = ".env"

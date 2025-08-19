@@ -1,10 +1,55 @@
-from fastapi import APIRouter, HTTPException, Depends, Query
+from fastapi import APIRouter, HTTPException, Depends, Query, Path
 from typing import List, Dict, Optional
+from pydantic import BaseModel, Field, validator
 from app.services.cache_factory import get_cache_service as get_hybrid_cache_service, HybridCacheService
 from app.config import get_settings
+from app.exceptions import (
+    CacheException, 
+    OdooConnectionException, 
+    ResourceNotFoundException, 
+    TranslationException,
+    AuthenticationException
+)
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 router = APIRouter(prefix="/api/v1", tags=["menu"])
+
+
+# Validation models
+class LanguageQuery(BaseModel):
+    """Validation for language query parameter"""
+    lang: Optional[str] = Field(None, pattern="^(vi|en|fr|it|es|zh|zh-TW|th|ja)$")
+    
+    @validator('lang')
+    def validate_language(cls, v):
+        if v is not None:
+            settings = get_settings()
+            if v not in settings.SUPPORTED_LANGUAGES:
+                raise ValueError(f'Unsupported language. Supported: {", ".join(settings.SUPPORTED_LANGUAGES)}')
+        return v
+
+
+class ImageSizeQuery(BaseModel):
+    """Validation for image size parameter"""
+    size: str = Field("image_512", pattern="^(image_128|image_256|image_512|image_1024)$")
+
+
+class ProductIdPath(BaseModel):
+    """Validation for product ID path parameter"""
+    product_id: int = Field(..., ge=1, le=999999, description="Product ID must be between 1 and 999999")
+
+
+class CategoryIdPath(BaseModel):
+    """Validation for category ID path parameter"""  
+    category_id: int = Field(..., ge=1, le=999999, description="Category ID must be between 1 and 999999")
+
+
+class CategoryIdQuery(BaseModel):
+    """Validation for category ID query parameter"""
+    category_id: Optional[int] = Field(None, ge=1, le=999999, description="Category ID must be between 1 and 999999")
 
 
 def get_cache_service() -> HybridCacheService:
@@ -30,33 +75,42 @@ def get_cache_service() -> HybridCacheService:
 
 @router.get("/categories", response_model=Dict[str, List[Dict]])
 async def get_categories(
-    lang: Optional[str] = Query(None, description="Language code for translations (vi, en, zh, zh-TW, th)"),
+    lang: Optional[str] = Query(None, pattern="^(vi|en|fr|it|es|zh|zh-TW|th|ja)$", description="Language code for translations"),
     cache_service: HybridCacheService = Depends(get_cache_service)
 ):
     """Get all POS categories from cache with optional translation"""
     try:
         categories = cache_service.get_categories()
         if not categories:
-            raise HTTPException(
-                status_code=503, 
-                detail="Cache is empty. Please reload cache first using POST /api/v1/cache/reload"
+            raise CacheException(
+                message="Cache is empty. Please reload cache first using POST /api/v1/cache/reload"
             )
         
         # Apply language translation if requested
         if lang and lang != 'vi':
-            settings = get_settings()
-            if lang in settings.SUPPORTED_LANGUAGES:
-                categories = _apply_category_translations(categories, lang)
+            try:
+                settings = get_settings()
+                if lang in settings.SUPPORTED_LANGUAGES:
+                    categories = _apply_category_translations(categories, lang)
+            except Exception as trans_error:
+                logger.warning(f"Translation failed for language {lang}: {trans_error}")
+                # Continue without translation rather than failing
             
         return {"categories": categories}
+    except CacheException:
+        raise
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error retrieving categories: {str(e)}")
+        logger.error(f"Unexpected error retrieving categories: {e}", exc_info=True)
+        raise CacheException(
+            message="Failed to retrieve categories",
+            details=str(e) if logger.level == logging.DEBUG else None
+        )
 
 
 @router.get("/products", response_model=Dict[str, List[Dict]])
 async def get_products(
-    category_id: Optional[int] = Query(None, description="Filter products by category ID"),
-    lang: Optional[str] = Query(None, description="Language code for translations (vi, en, zh, zh-TW, th)"),
+    category_id: Optional[int] = Query(None, ge=1, le=999999, description="Filter products by category ID (1-999999)"),
+    lang: Optional[str] = Query(None, pattern="^(vi|en|fr|it|es|zh|zh-TW|th|ja)$", description="Language code for translations"),
     cache_service: HybridCacheService = Depends(get_cache_service)
 ):
     """Get all POS products from cache, optionally filtered by category with optional translation"""
@@ -85,46 +139,68 @@ async def get_products(
 
 @router.get("/products/{product_id}", response_model=Dict)
 async def get_product(
-    product_id: int,
-    lang: Optional[str] = Query(None, description="Language code for translations (vi, en, zh, zh-TW, th)"),
+    product_id: int = Path(..., ge=1, le=999999, description="Product ID must be between 1 and 999999"),
+    lang: Optional[str] = Query(None, pattern="^(vi|en|fr|it|es|zh|zh-TW|th|ja)$", description="Language code for translations"),
     cache_service: HybridCacheService = Depends(get_cache_service)
 ):
     """Get a specific product by ID with optional translation"""
     try:
-        products = cache_service.get_products()
-        product = next((p for p in products if p['id'] == product_id), None)
+        product = cache_service.get_product_by_id(product_id)
         
         if not product:
-            raise HTTPException(status_code=404, detail=f"Product with ID {product_id} not found")
+            raise ResourceNotFoundException("Product", str(product_id))
         
         # Apply language translation if requested
         if lang and lang != 'vi':
-            settings = get_settings()
-            if lang in settings.SUPPORTED_LANGUAGES:
-                product = _apply_product_translations([product], lang)[0]
+            try:
+                settings = get_settings()
+                if lang in settings.SUPPORTED_LANGUAGES:
+                    product = _apply_product_translations([product], lang)[0]
+            except Exception as trans_error:
+                logger.warning(f"Translation failed for product {product_id}, language {lang}: {trans_error}")
+                # Continue without translation rather than failing
         
         return {"product": product}
-    except HTTPException:
+    except ResourceNotFoundException:
         raise
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error retrieving product: {str(e)}")
+        logger.error(f"Unexpected error retrieving product {product_id}: {e}", exc_info=True)
+        raise CacheException(
+            message=f"Failed to retrieve product",
+            details=str(e) if logger.level == logging.DEBUG else None
+        )
 
 
 @router.post("/cache/reload", response_model=Dict)
 async def reload_cache(cache_service: HybridCacheService = Depends(get_cache_service)):
     """Manually reload cache from Odoo"""
     try:
-        print("Starting cache reload...")
+        logger.info("Starting cache reload...")
         metadata = cache_service.reload_cache()
+        logger.info("Cache reload completed successfully")
         return {
             "status": "success",
             "message": "Cache reloaded successfully",
             "metadata": metadata
         }
     except ValueError as e:
-        raise HTTPException(status_code=401, detail=f"Authentication failed: {str(e)}")
+        logger.warning(f"Authentication failed during cache reload: {e}")
+        raise AuthenticationException(
+            message="Authentication failed",
+            details=str(e) if logger.level == logging.DEBUG else None
+        )
+    except ConnectionError as e:
+        logger.error(f"Connection failed during cache reload: {e}")
+        raise OdooConnectionException(
+            message="Failed to connect to Odoo server",
+            details=str(e) if logger.level == logging.DEBUG else None
+        )
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to reload cache: {str(e)}")
+        logger.error(f"Unexpected error during cache reload: {e}", exc_info=True)
+        raise CacheException(
+            message="Failed to reload cache",
+            details=str(e) if logger.level == logging.DEBUG else None
+        )
 
 
 @router.get("/cache/status", response_model=Dict)
@@ -249,7 +325,7 @@ async def get_attribute_values(cache_service: HybridCacheService = Depends(get_c
 
 @router.get("/products/{product_id}/attributes", response_model=Dict)
 async def get_product_attributes(
-    product_id: int,
+    product_id: int = Path(..., ge=1, le=999999, description="Product ID must be between 1 and 999999"),
     cache_service: HybridCacheService = Depends(get_cache_service)
 ):
     """Get attributes for a specific product (toppings, options, etc.)"""
@@ -258,11 +334,10 @@ async def get_product_attributes(
         
         if not product_attrs:
             # Check if product exists first
-            products = cache_service.get_products()
-            product_exists = any(p['id'] == product_id for p in products)
+            product = cache_service.get_product_by_id(product_id)
             
-            if not product_exists:
-                raise HTTPException(status_code=404, detail=f"Product with ID {product_id} not found")
+            if not product:
+                raise ResourceNotFoundException("Product", str(product_id))
             else:
                 # Product exists but has no attributes
                 return {
@@ -280,7 +355,7 @@ async def get_product_attributes(
 
 @router.get("/products/{product_id}/toppings", response_model=Dict)
 async def get_product_toppings(
-    product_id: int,
+    product_id: int = Path(..., ge=1, le=999999, description="Product ID must be between 1 and 999999"),
     cache_service: HybridCacheService = Depends(get_cache_service)
 ):
     """Get topping options for a specific product (convenience endpoint)"""
@@ -289,11 +364,10 @@ async def get_product_toppings(
         
         if not product_attrs:
             # Check if product exists first
-            products = cache_service.get_products()
-            product_exists = any(p['id'] == product_id for p in products)
+            product = cache_service.get_product_by_id(product_id)
             
-            if not product_exists:
-                raise HTTPException(status_code=404, detail=f"Product with ID {product_id} not found")
+            if not product:
+                raise ResourceNotFoundException("Product", str(product_id))
             else:
                 return {
                     "product_id": product_id,
@@ -329,8 +403,8 @@ async def get_product_toppings(
 
 @router.get("/categories/{category_id}/image", response_model=Dict)
 async def get_category_image(
-    category_id: int,
-    size: str = Query("image_256", description="Image size: image_128, image_256, image_512, image_1024"),
+    category_id: int = Path(..., ge=1, le=999999, description="Category ID must be between 1 and 999999"),
+    size: str = Query("image_256", pattern="^(image_128|image_256|image_512|image_1024)$", description="Image size"),
     cache_service: HybridCacheService = Depends(get_cache_service)
 ):
     """Get direct Odoo image URL for a category"""
@@ -360,17 +434,16 @@ async def get_category_image(
 
 @router.get("/products/{product_id}/image", response_model=Dict)
 async def get_product_image(
-    product_id: int,
-    size: str = Query("image_512", description="Image size: image_128, image_256, image_512, image_1024"),
+    product_id: int = Path(..., ge=1, le=999999, description="Product ID must be between 1 and 999999"),
+    size: str = Query("image_512", pattern="^(image_128|image_256|image_512|image_1024)$", description="Image size"),
     cache_service: HybridCacheService = Depends(get_cache_service)
 ):
     """Get direct Odoo image URL for a product"""
     try:
-        products = cache_service.get_products()
-        product = next((p for p in products if p['id'] == product_id), None)
+        product = cache_service.get_product_by_id(product_id)
         
         if not product:
-            raise HTTPException(status_code=404, detail=f"Product with ID {product_id} not found")
+            raise ResourceNotFoundException("Product", str(product_id))
         
         # Generate direct Odoo image URL
         from app.config import get_settings

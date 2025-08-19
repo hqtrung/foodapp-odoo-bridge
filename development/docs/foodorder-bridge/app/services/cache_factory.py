@@ -102,6 +102,20 @@ class HybridCacheService:
         else:
             return self.odoo_service.get_products()
     
+    def get_product_by_id(self, product_id: int) -> dict:
+        """Get a single product by ID efficiently"""
+        if self.is_cloud_run and self.firestore_service:
+            # For now, Firestore doesn't have efficient single lookup
+            # Fall back to loading all products and finding the one
+            products = self.firestore_service.get_products()
+            if products:
+                return next((p for p in products if p['id'] == product_id), None)
+            else:
+                # Fallback to file cache if Firestore is empty
+                return self.odoo_service.get_product_by_id(product_id)
+        else:
+            return self.odoo_service.get_product_by_id(product_id)
+    
     def get_products_by_category(self, category_id: int) -> list:
         """Get products filtered by category"""
         if self.is_cloud_run and self.firestore_service:

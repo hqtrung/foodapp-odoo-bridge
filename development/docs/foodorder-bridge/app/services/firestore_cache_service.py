@@ -1,6 +1,6 @@
 import os
 import json
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import Dict, List, Any, Optional
 from google.cloud import firestore
 from google.cloud.firestore import Client
@@ -34,7 +34,7 @@ class FirestoreCacheService:
                        product_attributes: Dict) -> Dict[str, Any]:
         """Save all cache data to Firestore"""
         try:
-            timestamp = datetime.utcnow()
+            timestamp = datetime.now(timezone.utc)
             
             # Prepare metadata
             metadata = {
@@ -278,7 +278,13 @@ class FirestoreCacheService:
                 return False
         
         # Check if cache is within TTL
-        cutoff_time = datetime.utcnow() - timedelta(hours=self.cache_ttl_hours)
+        # Make sure both datetimes are timezone-aware for comparison
+        cutoff_time = datetime.now(timezone.utc) - timedelta(hours=self.cache_ttl_hours)
+        
+        # If updated_timestamp is naive, make it UTC
+        if updated_timestamp.tzinfo is None:
+            updated_timestamp = updated_timestamp.replace(tzinfo=timezone.utc)
+            
         return updated_timestamp > cutoff_time
     
     def health_check(self) -> Dict[str, Any]:

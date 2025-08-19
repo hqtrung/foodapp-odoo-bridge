@@ -1,0 +1,35 @@
+# Cloud Build configuration for minimal FoodOrder Bridge API
+steps:
+  # Build Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [
+      'build', 
+      '-t', 'gcr.io/$PROJECT_ID/foodorder-bridge:$SHORT_SHA',
+      '-t', 'gcr.io/$PROJECT_ID/foodorder-bridge:latest',
+      '.'
+    ]
+    timeout: '600s'
+
+  # Push Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/foodorder-bridge:$SHORT_SHA']
+    
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/foodorder-bridge:latest']
+
+# Optimizations for small service
+options:
+  # Use smaller machine type for building
+  machineType: 'E2_HIGHCPU_8'
+  # Faster disk
+  diskSizeGb: 100
+  # Logging
+  logging: CLOUD_LOGGING_ONLY
+
+# Build timeout
+timeout: '1200s'
+
+# Available after build
+images: 
+  - 'gcr.io/$PROJECT_ID/foodorder-bridge:$SHORT_SHA'
+  - 'gcr.io/$PROJECT_ID/foodorder-bridge:latest'

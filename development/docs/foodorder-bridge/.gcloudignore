@@ -1,0 +1,73 @@
+# .gcloudignore for Cloud Build optimization
+# This file specifies files that are uploaded to Google Cloud
+
+# Include .dockerignore patterns
+.dockerignore
+
+# Git
+.git/
+.gitignore
+
+# Environment files
+.env
+.env.*
+
+# Development files
+README.md
+*.md
+DEPLOYMENT.md
+QUICK_START.md
+PATEDELI_*.md
+
+# Cache and build artifacts
+cache/
+public/images/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Debug files
+debug_*.py
+test_*.py
+
+# Backups
+backups/
+
+# Documentation images
+docs/

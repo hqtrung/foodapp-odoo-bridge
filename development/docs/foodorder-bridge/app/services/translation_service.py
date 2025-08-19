@@ -14,25 +14,35 @@ class TranslationService:
     """Service for translating text using Google Cloud Translation API"""
     
     def __init__(self, project_id: str = None, cache_dir: str = "cache"):
-        self.project_id = project_id or os.getenv('GOOGLE_CLOUD_PROJECT', 'finiziapp')
+        self.project_id = project_id or os.getenv('GOOGLE_CLOUD_PROJECT')
+        if not self.project_id:
+            logger.warning("GOOGLE_CLOUD_PROJECT environment variable not set - translation service will be disabled")
         self.cache_dir = Path(cache_dir)
         self.cache_dir.mkdir(exist_ok=True)
         
         # Supported languages for FoodOrder app
         self.supported_languages = {
             'vi': 'Vietnamese',
-            'en': 'English', 
+            'en': 'English',
+            'fr': 'French',
+            'it': 'Italian', 
+            'es': 'Spanish',
             'zh': 'Chinese (Simplified)',
             'zh-TW': 'Chinese (Traditional)',
-            'th': 'Thai'
+            'th': 'Thai',
+            'ja': 'Japanese'
         }
         
         self.default_language = 'vi'  # Vietnamese is the base language
         
         # Initialize translation client
         try:
-            self.translate_client = translate.Client()
-            logger.info("✅ Google Cloud Translation client initialized")
+            if self.project_id:
+                self.translate_client = translate.Client()
+                logger.info("✅ Google Cloud Translation client initialized")
+            else:
+                self.translate_client = None
+                logger.info("Translation client disabled - no project ID provided")
         except Exception as e:
             logger.warning(f"⚠️ Translation client initialization failed: {e}")
             self.translate_client = None

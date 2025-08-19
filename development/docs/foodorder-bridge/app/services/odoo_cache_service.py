@@ -10,6 +10,8 @@ from io import BytesIO
 from app.services.cloud_storage_service import CloudStorageService
 from app.services.translation_service import TranslationService
 from app.services.translation_glossary import VietnameseFoodGlossary
+from app.services.connection_pool import get_connection_pool
+from app.config import get_settings
 
 
 class OdooCacheService:
@@ -33,6 +35,16 @@ class OdooCacheService:
             raise ValueError("Either provide (username + api_key) or (username + password)")
         self.cache_dir = Path("cache")
         self.cache_dir.mkdir(exist_ok=True)
+        
+        # Initialize connection pool
+        settings = get_settings()
+        self.connection_pool = get_connection_pool(
+            odoo_url=odoo_url,
+            db=db,
+            username=username,
+            password=self.password,
+            max_connections=settings.CONNECTION_POOL_SIZE
+        )
         
         # Initialize Cloud Storage service for image handling
         try:
@@ -59,24 +71,18 @@ class OdooCacheService:
         """Fetch data from Odoo, save images locally, and update JSON cache"""
         print(f"Connecting to Odoo at {self.odoo_url} using {self.auth_method} authentication...")
         
-        # Connect to Odoo
-        common = xmlrpc.client.ServerProxy(f'{self.odoo_url}/xmlrpc/2/common')
+        # Clear in-memory cache
+        self._invalidate_cache()
         
-        # Authenticate with Odoo (API key is used as password)
-        uid = common.authenticate(self.db, self.username, self.password, {})
+        print(f"Using connection pool for Odoo operations...")
         
-        if not uid:
-            auth_info = f"API key ending in {'...' + self.api_key[-4:] if self.api_key else 'password'}"
-            raise ValueError(f"Failed to authenticate with Odoo using {self.auth_method}. Check credentials: {auth_info}")
-        
-        print(f"✅ Authenticated successfully with Odoo (User ID: {uid})")
-        
-        models = xmlrpc.client.ServerProxy(f'{self.odoo_url}/xmlrpc/2/object')
+        # Test connection pool by getting statistics
+        pool_stats = self.connection_pool.get_pool_stats()
+        print(f"Connection pool stats: {pool_stats}")
         
         # Fetch categories with images
         print("Fetching POS categories from Odoo...")
-        odoo_categories = models.execute_kw(
-            self.db, uid, self.password,
+        odoo_categories = self.connection_pool.execute_kw(
             'pos.category', 'search_read',
             [[]],
             {'fields': ['id', 'name', 'parent_id', 'sequence', 'image_128']}
@@ -125,8 +131,7 @@ class OdooCacheService:
         
         # Fetch products with images and tags
         print("Fetching POS products from Odoo...")
-        odoo_products = models.execute_kw(
-            self.db, uid, self.password,
+        odoo_products = self.connection_pool.execute_kw(
             'product.product', 'search_read',
             [[['available_in_pos', '=', True]]],
             {'fields': ['id', 'name', 'pos_categ_id', 
@@ -141,8 +146,7 @@ class OdooCacheService:
         template_prices = {}
         if template_ids:
             print("Fetching template prices from Odoo...")
-            odoo_templates = models.execute_kw(
-                self.db, uid, self.password,
+            odoo_templates = self.connection_pool.execute_kw(
                 'product.template', 'search_read',
                 [[['id', 'in', template_ids]]],
                 {'fields': ['id', 'list_price']}
@@ -202,8 +206,7 @@ class OdooCacheService:
         
         # Fetch all product tags for mapping
         print("Fetching product tags from Odoo...")
-        product_tags = models.execute_kw(
-            self.db, uid, self.password,
+        product_tags = self.connection_pool.execute_kw(
             'product.tag', 'search_read',
             [[]],
             {'fields': ['id', 'name', 'color']}
@@ -215,16 +218,14 @@ class OdooCacheService:
         
         # Fetch product attributes and attribute values for toppings/options
         print("Fetching product attributes from Odoo...")
-        attributes = models.execute_kw(
-            self.db, uid, self.password,
+        attributes = self.connection_pool.execute_kw(
             'product.attribute', 'search_read',
             [[]],
             {'fields': ['id', 'name', 'create_variant', 'display_type']}
         )
         
         print("Fetching attribute values from Odoo...")
-        attribute_values = models.execute_kw(
-            self.db, uid, self.password,
+        attribute_values = self.connection_pool.execute_kw(
             'product.attribute.value', 'search_read',
             [[]],
             {'fields': ['id', 'name', 'attribute_id']}
@@ -235,8 +236,7 @@ class OdooCacheService:
         pos_template_ids = list(set([prod['product_tmpl_id'][0] for prod in odoo_products if prod.get('product_tmpl_id')]))
         
         if pos_template_ids:
-            template_lines = models.execute_kw(
-                self.db, uid, self.password,
+            template_lines = self.connection_pool.execute_kw(
                 'product.template.attribute.line', 'search_read',
                 [[['product_tmpl_id', 'in', pos_template_ids]]],
                 {'fields': ['id', 'product_tmpl_id', 'attribute_id', 'value_ids']}
@@ -248,8 +248,7 @@ class OdooCacheService:
         # Get template attribute values directly by template IDs (more reliable than attribute lines)
         # This fixes the issue where attribute lines may reference wrong template attribute values
         if pos_template_ids:
-            template_attribute_values = models.execute_kw(
-                self.db, uid, self.password,
+            template_attribute_values = self.connection_pool.execute_kw(
                 'product.template.attribute.value', 'search_read',
                 [[['product_tmpl_id', 'in', pos_template_ids]]],
                 {'fields': ['id', 'name', 'price_extra', 'product_tmpl_id', 
@@ -267,8 +266,7 @@ class OdooCacheService:
         packaging_data = {}
         if packaging_ids:
             print("Fetching product packaging data for attribute values...")
-            packagings = models.execute_kw(
-                self.db, uid, self.password,
+            packagings = self.connection_pool.execute_kw(
                 'product.packaging', 'search_read',
                 [[['id', 'in', packaging_ids]]],
                 {'fields': ['id', 'product_id']}
@@ -280,8 +278,7 @@ class OdooCacheService:
             linked_products_data = {}
             if linked_product_ids:
                 print("Fetching linked product data...")
-                linked_products = models.execute_kw(
-                    self.db, uid, self.password,
+                linked_products = self.connection_pool.execute_kw(
                     'product.product', 'search_read',
                     [[['id', 'in', linked_product_ids]]],
                     {'fields': ['id', 'name', 'product_tmpl_id']}
@@ -293,8 +290,7 @@ class OdooCacheService:
                 linked_template_prices = {}
                 if linked_template_ids:
                     print("Fetching linked product template prices...")
-                    linked_templates = models.execute_kw(
-                        self.db, uid, self.password,
+                    linked_templates = self.connection_pool.execute_kw(
                         'product.template', 'search_read',
                         [[['id', 'in', linked_template_ids]]],
                         {'fields': ['id', 'list_price']}
@@ -367,6 +363,22 @@ class OdooCacheService:
         """Load products from cache"""
         return self._load_json('products.json', default=[])
     
+    def get_product_by_id(self, product_id: int) -> Optional[Dict]:
+        """Get a single product by ID efficiently"""
+        # Load the products cache if it doesn't exist in memory
+        if not hasattr(self, '_products_cache') or self._products_cache is None:
+            self._products_cache = {}
+            products = self.get_products()
+            for product in products:
+                self._products_cache[product['id']] = product
+        
+        return self._products_cache.get(product_id)
+    
+    def _invalidate_cache(self):
+        """Clear in-memory cache"""
+        if hasattr(self, '_products_cache'):
+            self._products_cache = None
+    
     def get_products_by_category(self, category_id: int) -> List[Dict]:
         """Get products filtered by category"""
         products = self.get_products()
@@ -427,25 +439,38 @@ class OdooCacheService:
             return json.load(f)
     
     def test_connection(self) -> Dict[str, Any]:
-        """Test connection to Odoo server"""
+        """Test connection to Odoo server using connection pool"""
         try:
-            common = xmlrpc.client.ServerProxy(f'{self.odoo_url}/xmlrpc/2/common')
-            version = common.version()
+            # Test by getting a connection from pool
+            connection = self.connection_pool.get_connection()
             
-            # Test authentication
-            uid = common.authenticate(self.db, self.username, self.password, {})
+            # Get version info
+            version = connection.common_proxy.version()
+            
+            # Release connection back to pool
+            self.connection_pool.release_connection(connection)
+            
+            # Get pool statistics
+            pool_stats = self.connection_pool.get_pool_stats()
             
             return {
                 'status': 'success',
                 'odoo_version': version.get('server_version', 'unknown'),
-                'authenticated': uid is not False,
-                'user_id': uid,
+                'authenticated': True,
+                'user_id': connection.uid,
                 'auth_method': self.auth_method,
                 'database': self.db,
                 'username': self.username,
-                'server_url': self.odoo_url
+                'server_url': self.odoo_url,
+                'connection_pool': pool_stats
             }
         except Exception as e:
+            # Get pool statistics even on failure
+            try:
+                pool_stats = self.connection_pool.get_pool_stats()
+            except:
+                pool_stats = {'error': 'Failed to get pool stats'}
+                
             return {
                 'status': 'error',
                 'error': str(e),
@@ -453,7 +478,8 @@ class OdooCacheService:
                 'auth_method': self.auth_method,
                 'database': self.db,
                 'username': self.username,
-                'server_url': self.odoo_url
+                'server_url': self.odoo_url,
+                'connection_pool': pool_stats
             }
     
     def _process_attributes(self, attributes, attribute_values, template_lines, template_attribute_values, products, packaging_data={}, linked_products_data={}, linked_template_prices={}):
