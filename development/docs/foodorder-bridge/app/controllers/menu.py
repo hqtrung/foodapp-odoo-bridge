@@ -555,6 +555,209 @@ async def refresh_translations(cache_service: HybridCacheService = Depends(get_c
         raise HTTPException(status_code=500, detail=f"Error refreshing translations: {str(e)}")
 
 
+@router.get("/translations/metadata", response_model=Dict)
+async def get_translation_metadata(cache_service: HybridCacheService = Depends(get_cache_service)):
+    """Get translation metadata for frontend configuration (direct Firestore access)"""
+    try:
+        translation_service = cache_service.get_translation_service()
+        if not translation_service:
+            raise HTTPException(
+                status_code=503,
+                detail="Translation service not available"
+            )
+        
+        metadata = translation_service.get_translation_metadata()
+        if not metadata:
+            # Return basic metadata if Firestore data not available
+            metadata = {
+                'supported_languages': {
+                    'vi': 'Vietnamese',
+                    'en': 'English', 
+                    'fr': 'French',
+                    'it': 'Italian',
+                    'es': 'Spanish',
+                    'zh': 'Chinese (Simplified)',
+                    'zh-TW': 'Chinese (Traditional)',
+                    'th': 'Thai',
+                    'ja': 'Japanese'
+                },
+                'default_language': 'vi',
+                'language_codes': ['vi', 'en', 'fr', 'it', 'es', 'zh', 'zh-TW', 'th', 'ja'],
+                'translation_version': '1.0'
+            }
+        
+        return {
+            "status": "success",
+            "metadata": metadata,
+            "firestore_collections": {
+                "products": "foodorder_translations_products",
+                "categories": "foodorder_translations_categories", 
+                "metadata": "foodorder_translations_metadata"
+            },
+            "usage_instructions": {
+                "frontend_sdk": "Use Firebase SDK to read from collections directly",
+                "product_translations": "Query: foodorder_translations_products/{product_id}",
+                "category_translations": "Query: foodorder_translations_categories/{category_id}",
+                "language_access": "doc.data().translations[languageCode]"
+            }
+        }
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error getting translation metadata: {e}", exc_info=True)
+        raise HTTPException(
+            status_code=500,
+            detail="Failed to get translation metadata"
+        )
+
+
+@router.get("/translations/products/{product_id}", response_model=Dict)
+async def get_product_translation_by_id(
+    product_id: int = Path(..., ge=1, le=999999, description="Product ID must be between 1 and 999999"),
+    lang: Optional[str] = Query(None, pattern="^(vi|en|fr|it|es|zh|zh-TW|th|ja)$", description="Language code for specific translation"),
+    cache_service: HybridCacheService = Depends(get_cache_service)
+):
+    """Get translation data for a specific product (demo endpoint for direct access)"""
+    try:
+        translation_service = cache_service.get_translation_service()
+        if not translation_service:
+            raise HTTPException(
+                status_code=503,
+                detail="Translation service not available"
+            )
+        
+        translations = translation_service.get_product_translations(product_id, lang)
+        if not translations:
+            raise ResourceNotFoundException("Product translations", str(product_id))
+        
+        return {
+            "status": "success",
+            "product_id": product_id,
+            "language": lang,
+            "translations": translations,
+            "note": "This endpoint demonstrates direct Firestore access. Frontend should use Firebase SDK directly."
+        }
+        
+    except ResourceNotFoundException:
+        raise
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error getting product translation {product_id}: {e}", exc_info=True)
+        raise HTTPException(
+            status_code=500,
+            detail="Failed to get product translation"
+        )
+
+
+@router.get("/translations/categories/{category_id}", response_model=Dict)
+async def get_category_translation_by_id(
+    category_id: int = Path(..., ge=1, le=999999, description="Category ID must be between 1 and 999999"),
+    lang: Optional[str] = Query(None, pattern="^(vi|en|fr|it|es|zh|zh-TW|th|ja)$", description="Language code for specific translation"),
+    cache_service: HybridCacheService = Depends(get_cache_service)
+):
+    """Get translation data for a specific category (demo endpoint for direct access)"""
+    try:
+        translation_service = cache_service.get_translation_service()
+        if not translation_service:
+            raise HTTPException(
+                status_code=503,
+                detail="Translation service not available"
+            )
+        
+        translations = translation_service.get_category_translations(category_id, lang)
+        if not translations:
+            raise ResourceNotFoundException("Category translations", str(category_id))
+        
+        return {
+            "status": "success",
+            "category_id": category_id,
+            "language": lang,
+            "translations": translations,
+            "note": "This endpoint demonstrates direct Firestore access. Frontend should use Firebase SDK directly."
+        }
+        
+    except ResourceNotFoundException:
+        raise
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error getting category translation {category_id}: {e}", exc_info=True)
+        raise HTTPException(
+            status_code=500,
+            detail="Failed to get category translation"
+        )
+
+
+@router.get("/translations/products/all", response_model=Dict)
+async def get_all_product_translations(
+    lang: Optional[str] = Query(None, pattern="^(vi|en|fr|it|es|zh|zh-TW|th|ja)$", description="Language code to filter translations"),
+    cache_service: HybridCacheService = Depends(get_cache_service)
+):
+    """Get ALL product translations in one shot (bulk endpoint)"""
+    try:
+        translation_service = cache_service.get_translation_service()
+        if not translation_service:
+            raise HTTPException(
+                status_code=503,
+                detail="Translation service not available"
+            )
+        
+        all_translations = translation_service.get_all_product_translations(lang)
+        
+        return {
+            "status": "success",
+            "language_filter": lang,
+            "products_count": len(all_translations),
+            "products": all_translations,
+            "note": "This bulk endpoint retrieves all product translations. Frontend should use Firebase SDK for real-time updates."
+        }
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error getting all product translations: {e}", exc_info=True)
+        raise HTTPException(
+            status_code=500,
+            detail="Failed to get all product translations"
+        )
+
+
+@router.get("/translations/categories/all", response_model=Dict)
+async def get_all_category_translations(
+    lang: Optional[str] = Query(None, pattern="^(vi|en|fr|it|es|zh|zh-TW|th|ja)$", description="Language code to filter translations"),
+    cache_service: HybridCacheService = Depends(get_cache_service)
+):
+    """Get ALL category translations in one shot (bulk endpoint)"""
+    try:
+        translation_service = cache_service.get_translation_service()
+        if not translation_service:
+            raise HTTPException(
+                status_code=503,
+                detail="Translation service not available"
+            )
+        
+        all_translations = translation_service.get_all_category_translations(lang)
+        
+        return {
+            "status": "success", 
+            "language_filter": lang,
+            "categories_count": len(all_translations),
+            "categories": all_translations,
+            "note": "This bulk endpoint retrieves all category translations. Frontend should use Firebase SDK for real-time updates."
+        }
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error getting all category translations: {e}", exc_info=True)
+        raise HTTPException(
+            status_code=500,
+            detail="Failed to get all category translations"
+        )
+
+
 # Helper functions for applying translations
 def _apply_product_translations(products: List[Dict], target_language: str) -> List[Dict]:
     """Apply translations to product list"""

@@ -2,6 +2,7 @@ import os
 from typing import Union
 from app.services.odoo_cache_service import OdooCacheService
 from app.services.firestore_cache_service import FirestoreCacheService
+from app.services.firestore_translation_service import FirestoreTranslationService
 
 
 class HybridCacheService:
@@ -30,6 +31,7 @@ class HybridCacheService:
         # Always try to initialize Firestore service (for both local and Cloud Run)
         try:
             self.firestore_service = FirestoreCacheService()
+            self.translation_service = FirestoreTranslationService()
             if self.is_cloud_run:
                 print("✅ Using Firestore cache for persistence on Cloud Run")
             else:
@@ -37,6 +39,7 @@ class HybridCacheService:
         except Exception as e:
             print(f"❌ Failed to initialize Firestore, using file cache only: {e}")
             self.firestore_service = None
+            self.translation_service = None
             if self.is_cloud_run:
                 print("⚠️ Running on Cloud Run without Firestore - cache won't persist!")
             else:
@@ -61,7 +64,7 @@ class HybridCacheService:
                 attribute_values = self.odoo_service.get_attribute_values()
                 product_attributes = self.odoo_service.get_product_attributes()
                 
-                # Save to Firestore
+                # Save to Firestore main cache
                 firestore_metadata = self.firestore_service.save_cache_data(
                     categories=categories,
                     products=products,
@@ -69,6 +72,16 @@ class HybridCacheService:
                     attribute_values=attribute_values,
                     product_attributes=product_attributes
                 )
+                
+                # Save to translation-optimized collections
+                if self.translation_service:
+                    try:
+                        self.translation_service.save_product_translations(products)
+                        self.translation_service.save_category_translations(categories)
+                        self.translation_service.save_translation_metadata(firestore_metadata)
+                        print("✅ Translations saved to optimized Firestore collections")
+                    except Exception as trans_error:
+                        print(f"⚠️ Error saving translations to optimized collections: {trans_error}")
                 
                 print("✅ Cache saved to both file system and Firestore")
                 return firestore_metadata
@@ -221,6 +234,28 @@ class HybridCacheService:
     def clear_translation_cache(self, older_than_days: int = None):
         """Clear translation cache"""
         return self.odoo_service.clear_translation_cache(older_than_days=older_than_days)
+    
+    def get_translation_service(self):
+        """Get the Firestore translation service"""
+        return self.translation_service
+    
+    def get_product_translations(self, product_id: int, language: str = None):
+        """Get translations for a specific product from optimized collections"""
+        if self.translation_service:
+            return self.translation_service.get_product_translations(product_id, language)
+        return None
+    
+    def get_category_translations(self, category_id: int, language: str = None):
+        """Get translations for a specific category from optimized collections"""
+        if self.translation_service:
+            return self.translation_service.get_category_translations(category_id, language)
+        return None
+    
+    def get_translation_metadata(self):
+        """Get translation metadata from optimized collections"""
+        if self.translation_service:
+            return self.translation_service.get_translation_metadata()
+        return None
 
 
 def get_cache_service(odoo_url: str, db: str, username: str = None, password: str = None, api_key: str = None) -> HybridCacheService:
