@@ -1,0 +1,849 @@
+```json
+{
+  "source_language": "vi",
+  "categories": [
+    {
+      "category_id": 1,
+      "category_name": "Traditional Vietnamese Baguettes",
+      "description": "Traditional Vietnamese sandwiches with fresh ingredients"
+    },
+    {
+      "category_id": 15,
+      "category_name": "Mixed Noodles & Sticky Rice",
+      "description": "Mixed noodle dishes with various toppings"
+    },
+    {
+      "category_id": 3,
+      "category_name": "Beverages",
+      "description": "Refreshing beverages including coffee, tea, and soft drinks"
+    },
+    {
+      "category_id": 11,
+      "category_name": "Salad",
+      "description": "Fresh and healthy salad options"
+    },
+    {
+      "category_id": 8,
+      "category_name": "COMBO",
+      "description": "Value meal combinations with drinks and sides"
+    },
+    {
+      "category_id": 5,
+      "category_name": "Topping",
+      "description": "Extra toppings and add-ons for your meals"
+    },
+    {
+      "category_id": 7,
+      "category_name": "Vật Phẩm",
+      "description": "Utensils and additional items"
+    }
+  ],
+  "products": [
+    {
+      "product_id": 1186,
+      "product_name": "Baguette Không",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2715,
+      "product_name": "(C2) CMB Happy Lunchset",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 4,
+          "attribute_name": "Baguette",
+          "display_type": "radio",
+          "attribute_values": [
+            {
+              "value_id": 2,
+              "value_name": "Baguette Thập Cẩm",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 7,
+              "value_name": "Baguette Gà Xé",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 3,
+              "value_name": "Baguette Xá Xíu",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 4,
+              "value_name": "Baguette Heo Nướng Teriyaki",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 5,
+              "value_name": "Baguette Veggy",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 71,
+              "value_name": "Baguette Pate Trứng",
+              "price_extra": 0.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 5,
+          "attribute_name": "Softdrinks",
+          "display_type": "radio",
+          "attribute_values": [
+            {
+              "value_id": 8,
+              "value_name": "Coca Cola Zero",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 9,
+              "value_name": "Pepsi",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 10,
+              "value_name": "Pepsi Black",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 11,
+              "value_name": "7-up",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 68,
+              "value_name": "Trà Ô Long TeaPlus",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 69,
+              "value_name": "Revive chanh muối",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 70,
+              "value_name": "Revive",
+              "price_extra": 0.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 6,
+          "attribute_name": "Kèm Salad Sữa Chua",
+          "display_type": "check_box",
+          "attribute_values": [
+            {
+              "value_id": 30,
+              "value_name": "Salad",
+              "price_extra": 15000.0
+            },
+            {
+              "value_id": 31,
+              "value_name": "Sữa chua",
+              "price_extra": 15000.0
+            },
+            {
+              "value_id": 32,
+              "value_name": "Không",
+              "price_extra": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2718,
+      "product_name": "(C1) CMB Express Lunchset",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 6,
+          "attribute_name": "Kèm Salad Sữa Chua",
+          "display_type": "check_box",
+          "attribute_values": [
+            {
+              "value_id": 28,
+              "value_name": "Salad",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 29,
+              "value_name": "Sữa chua",
+              "price_extra": 0.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 7,
+          "attribute_name": "Món Trưa",
+          "display_type": "radio",
+          "attribute_values": [
+            {
+              "value_id": 23,
+              "value_name": "Mì Trộn Xá Xíu",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 24,
+              "value_name": "Bò Kho",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 25,
+              "value_name": "Xíu Mại Đà Lạt",
+              "price_extra": 0.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 8,
+          "attribute_name": "Cà Phê",
+          "display_type": "radio",
+          "attribute_values": [
+            {
+              "value_id": 26,
+              "value_name": "Cà Phê Sữa Đá",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 27,
+              "value_name": "Cà Phê Đá",
+              "price_extra": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2717,
+      "product_name": "(C3) CMB Sáng Năng Lượng",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 4,
+          "attribute_name": "Baguette",
+          "display_type": "radio",
+          "attribute_values": [
+            {
+              "value_id": 15,
+              "value_name": "Baguette Thập Cẩm",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 16,
+              "value_name": "Baguette Gà Xé",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 17,
+              "value_name": "Baguette Xá Xíu",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 18,
+              "value_name": "Baguette Heo Nướng Teriyaki",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 19,
+              "value_name": "Baguette Veggy",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 20,
+              "value_name": "Baguette Pate Trứng",
+              "price_extra": 0.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 8,
+          "attribute_name": "Cà Phê",
+          "display_type": "radio",
+          "attribute_values": [
+            {
+              "value_id": 21,
+              "value_name": "Cà Phê Sữa Đá",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 22,
+              "value_name": "Cà Phê Đá",
+              "price_extra": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2716,
+      "product_name": "(C4) CMB Sáng Tốc Hành",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 8,
+          "attribute_name": "Cà Phê",
+          "display_type": "radio",
+          "attribute_values": [
+            {
+              "value_id": 13,
+              "value_name": "Cà Phê Sữa Đá",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 14,
+              "value_name": "Cà Phê Đá",
+              "price_extra": 0.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 9,
+          "attribute_name": "Bánh Mì Que",
+          "display_type": "radio",
+          "attribute_values": [
+            {
+              "value_id": 12,
+              "value_name": "Bánh Mì Que",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 72,
+              "value_name": "Bánh Mì Que Nấm Chay",
+              "price_extra": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2736,
+      "product_name": "Sữa Chua Lắc Đá",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2737,
+      "product_name": "Sữa Chua Lắc Đá CAFE",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2546,
+      "product_name": "Bia Sài Gòn Special ( lon 330ml)",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2488,
+      "product_name": "(D6) Cà Phê Đen Đá",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2489,
+      "product_name": "(D7) Cà Phê Sữa Đá",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2490,
+      "product_name": "(D9) Expresso",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2491,
+      "product_name": "(D8) Americano",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2492,
+      "product_name": "(D10) Latte Đá",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2493,
+      "product_name": "(D1) Trà Dưa Lưới Hoàng Kim",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2494,
+      "product_name": "(D2) Sâm Bí Đao Hạt Chia",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2675,
+      "product_name": "(D3) Nước cam tươi",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2547,
+      "product_name": "(D5) Sữa chua",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2725,
+      "product_name": "Revive Chanh muối",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2498,
+      "product_name": "Aquafina 500ml",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2544,
+      "product_name": "Trà Ô long Tea Plus ( chai 450ml)",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2545,
+      "product_name": "Nước tăng lực Redbull ( lon 250ml)",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2550,
+      "product_name": "Coca Cola Zero",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2658,
+      "product_name": "Pepsi 320ml ( Lon)",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2659,
+      "product_name": "7Up 320ml ( Lon)",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2677,
+      "product_name": "Pepsi Black 320ml ( Lon)",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2726,
+      "product_name": "Revive Không Calo",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2730,
+      "product_name": "Chuối Trái",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 11,
+      "attributes": []
+    },
+    {
+      "product_id": 2477,
+      "product_name": "(A2) Baguette Pate Trứng",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 1,
+      "attributes": [
+        {
+          "attribute_id": 10,
+          "attribute_name": "Topping Bánh mì",
+          "display_type": "check_box",
+          "attribute_values": [
+            {
+              "value_id": 48,
+              "value_name": "Thêm Pate",
+              "price_extra": 5000.0
+            },
+            {
+              "value_id": 49,
+              "value_name": "Thêm Xá Xíu",
+              "price_extra": 10000.0
+            },
+            {
+              "value_id": 50,
+              "value_name": "Thêm Chả",
+              "price_extra": 5000.0
+            },
+            {
+              "value_id": 51,
+              "value_name": "Thêm Jambon",
+              "price_extra": 5000.0
+            },
+            {
+              "value_id": 52,
+              "value_name": "Thêm Gà Xé",
+              "price_extra": 10000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2478,
+      "product_name": "(A4) Baguette Thập Cẩm",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 1,
+      "attributes": [
+        {
+          "attribute_id": 10,
+          "attribute_name": "Topping Bánh mì",
+          "display_type": "check_box",
+          "attribute_values": [
+            {
+              "value_id": 58,
+              "value_name": "Thêm Pate",
+              "price_extra": 5000.0
+            },
+            {
+              "value_id": 59,
+              "value_name": "Thêm Xá Xíu",
+              "price_extra": 10000.0
+            },
+            {
+              "value_id": 60,
+              "value_name": "Thêm Chả",
+              "price_extra": 5000.0
+            },
+            {
+              "value_id": 61,
+              "value_name": "Thêm Jambon",
+              "price_extra": 5000.0
+            },
+            {
+              "value_id": 62,
+              "value_name": "Thêm Gà Xé",
+              "price_extra": 10000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2479,
+      "product_name": "(A7) Baguette Heo Nướng Teriyaki",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2480,
+      "product_name": "(A8) Baguette Veggy Nấm Tứ Xuyên",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2481,
+      "product_name": "(A5) Bánh Mì Que Pate Chà Bông",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2728,
+      "product_name": "(A5) Bánh Mì Que Nấm Chay",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2482,
+      "product_name": "(A11) Baguette Bò Kho",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2483,
+      "product_name": "(A10) Baguette Xíu Mại",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2484,
+      "product_name": "(A6) Baguette Xá Xíu",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 1,
+      "attributes": [
+        {
+          "attribute_id": 10,
+          "attribute_name": "Topping Bánh mì",
+          "display_type": "check_box",
+          "attribute_values": [
+            {
+              "value_id": 63,
+              "value_name": "Thêm Pate",
+              "price_extra": 5000.0
+            },
+            {
+              "value_id": 64,
+              "value_name": "Thêm Xá Xíu",
+              "price_extra": 10000.0
+            },
+            {
+              "value_id": 65,
+              "value_name": "Thêm Chả",
+              "price_extra": 5000.0
+            },
+            {
+              "value_id": 66,
+              "value_name": "Thêm Jambon",
+              "price_extra": 5000.0
+            },
+            {
+              "value_id": 67,
+              "value_name": "Thêm Gà Xé",
+              "price_extra": 10000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2485,
+      "product_name": "(A9) Baguette Gà Xé Bơ Tỏi",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2689,
+      "product_name": "(A3) Baguette Pate Trứng DOUBLE",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 1,
+      "attributes": [
+        {
+          "attribute_id": 10,
+          "attribute_name": "Topping Bánh mì",
+          "display_type": "check_box",
+          "attribute_values": [
+            {
+              "value_id": 53,
+              "value_name": "Thêm Pate",
+              "price_extra": 5000.0
+            },
+            {
+              "value_id": 54,
+              "value_name": "Thêm Xá Xíu",
+              "price_extra": 10000.0
+            },
+            {
+              "value_id": 55,
+              "value_name": "Thêm Chả",
+              "price_extra": 5000.0
+            },
+            {
+              "value_id": 56,
+              "value_name": "Thêm Jambon",
+              "price_extra": 5000.0
+            },
+            {
+              "value_id": 57,
+              "value_name": "Thêm Gà Xé",
+              "price_extra": 10000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2690,
+      "product_name": "(B3) Mì Trộn Xá Xíu",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 15,
+      "attributes": []
+    },
+    {
+      "product_id": 2669,
+      "product_name": "(B4) Mì Trộn Nấm Nướng Tứ Xuyên",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 15,
+      "attributes": []
+    },
+    {
+      "product_id": 2657,
+      "product_name": "(B5) Mì Bò Ngũ Vị",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 15,
+      "attributes": []
+    },
+    {
+      "product_id": 2552,
+      "product_name": "(B6) Salad Mix",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 11,
+      "attributes": []
+    },
+    {
+      "product_id": 2499,
+      "product_name": "Topping Pate",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2500,
+      "product_name": "Topping Trứng",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2501,
+      "product_name": "Topping Chả Lụa",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2502,
+      "product_name": "Topping Jambon",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2503,
+      "product_name": "Topping Gà Xé",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2504,
+      "product_name": "Topping Xá Xíu",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2486,
+      "product_name": "(B1) Xôi Thập Cẩm",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 15,
+      "attributes": []
+    },
+    {
+      "product_id": 2487,
+      "product_name": "(B2) Xôi Gà Xé",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 15,
+      "attributes": []
+    },
+    {
+      "product_id": 1181,
+      "product_name": "Đồ chua",
+      "short_description": "",
+      "long_description": "",
+      "category_id": null,
+      "attributes": []
+    },
+    {
+      "product_id": 1293,
+      "product_name": "Có đường",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2735,
+      "product_name": "Nước Ép Dưa Hấu Hạt Chia",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 3,
+      "attributes": []
+    }
+  ]
+}
+```

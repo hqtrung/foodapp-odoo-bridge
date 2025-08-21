@@ -758,6 +758,39 @@ async def get_all_category_translations(
         )
 
 
+@router.get("/translations/products/{product_id}/toppings", response_model=Dict)
+async def get_product_topping_translations(
+    product_id: int = Path(..., ge=1, le=999999, description="Product ID"),
+    lang: Optional[str] = Query(None, pattern="^(vi|en|fr|it|es|zh|zh-TW|th|ja)$", description="Language code"),
+    cache_service: HybridCacheService = Depends(get_cache_service)
+):
+    """Get topping translations for a specific product"""
+    try:
+        translation_service = cache_service.get_translation_service()
+        if not translation_service:
+            raise HTTPException(
+                status_code=503,
+                detail="Translation service not available"
+            )
+            
+        toppings = translation_service.get_product_toppings(product_id, lang)
+        
+        return {
+            "product_id": product_id,
+            "language": lang or "all",
+            "toppings": toppings
+        }
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error getting product {product_id} topping translations: {e}", exc_info=True)
+        raise HTTPException(
+            status_code=500,
+            detail="Failed to get product topping translations"
+        )
+
+
 # Helper functions for applying translations
 def _apply_product_translations(products: List[Dict], target_language: str) -> List[Dict]:
     """Apply translations to product list"""

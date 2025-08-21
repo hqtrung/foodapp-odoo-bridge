@@ -1,0 +1,331 @@
+{
+  "source_language": "vi",
+  "categories": [
+    {
+      "category_id": 1,
+      "category_name": "Traditional Bánh Mì",
+      "description": "Traditional Vietnamese sandwiches with fresh ingredients"
+    },
+    {
+      "category_id": 15,
+      "category_name": "Mixed Noodles & Sticky Rice",
+      "description": "Mixed noodle dishes with various toppings"
+    },
+    {
+      "category_id": 3,
+      "category_name": "Drinks",
+      "description": "Refreshing beverages including coffee, tea, and soft drinks"
+    },
+    {
+      "category_id": 11,
+      "category_name": "Salads",
+      "description": "Fresh and healthy salad options"
+    },
+    {
+      "category_id": 8,
+      "category_name": "COMBO",
+      "description": "Value meal combinations with drinks and sides"
+    },
+    {
+      "category_id": 5,
+      "category_name": "Toppings",
+      "description": "Extra toppings and add-ons for your meals"
+    },
+    {
+      "category_id": 7,
+      "category_name": "Items",
+      "description": "Utensils and additional items"
+    }
+  ],
+  "products": [
+    {
+      "product_id": 1186,
+      "product_name": "Plain Bánh Mì",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2715,
+      "product_name": "(C2) CMB Happy Lunchset",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 4,
+          "attribute_name": "Bánh Mì",
+          "display_type": "radio",
+          "attribute_values": [
+            {
+              "value_id": 2,
+              "value_name": "Bánh Mì Thập Cẩm (Combination)",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 7,
+              "value_name": "Bánh Mì Shredded Chicken",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 3,
+              "value_name": "Bánh Mì Char Siu Pork",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 4,
+              "value_name": "Bánh Mì Teriyaki Grilled Pork",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 5,
+              "value_name": "Bánh Mì Veggie",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 71,
+              "value_name": "Bánh Mì Pate and Egg",
+              "price_extra": 0.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 5,
+          "attribute_name": "Softdrinks",
+          "display_type": "radio",
+          "attribute_values": [
+            {
+              "value_id": 8,
+              "value_name": "Coca Cola Zero",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 9,
+              "value_name": "Pepsi",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 10,
+              "value_name": "Pepsi Black",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 11,
+              "value_name": "7-up",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 68,
+              "value_name": "Oolong Tea TeaPlus",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 69,
+              "value_name": "Revive Salted Lemon",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 70,
+              "value_name": "Revive",
+              "price_extra": 0.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 6,
+          "attribute_name": "Comes with Yogurt Salad",
+          "display_type": "check_box",
+          "attribute_values": [
+            {
+              "value_id": 30,
+              "value_name": "Salad",
+              "price_extra": 15000.0
+            },
+            {
+              "value_id": 31,
+              "value_name": "Yogurt",
+              "price_extra": 15000.0
+            },
+            {
+              "value_id": 32,
+              "value_name": "None",
+              "price_extra": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2718,
+      "product_name": "(C1) CMB Express Lunchset",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 6,
+          "attribute_name": "Comes with Yogurt Salad",
+          "display_type": "check_box",
+          "attribute_values": [
+            {
+              "value_id": 28,
+              "value_name": "Salad",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 29,
+              "value_name": "Yogurt",
+              "price_extra": 0.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 7,
+          "attribute_name": "Lunch Item",
+          "display_type": "radio",
+          "attribute_values": [
+            {
+              "value_id": 23,
+              "value_name": "Char Siu Noodle Salad",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 24,
+              "value_name": "Beef Stew",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 25,
+              "value_name": "Da Lat Meatballs",
+              "price_extra": 0.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 8,
+          "attribute_name": "Coffee",
+          "display_type": "radio",
+          "attribute_values": [
+            {
+              "value_id": 26,
+              "value_name": "Iced Coffee with Milk",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 27,
+              "value_name": "Iced Coffee",
+              "price_extra": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2717,
+      "product_name": "(C3) CMB Energy Boost",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 4,
+          "attribute_name": "Bánh Mì",
+          "display_type": "radio",
+          "attribute_values": [
+            {
+              "value_id": 15,
+              "value_name": "Bánh Mì Combination",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 16,
+              "value_name": "Bánh Mì Shredded Chicken",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 17,
+              "value_name": "Bánh Mì Char Siu Pork",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 18,
+              "value_name": "Bánh Mì Teriyaki Grilled Pork",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 19,
+              "value_name": "Bánh Mì Veggie",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 20,
+              "value_name": "Bánh Mì Pate and Egg",
+              "price_extra": 0.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 8,
+          "attribute_name": "Coffee",
+          "display_type": "radio",
+          "attribute_values": [
+            {
+              "value_id": 21,
+              "value_name": "Iced Coffee with Milk",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 22,
+              "value_name": "Iced Black Coffee",
+              "price_extra": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2716,
+      "product_name": "(C4) CMB Express Breakfast",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 8,
+          "attribute_name": "Coffee",
+          "display_type": "radio",
+          "attribute_values": [
+            {
+              "value_id": 13,
+              "value_name": "Iced Coffee with Milk",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 14,
+              "value_name": "Iced Coffee",
+              "price_extra": 0.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 9,
+          "attribute_name": "Bánh Mì Stick",
+          "display_type": "radio",
+          "attribute_values": [
+            {
+              "value_id": 12,
+              "value_name": "Bánh Mì Stick",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 72,
+              "value_name": "Vegetarian Mushroom Bánh Mì Stick",
+              "price_extra": 0.0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

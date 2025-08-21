@@ -1,0 +1,1187 @@
+{
+  "source_language" : "vi",
+  "categories" : [
+    {
+      "category_id" : 1,
+      "category_name" : "Traditional Banh Mi",
+      "description" : "Traditional Vietnamese sandwiches with fresh ingredients"
+    },
+    {
+      "category_id" : 15,
+      "category_name" : "Mixed Noodles & Sticky Rice",
+      "description" : "Mixed noodle dishes and sticky rice with various toppings"
+    },
+    {
+      "category_id" : 3,
+      "category_name" : "Beverages",
+      "description" : "Refreshing beverages including coffee, tea, and soft drinks"
+    },
+    {
+      "category_id" : 11,
+      "category_name" : "Salad",
+      "description" : "Fresh and healthy salad options"
+    },
+    {
+      "category_id" : 8,
+      "category_name" : "Combo",
+      "description" : "Value meal combinations with drinks and sides"
+    },
+    {
+      "category_id" : 5,
+      "category_name" : "Toppings",
+      "description" : "Extra toppings and add-ons for your meals"
+    },
+    {
+      "category_id" : 7,
+      "category_name" : "Other Items",
+      "description" : "Utensils and additional items"
+    }
+  ],
+  "products" : [
+    {
+      "product_id" : 1186,
+      "product_name" : "Plain Baguette",
+      "short_description" : "Traditional Vietnamese Baguette",
+      "long_description" : "Fresh and delicious Vietnamese baguette, with a crispy golden crust and a soft and fluffy interior. Perfect as a side dish or as a base to create your own custom baguette combo.",
+      "category_id" : 5,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2715,
+      "product_name" : "(C2) CMB Happy Lunchset",
+      "short_description" : "Combo bánh mì + nước + salad/sữa chua tùy chọn",
+      "long_description" : "Combo trưa hoàn hảo với bánh mì đặc trưng, nước giải khát và tùy chọn salad tươi mát hoặc sữa chua béo ngậy. Giá trị tuyệt vời cho bữa ăn trọn vẹn!",
+      "category_id" : 8,
+      "attributes" : [
+        {
+          "attribute_id" : 4,
+          "attribute_name" : "Bánh Mì",
+          "display_type" : "radio",
+          "create_variant" : "no_variant",
+          "values" : [
+            {
+              "id" : 2,
+              "name" : "Bánh Mì Thập Cẩm",
+              "price_extra" : 0,
+              "base_value_id" : 2,
+              "base_value_name" : "Bánh Mì Thập Cẩm",
+              "product_packaging_id" : 4451,
+              "linked_product_id" : 2478,
+              "linked_product_name" : "(A4) Bánh Mì Thập Cẩm",
+              "linked_product_price" : 35000
+            },
+            {
+              "id" : 7,
+              "name" : "Bánh Mì Gà Xé",
+              "price_extra" : 0,
+              "base_value_id" : 9,
+              "base_value_name" : "Bánh Mì Gà Xé",
+              "product_packaging_id" : 4457,
+              "linked_product_id" : 2485,
+              "linked_product_name" : "(A9) Bánh Mì Gà Xé Bơ Tỏi",
+              "linked_product_price" : 35000
+            },
+            {
+              "id" : 3,
+              "name" : "Bánh Mì Xá Xíu",
+              "price_extra" : 0,
+              "base_value_id" : 10,
+              "base_value_name" : "Bánh Mì Xá Xíu",
+              "product_packaging_id" : 4456,
+              "linked_product_id" : 2484,
+              "linked_product_name" : "(A6) Bánh Mì Xá Xíu",
+              "linked_product_price" : 35000
+            },
+            {
+              "id" : 4,
+              "name" : "Bánh Mì Heo Nướng Teriyaki",
+              "price_extra" : 0,
+              "base_value_id" : 11,
+              "base_value_name" : "Bánh Mì Heo Nướng Teriyaki",
+              "product_packaging_id" : 4452,
+              "linked_product_id" : 2479,
+              "linked_product_name" : "(A7) Bánh Mì Heo Nướng Teriyaki",
+              "linked_product_price" : 35000
+            },
+            {
+              "id" : 5,
+              "name" : "Bánh Mì Veggy",
+              "price_extra" : 0,
+              "base_value_id" : 12,
+              "base_value_name" : "Bánh Mì Veggy",
+              "product_packaging_id" : 4453,
+              "linked_product_id" : 2480,
+              "linked_product_name" : "(A8) Bánh Mì Veggy Nấm Tứ Xuyên",
+              "linked_product_price" : 35000
+            },
+            {
+              "id" : 71,
+              "name" : "Bánh Mì Pate Trứng",
+              "price_extra" : 0,
+              "base_value_id" : 13,
+              "base_value_name" : "Bánh Mì Pate Trứng",
+              "product_packaging_id" : 4450,
+              "linked_product_id" : 2477,
+              "linked_product_name" : "(A2) Bánh Mì Pate Trứng",
+              "linked_product_price" : 29000
+            }
+          ]
+        },
+        {
+          "attribute_id" : 5,
+          "attribute_name" : "Softdrinks",
+          "display_type" : "radio",
+          "create_variant" : "no_variant",
+          "values" : [
+            {
+              "id" : 8,
+              "name" : "Coca Cola Zero",
+              "price_extra" : 0,
+              "base_value_id" : 14,
+              "base_value_name" : "Coca Cola Zero",
+              "product_packaging_id" : 4537,
+              "linked_product_id" : 2550,
+              "linked_product_name" : "Coca Cola Zero",
+              "linked_product_price" : 20000
+            },
+            {
+              "id" : 9,
+              "name" : "Pepsi",
+              "price_extra" : 0,
+              "base_value_id" : 15,
+              "base_value_name" : "Pepsi",
+              "product_packaging_id" : 4662,
+              "linked_product_id" : 2658,
+              "linked_product_name" : "Pepsi 320ml ( Lon)",
+              "linked_product_price" : 20000
+            },
+            {
+              "id" : 10,
+              "name" : "Pepsi Black",
+              "price_extra" : 0,
+              "base_value_id" : 16,
+              "base_value_name" : "Pepsi Black",
+              "product_packaging_id" : 4694,
+              "linked_product_id" : 2677,
+              "linked_product_name" : "Pepsi Black 320ml ( Lon)",
+              "linked_product_price" : 20000
+            },
+            {
+              "id" : 11,
+              "name" : "7-up",
+              "price_extra" : 0,
+              "base_value_id" : 17,
+              "base_value_name" : "7-up",
+              "product_packaging_id" : 4665,
+              "linked_product_id" : 2659,
+              "linked_product_name" : "7Up 320ml ( Lon)",
+              "linked_product_price" : 20000
+            },
+            {
+              "id" : 68,
+              "name" : "Trà Ô Long TeaPlus",
+              "price_extra" : 0,
+              "base_value_id" : 18,
+              "base_value_name" : "Trà Ô Long TeaPlus",
+              "product_packaging_id" : 4531,
+              "linked_product_id" : 2544,
+              "linked_product_name" : "Trà Ô long Tea Plus ( chai 450ml)",
+              "linked_product_price" : 20000
+            },
+            {
+              "id" : 69,
+              "name" : "Revive chanh muối",
+              "price_extra" : 0,
+              "base_value_id" : 34,
+              "base_value_name" : "Revive chanh muối",
+              "product_packaging_id" : 4777,
+              "linked_product_id" : 2725,
+              "linked_product_name" : "Revive Chanh muối",
+              "linked_product_price" : 20000
+            },
+            {
+              "id" : 70,
+              "name" : "Revive",
+              "price_extra" : 0,
+              "base_value_id" : 35,
+              "base_value_name" : "Revive",
+              "product_packaging_id" : 4780,
+              "linked_product_id" : 2726,
+              "linked_product_name" : "Revive Không Calo",
+              "linked_product_price" : 20000
+            }
+          ]
+        },
+        {
+          "attribute_id" : 6,
+          "attribute_name" : "Kèm Salad Sữa Chua",
+          "display_type" : "check_box",
+          "create_variant" : "no_variant",
+          "values" : [
+            {
+              "id" : 30,
+              "name" : "Salad",
+              "price_extra" : 15000,
+              "base_value_id" : 19,
+              "base_value_name" : "Salad",
+              "product_packaging_id" : 4540,
+              "linked_product_id" : 2552,
+              "linked_product_name" : "(B6) Salad Mix",
+              "linked_product_price" : 25000
+            },
+            {
+              "id" : 31,
+              "name" : "Sữa chua",
+              "price_extra" : 15000,
+              "base_value_id" : 20,
+              "base_value_name" : "Sữa chua",
+              "product_packaging_id" : 4534,
+              "linked_product_id" : 2547,
+              "linked_product_name" : "(D5) Sữa chua",
+              "linked_product_price" : 20000
+            },
+            {
+              "id" : 32,
+              "name" : "Không",
+              "price_extra" : 0,
+              "base_value_id" : 27,
+              "base_value_name" : "Không"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id" : 2718,
+      "product_name" : "(C1) CMB Express Lunchset",
+      "short_description" : "Trưa nhanh: mì/cơm + cà phê + salad/sữa chua",
+      "long_description" : "Combo trưa express với mì/cơm Việt Nam đậm đà, cà phê thơm lừng và salad tươi hoặc sữa chua. Nhanh gọn, ngon miệng và đầy đủ dinh dưỡng!",
+      "category_id" : 8,
+      "attributes" : [
+        {
+          "attribute_id" : 6,
+          "attribute_name" : "Kèm Salad Sữa Chua",
+          "display_type" : "check_box",
+          "create_variant" : "no_variant",
+          "values" : [
+            {
+              "id" : 28,
+              "name" : "Salad",
+              "price_extra" : 0,
+              "base_value_id" : 19,
+              "base_value_name" : "Salad",
+              "product_packaging_id" : 4540,
+              "linked_product_id" : 2552,
+              "linked_product_name" : "(B6) Salad Mix",
+              "linked_product_price" : 25000
+            },
+            {
+              "id" : 29,
+              "name" : "Sữa chua",
+              "price_extra" : 0,
+              "base_value_id" : 20,
+              "base_value_name" : "Sữa chua",
+              "product_packaging_id" : 4534,
+              "linked_product_id" : 2547,
+              "linked_product_name" : "(D5) Sữa chua",
+              "linked_product_price" : 20000
+            }
+          ]
+        },
+        {
+          "attribute_id" : 7,
+          "attribute_name" : "Món Trưa",
+          "display_type" : "radio",
+          "create_variant" : "no_variant",
+          "values" : [
+            {
+              "id" : 23,
+              "name" : "Mì Trộn Xá Xíu",
+              "price_extra" : 0,
+              "base_value_id" : 21,
+              "base_value_name" : "Mì Trộn Xá Xíu",
+              "product_packaging_id" : 4713,
+              "linked_product_id" : 2690,
+              "linked_product_name" : "(B3) Mì Trộn Xá Xíu",
+              "linked_product_price" : 45000
+            },
+            {
+              "id" : 24,
+              "name" : "Bò Kho",
+              "price_extra" : 0,
+              "base_value_id" : 22,
+              "base_value_name" : "Bò Kho",
+              "product_packaging_id" : 4455,
+              "linked_product_id" : 2482,
+              "linked_product_name" : "(A11) Bánh Mì Bò Kho",
+              "linked_product_price" : 49000
+            },
+            {
+              "id" : 25,
+              "name" : "Xíu Mại Đà Lạt",
+              "price_extra" : 0,
+              "base_value_id" : 23,
+              "base_value_name" : "Xíu Mại Đà Lạt",
+              "product_packaging_id" : 4401,
+              "linked_product_id" : 2450,
+              "linked_product_name" : "Bánh Mì Xíu Mại Đà Lạt",
+              "linked_product_price" : 49000
+            }
+          ]
+        },
+        {
+          "attribute_id" : 8,
+          "attribute_name" : "Cà Phê",
+          "display_type" : "radio",
+          "create_variant" : "no_variant",
+          "values" : [
+            {
+              "id" : 26,
+              "name" : "Cà Phê Sữa Đá",
+              "price_extra" : 0,
+              "base_value_id" : 24,
+              "base_value_name" : "Cà Phê Sữa Đá",
+              "product_packaging_id" : 4461,
+              "linked_product_id" : 2489,
+              "linked_product_name" : "(D7) Cà Phê Sữa Đá",
+              "linked_product_price" : 29000
+            },
+            {
+              "id" : 27,
+              "name" : "Cà Phê Đá",
+              "price_extra" : 0,
+              "base_value_id" : 25,
+              "base_value_name" : "Cà Phê Đá",
+              "product_packaging_id" : 4460,
+              "linked_product_id" : 2488,
+              "linked_product_name" : "(D6) Cà Phê Đen Đá",
+              "linked_product_price" : 25000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id" : 2717,
+      "product_name" : "(C3) CMB Energetic Morning",
+      "short_description" : "Energetic morning: baguette + Vietnamese coffee",
+      "long_description" : "Start your new day right with an energetic morning combo! Choose your favorite baguette with rich Vietnamese coffee - the perfect energy source for a busy day.",
+      "category_id" : 8,
+      "attributes" : [
+        {
+          "attribute_id" : 4,
+          "attribute_name" : "Baguette",
+          "display_type" : "radio",
+          "create_variant" : "no_variant",
+          "values" : [
+            {
+              "id" : 15,
+              "name" : "Mixed Baguette",
+              "price_extra" : 0,
+              "base_value_id" : 2,
+              "base_value_name" : "Mixed Baguette",
+              "product_packaging_id" : 4451,
+              "linked_product_id" : 2478,
+              "linked_product_name" : "(A4) Mixed Baguette",
+              "linked_product_price" : 35000
+            },
+            {
+              "id" : 16,
+              "name" : "Shredded Chicken Baguette",
+              "price_extra" : 0,
+              "base_value_id" : 9,
+              "base_value_name" : "Shredded Chicken Baguette",
+              "product_packaging_id" : 4457,
+              "linked_product_id" : 2485,
+              "linked_product_name" : "(A9) Shredded Chicken with Butter Garlic Baguette",
+              "linked_product_price" : 35000
+            },
+            {
+              "id" : 17,
+              "name" : "Cha Siu BBQ Pork Baguette",
+              "price_extra" : 0,
+              "base_value_id" : 10,
+              "base_value_name" : "Cha Siu BBQ Pork Baguette",
+              "product_packaging_id" : 4456,
+              "linked_product_id" : 2484,
+              "linked_product_name" : "(A6) Cha Siu BBQ Pork Baguette",
+              "linked_product_price" : 35000
+            },
+            {
+              "id" : 18,
+              "name" : "Teriyaki Grilled Pork Baguette",
+              "price_extra" : 0,
+              "base_value_id" : 11,
+              "base_value_name" : "Teriyaki Grilled Pork Baguette",
+              "product_packaging_id" : 4452,
+              "linked_product_id" : 2479,
+              "linked_product_name" : "(A7) Teriyaki Grilled Pork Baguette",
+              "linked_product_price" : 35000
+            },
+            {
+              "id" : 19,
+              "name" : "Veggy Baguette",
+              "price_extra" : 0,
+              "base_value_id" : 12,
+              "base_value_name" : "Veggy Baguette",
+              "product_packaging_id" : 4453,
+              "linked_product_id" : 2480,
+              "linked_product_name" : "(A8) Veggy Szechuan Mushroom Baguette",
+              "linked_product_price" : 35000
+            },
+            {
+              "id" : 20,
+              "name" : "Pate Egg Baguette",
+              "price_extra" : 0,
+              "base_value_id" : 13,
+              "base_value_name" : "Pate Egg Baguette",
+              "product_packaging_id" : 4450,
+              "linked_product_id" : 2477,
+              "linked_product_name" : "(A2) Pate Egg Baguette",
+              "linked_product_price" : 29000
+            }
+          ]
+        },
+        {
+          "attribute_id" : 8,
+          "attribute_name" : "Coffee",
+          "display_type" : "radio",
+          "create_variant" : "no_variant",
+          "values" : [
+            {
+              "id" : 21,
+              "name" : "Iced Milk Coffee",
+              "price_extra" : 0,
+              "base_value_id" : 24,
+              "base_value_name" : "Iced Milk Coffee",
+              "product_packaging_id" : 4461,
+              "linked_product_id" : 2489,
+              "linked_product_name" : "(D7) Iced Milk Coffee",
+              "linked_product_price" : 29000
+            },
+            {
+              "id" : 22,
+              "name" : "Iced Coffee",
+              "price_extra" : 0,
+              "base_value_id" : 25,
+              "base_value_name" : "Iced Coffee",
+              "product_packaging_id" : 4460,
+              "linked_product_id" : 2488,
+              "linked_product_name" : "(D6) Iced Black Coffee",
+              "linked_product_price" : 25000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id" : 2716,
+      "product_name" : "(C4) CMB Express Morning",
+      "short_description" : "Quick morning: baguette stick + coffee",
+      "long_description" : "Convenient on-the-go breakfast! Crispy baguette stick with delicious filling accompanied by rich Vietnamese coffee. Quick, delicious, and full of energy for a busy morning.",
+      "category_id" : 8,
+      "attributes" : [
+        {
+          "attribute_id" : 8,
+          "attribute_name" : "Coffee",
+          "display_type" : "radio",
+          "create_variant" : "no_variant",
+          "values" : [
+            {
+              "id" : 13,
+              "name" : "Iced Milk Coffee",
+              "price_extra" : 0,
+              "base_value_id" : 24,
+              "base_value_name" : "Iced Milk Coffee",
+              "product_packaging_id" : 4461,
+              "linked_product_id" : 2489,
+              "linked_product_name" : "(D7) Iced Milk Coffee",
+              "linked_product_price" : 29000
+            },
+            {
+              "id" : 14,
+              "name" : "Iced Coffee",
+              "price_extra" : 0,
+              "base_value_id" : 25,
+              "base_value_name" : "Iced Coffee",
+              "product_packaging_id" : 4460,
+              "linked_product_id" : 2488,
+              "linked_product_name" : "(D6) Iced Black Coffee",
+              "linked_product_price" : 25000
+            }
+          ]
+        },
+        {
+          "attribute_id" : 9,
+          "attribute_name" : "Baguette Stick",
+          "display_type" : "radio",
+          "create_variant" : "no_variant",
+          "values" : [
+            {
+              "id" : 12,
+              "name" : "Baguette Stick",
+              "price_extra" : 0,
+              "base_value_id" : 26,
+              "base_value_name" : "Baguette Stick",
+              "product_packaging_id" : 4454,
+              "linked_product_id" : 2481,
+              "linked_product_name" : "(A5) Baguette Stick Pate Shredded Pork Floss",
+              "linked_product_price" : 25000
+            },
+            {
+              "id" : 72,
+              "name" : "Baguette Stick Vegetarian Mushroom",
+              "price_extra" : 0,
+              "base_value_id" : 36,
+              "base_value_name" : "Baguette Stick Vegetarian Mushroom",
+              "product_packaging_id" : 4783,
+              "linked_product_id" : 2728,
+              "linked_product_name" : "(A5) Baguette Stick Vegetarian Mushroom",
+              "linked_product_price" : 25000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id" : 2736,
+      "product_name" : "Iced Shaken Yogurt",
+      "short_description" : "Iced Shaken Yogurt - creamy and refreshing",
+      "long_description" : "Refreshing Vietnamese-style Iced Shaken Yogurt with a smooth, creamy texture. Light, tangy, and moderately sweet - an ideal refreshing drink any time of day.",
+      "category_id" : 3,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2737,
+      "product_name" : "Iced Blended Yogurt Coffee",
+      "short_description" : "Iced blended yogurt with coffee flavor",
+      "long_description" : "A unique drink combining creamy yogurt with rich Vietnamese coffee and ice. Smooth, refreshing, and energizing - the perfect blend of tartness and caffeine.",
+      "category_id" : 3,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2546,
+      "product_name" : "Saigon Special Beer (330ml can)",
+      "short_description" : "Saigon Special Beer 330ml can",
+      "long_description" : "Premium Saigon Special Beer in a 330ml can. Cool, light, and fresh with a clean finish. A perfect partner for spicy Vietnamese dishes and hot weather.",
+      "category_id" : 3,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2488,
+      "product_name" : "(D6) Iced Black Coffee",
+      "short_description" : "Vietnamese Iced Black Coffee",
+      "long_description" : "Authentic Vietnamese iced black coffee. Rich and aromatic, made using traditional phin brewing method. Pure coffee flavor without milk - perfect for coffee connoisseurs.",
+      "category_id" : 3,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2489,
+      "product_name" : "(D7) Vietnamese Iced Coffee",
+      "short_description" : "Vietnamese iced coffee with condensed milk",
+      "long_description" : "Classic Vietnamese iced coffee with sweet condensed milk. Rich, smooth, and perfectly balanced between the bitterness of coffee and the sweet richness. Vietnam's most beloved drink!",
+      "category_id" : 3,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2490,
+      "product_name" : "(D9) Expresso",
+      "short_description" : "Espresso Ý đậm đà",
+      "long_description" : "Shot espresso đậm đặc với hương vị mạnh mẽ. Vị đậm đà với lớp crema dày. Hoàn hảo cho những ai yêu thích cà phê mạnh hoặc cần nạp năng lượng nhanh bất kỳ lúc nào.",
+      "category_id" : 3,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2491,
+      "product_name" : "(D8) Americano",
+      "short_description" : "Espresso pha loãng với nước nóng",
+      "long_description" : "Americano cổ điển làm từ espresso đậm đà và nước nóng. Hương vị cà phê sạch, mịn màng với độ đậm vừa phải nhưng sâu lắng hơn cà phê phin thông thường.",
+      "category_id" : 3,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2492,
+      "product_name" : "(D10) Iced Latte",
+      "short_description" : "Iced Latte with fresh milk",
+      "long_description" : "Creamy Iced Latte made from espresso and fresh milk on ice. Smooth, creamy, and perfectly balanced. A modern take on traditional Vietnamese coffee culture.",
+      "category_id" : 3,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2493,
+      "product_name" : "(D1) Golden Cantaloupe Tea",
+      "short_description" : "Cantaloupe Tea - sweet and refreshing",
+      "long_description" : "Golden Cantaloupe Tea, fresh and refreshing with natural fruit flavor. Mildly sweet, aromatic and wonderfully refreshing. A light and healthy alternative to sugary sodas.",
+      "category_id" : 3,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2494,
+      "product_name" : "(D2) Winter Melon Chia Seeds",
+      "short_description" : "Winter Melon Drink with chia seeds",
+      "long_description" : "Healthy winter melon drink supplemented with nutritious chia seeds. Mildly sweet, refreshing, and rich in fiber. A perfect wellness drink for health-conscious customers.",
+      "category_id" : 3,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2675,
+      "product_name" : "(D3) Fresh orange juice",
+      "short_description" : "Fresh orange juice - pure and natural",
+      "long_description" : "100% freshly squeezed orange juice, full of vitamin C and natural sweetness. No additives - just pure and refreshing fresh orange flavor in every sip.",
+      "category_id" : 3,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2547,
+      "product_name" : "(D5) Yogurt",
+      "short_description" : "Traditional Vietnamese yogurt",
+      "long_description" : "Authentic Vietnamese style yogurt with a smooth, creamy texture and a refreshing tangy taste. Made fresh daily using traditional methods. Good for health, rich in probiotics.",
+      "category_id" : 3,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2725,
+      "product_name" : "Revive Salted Lime",
+      "short_description" : "Sports drink with salted lime flavor",
+      "long_description" : "Revive isotonic drink with refreshing salted lime flavor. Perfect for rehydration with electrolytes and minerals. Ideal after exercise or in hot weather.",
+      "category_id" : 3,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2498,
+      "product_name" : "Aquafina 500ml",
+      "short_description" : "Nước tinh khiết đóng chai 500ml",
+      "long_description" : "Nước tinh khiết Aquafina cao cấp trong chai 500ml tiện lợi. Sạch, tinh khiết và tươi mát. Hoàn hảo để giữ nước cho cơ thể suốt cả ngày hoặc kèm theo bữa ăn.",
+      "category_id" : 3,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2544,
+      "product_name" : "Oolong Tea Plus ( 450ml bottle)",
+      "short_description" : "Oolong Tea 450ml bottle",
+      "long_description" : "Premium Oolong Tea in a 450ml bottle with authentic Chinese tea flavor. Gentle, refreshing, and delicious with natural antioxidants. Traditional flavor meets modern convenience.",
+      "category_id" : 3,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2545,
+      "product_name" : "Redbull Energy Drink (250ml can)",
+      "short_description" : "Red Bull energy 250ml",
+      "long_description" : "Original Red Bull energy drink in a 250ml can. Boosts energy and alertness with caffeine and taurine. The perfect drink for busy days and late nights.",
+      "category_id" : 3,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2550,
+      "product_name" : "Coca Cola Zero",
+      "short_description" : "Coca Cola không calo",
+      "long_description" : "Hương vị Coca Cola cổ điển với không calo và không đường. Vị cola tươi mát mà không có cảm giác tội lỗi. Hoàn hảo cho những ai theo dõi lượng calo nhưng vẫn thèm vị Coke.",
+      "category_id" : 3,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2658,
+      "product_name" : "Pepsi 320ml ( Can)",
+      "short_description" : "Pepsi cola can 320ml",
+      "long_description" : "Classic Pepsi cola in a 320ml can with a rich, refreshing taste. Sweet, carbonated, and full of energy. The perfect partner for spicy Vietnamese dishes and everyday meals.",
+      "category_id" : 3,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2659,
+      "product_name" : "7Up 320ml (Can)",
+      "short_description" : "7Up Lemon-Lime Can 320ml",
+      "long_description" : "7Up lemon-lime soft drink in a 320ml can. Clear, refreshing and caffeine-free with natural lemon-lime flavor. Light and carbonated - perfect palate cleanser.",
+      "category_id" : 3,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2677,
+      "product_name" : "Pepsi Black 320ml (Can)",
+      "short_description" : "Pepsi Black sugar-free 320ml",
+      "long_description" : "Pepsi Black in a 320ml can - rich cola flavor with no sugar. Bold taste with a sophisticated style. For those who want full flavor without calories.",
+      "category_id" : 3,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2726,
+      "product_name" : "Revive Zero Calorie",
+      "short_description" : "Zero Calorie Sport Drink",
+      "long_description" : "Revive isotonic drink with zero calories but full of rehydrating electrolytes. Perfect for hydration without added sugar. Ideal for health-conscious active lifestyles.",
+      "category_id" : 3,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2730,
+      "product_name" : "Banana",
+      "short_description" : "Fresh delicious banana",
+      "long_description" : "Fresh ripe bananas rich in potassium and natural sugars. A healthy snack or a great natural energy source. Sweet, delicious, nutritious, and always satisfying.",
+      "category_id" : 11,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2477,
+      "product_name" : "(A2) Baguette Pate Egg",
+      "short_description" : "Pate and egg baguette",
+      "long_description" : "Classic Vietnamese baguette with rich pate and fresh egg on a crispy baguette. Served with fresh cilantro and lettuce and traditional seasonings. The best rustic dish!",
+      "category_id" : 1,
+      "attributes" : [
+        {
+          "attribute_id" : 10,
+          "attribute_name" : "Baguette Topping",
+          "display_type" : "check_box",
+          "create_variant" : "no_variant",
+          "values" : [
+            {
+              "id" : 48,
+              "name" : "Add Pate",
+              "price_extra" : 5000,
+              "base_value_id" : 28,
+              "base_value_name" : "Add Pate",
+              "product_packaging_id" : 4471,
+              "linked_product_id" : 2499,
+              "linked_product_name" : "Topping Pate",
+              "linked_product_price" : 10000
+            },
+            {
+              "id" : 49,
+              "name" : "Add Cha Siu BBQ Pork",
+              "price_extra" : 10000,
+              "base_value_id" : 29,
+              "base_value_name" : "Add Cha Siu BBQ Pork",
+              "product_packaging_id" : 4476,
+              "linked_product_id" : 2504,
+              "linked_product_name" : "Topping Cha Siu BBQ Pork",
+              "linked_product_price" : 10000
+            },
+            {
+              "id" : 50,
+              "name" : "Add Pork Roll",
+              "price_extra" : 5000,
+              "base_value_id" : 30,
+              "base_value_name" : "Add Pork Roll",
+              "product_packaging_id" : 4473,
+              "linked_product_id" : 2501,
+              "linked_product_name" : "Topping Pork Roll",
+              "linked_product_price" : 5000
+            },
+            {
+              "id" : 51,
+              "name" : "Add Ham",
+              "price_extra" : 5000,
+              "base_value_id" : 31,
+              "base_value_name" : "Add Ham",
+              "product_packaging_id" : 4474,
+              "linked_product_id" : 2502,
+              "linked_product_name" : "Topping Ham",
+              "linked_product_price" : 5000
+            },
+            {
+              "id" : 52,
+              "name" : "Add Shredded Chicken",
+              "price_extra" : 10000,
+              "base_value_id" : 32,
+              "base_value_name" : "Add Shredded Chicken",
+              "product_packaging_id" : 4475,
+              "linked_product_id" : 2503,
+              "linked_product_name" : "Topping Shredded Chicken",
+              "linked_product_price" : 10000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id" : 2478,
+      "product_name" : "(A4) Mixed Baguette",
+      "short_description" : "Mixed baguette with many kinds of meat",
+      "long_description" : "Ultimate Vietnamese Baguette with mixed Pate, Vietnamese Pork Roll, Ham, and Cha Siu BBQ Pork. Full of fresh cilantro and lettuce. Most loved traditional choice!",
+      "category_id" : 1,
+      "attributes" : [
+        {
+          "attribute_id" : 10,
+          "attribute_name" : "Baguette Topping",
+          "display_type" : "check_box",
+          "create_variant" : "no_variant",
+          "values" : [
+            {
+              "id" : 58,
+              "name" : "Add Pate",
+              "price_extra" : 5000,
+              "base_value_id" : 28,
+              "base_value_name" : "Add Pate",
+              "product_packaging_id" : 4471,
+              "linked_product_id" : 2499,
+              "linked_product_name" : "Pate Topping",
+              "linked_product_price" : 10000
+            },
+            {
+              "id" : 59,
+              "name" : "Add Cha Siu BBQ Pork",
+              "price_extra" : 10000,
+              "base_value_id" : 29,
+              "base_value_name" : "Add Cha Siu BBQ Pork",
+              "product_packaging_id" : 4476,
+              "linked_product_id" : 2504,
+              "linked_product_name" : "Cha Siu BBQ Pork Topping",
+              "linked_product_price" : 10000
+            },
+            {
+              "id" : 60,
+              "name" : "Add Vietnamese Pork Roll",
+              "price_extra" : 5000,
+              "base_value_id" : 30,
+              "base_value_name" : "Add Vietnamese Pork Roll",
+              "product_packaging_id" : 4473,
+              "linked_product_id" : 2501,
+              "linked_product_name" : "Vietnamese Pork Roll Topping",
+              "linked_product_price" : 5000
+            },
+            {
+              "id" : 61,
+              "name" : "Add Ham",
+              "price_extra" : 5000,
+              "base_value_id" : 31,
+              "base_value_name" : "Add Ham",
+              "product_packaging_id" : 4474,
+              "linked_product_id" : 2502,
+              "linked_product_name" : "Ham Topping",
+              "linked_product_price" : 5000
+            },
+            {
+              "id" : 62,
+              "name" : "Add Shredded Chicken",
+              "price_extra" : 10000,
+              "base_value_id" : 32,
+              "base_value_name" : "Add Shredded Chicken",
+              "product_packaging_id" : 4475,
+              "linked_product_id" : 2503,
+              "linked_product_name" : "Shredded Chicken Topping",
+              "linked_product_price" : 10000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id" : 2479,
+      "product_name" : "(A7) Teriyaki Grilled Pork Baguette",
+      "short_description" : "Teriyaki grilled pork baguette",
+      "long_description" : "Baguette fusion with rich pate and tender and delicious teriyaki grilled pork, fresh cilantro and lettuce along with traditional Vietnamese spices. Sweet, rich, and incredibly delicious!",
+      "category_id" : 1,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2480,
+      "product_name" : "(A8) Veggie Sichuan Mushroom Baguette",
+      "short_description" : "Vegetarian mushroom baguette",
+      "long_description" : "A healthy vegetarian choice with savory grilled mushrooms, fresh cilantro and lettuce. Flavorful plant-based protein. Perfect for vegetarian lovers!",
+      "category_id" : 1,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2481,
+      "product_name" : "(A5) Pate and Pork Floss Baguette Stick",
+      "short_description" : "Baguette stick with pate & pork floss",
+      "long_description" : "Crispy baguette stick with rich pate and soft, smooth pork floss filling. A perfect handheld choice with authentic Vietnamese flavor in a convenient size.",
+      "category_id" : 1,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2728,
+      "product_name" : "(A5) Vegetarian Mushroom Stick Baguette",
+      "short_description" : "Vegetarian mushroom stick baguette",
+      "long_description" : "Vegetarian stick baguette with seasoned mushrooms and fresh cilantro. Convenient handheld size with full flavor. Perfect plant-based choice for a quick bite.",
+      "category_id" : 1,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2482,
+      "product_name" : "(A11) Baguette Beef Stew",
+      "short_description" : "Vietnamese beef stew baguette",
+      "long_description" : "Flavorful baguette with tender and delicious Vietnamese beef stew filling, fresh cilantro and lettuce. Rich, warm flavor perfect for chilly weather or when craving a hearty meal.",
+      "category_id" : 1,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2483,
+      "product_name" : "(A10) Baguette Pork Meatball",
+      "short_description" : "Vietnamese pork meatball baguette",
+      "long_description" : "Delicious baguette with tender Vietnamese pork meatballs in a rich sauce, fresh cilantro, and lettuce. Juicy, full of flavor, and a comforting meal experience.",
+      "category_id" : 1,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2484,
+      "product_name" : "(A6) Baguette Cha Siu BBQ Pork",
+      "short_description" : "Cha Siu BBQ Pork Baguette",
+      "long_description" : "Classic Baguette with sweet and savory Chinese style Cha Siu BBQ Pork, fresh vegetables, and traditional seasonings. Smoky aroma perfectly balances sweet and savory.",
+      "category_id" : 1,
+      "attributes" : [
+        {
+          "attribute_id" : 10,
+          "attribute_name" : "Baguette Toppings",
+          "display_type" : "check_box",
+          "create_variant" : "no_variant",
+          "values" : [
+            {
+              "id" : 63,
+              "name" : "Add Pate",
+              "price_extra" : 5000,
+              "base_value_id" : 28,
+              "base_value_name" : "Add Pate",
+              "product_packaging_id" : 4471,
+              "linked_product_id" : 2499,
+              "linked_product_name" : "Pate Topping",
+              "linked_product_price" : 10000
+            },
+            {
+              "id" : 64,
+              "name" : "Add Cha Siu BBQ Pork",
+              "price_extra" : 10000,
+              "base_value_id" : 29,
+              "base_value_name" : "Add Cha Siu BBQ Pork",
+              "product_packaging_id" : 4476,
+              "linked_product_id" : 2504,
+              "linked_product_name" : "Cha Siu BBQ Pork Topping",
+              "linked_product_price" : 10000
+            },
+            {
+              "id" : 65,
+              "name" : "Add Pork Roll",
+              "price_extra" : 5000,
+              "base_value_id" : 30,
+              "base_value_name" : "Add Pork Roll",
+              "product_packaging_id" : 4473,
+              "linked_product_id" : 2501,
+              "linked_product_name" : "Pork Roll Topping",
+              "linked_product_price" : 5000
+            },
+            {
+              "id" : 66,
+              "name" : "Add Ham",
+              "price_extra" : 5000,
+              "base_value_id" : 31,
+              "base_value_name" : "Add Ham",
+              "product_packaging_id" : 4474,
+              "linked_product_id" : 2502,
+              "linked_product_name" : "Ham Topping",
+              "linked_product_price" : 5000
+            },
+            {
+              "id" : 67,
+              "name" : "Add Shredded Chicken",
+              "price_extra" : 10000,
+              "base_value_id" : 32,
+              "base_value_name" : "Add Shredded Chicken",
+              "product_packaging_id" : 4475,
+              "linked_product_id" : 2503,
+              "linked_product_name" : "Shredded Chicken Topping",
+              "linked_product_price" : 10000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id" : 2485,
+      "product_name" : "(A9) Baguette Shredded Chicken with Garlic Butter",
+      "short_description" : "Baguette shredded chicken with garlic butter",
+      "long_description" : "Tender shredded chicken marinated in fragrant garlic butter, fresh cilantro and lettuce. Rich flavor with a perfect balance of garlic and a creamy texture.",
+      "category_id" : 1,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2689,
+      "product_name" : "(A3) Pate Egg Baguette DOUBLE",
+      "short_description" : "Double pate egg baguette",
+      "long_description" : "Super-sized version of the classic pate egg baguette with a double portion. Comes with fresh cilantro and lettuce. Rich, filling, and perfect for those with a big appetite. Maximum flavor and satisfaction!",
+      "category_id" : 1,
+      "attributes" : [
+        {
+          "attribute_id" : 10,
+          "attribute_name" : "Baguette Topping",
+          "display_type" : "check_box",
+          "create_variant" : "no_variant",
+          "values" : [
+            {
+              "id" : 53,
+              "name" : "Add Pate",
+              "price_extra" : 5000,
+              "base_value_id" : 28,
+              "base_value_name" : "Add Pate",
+              "product_packaging_id" : 4471,
+              "linked_product_id" : 2499,
+              "linked_product_name" : "Pate Topping",
+              "linked_product_price" : 10000
+            },
+            {
+              "id" : 54,
+              "name" : "Add Cha Siu BBQ Pork",
+              "price_extra" : 10000,
+              "base_value_id" : 29,
+              "base_value_name" : "Add Cha Siu BBQ Pork",
+              "product_packaging_id" : 4476,
+              "linked_product_id" : 2504,
+              "linked_product_name" : "Cha Siu BBQ Pork Topping",
+              "linked_product_price" : 10000
+            },
+            {
+              "id" : 55,
+              "name" : "Add Pork Roll",
+              "price_extra" : 5000,
+              "base_value_id" : 30,
+              "base_value_name" : "Add Pork Roll",
+              "product_packaging_id" : 4473,
+              "linked_product_id" : 2501,
+              "linked_product_name" : "Pork Roll Topping",
+              "linked_product_price" : 5000
+            },
+            {
+              "id" : 56,
+              "name" : "Add Jambon",
+              "price_extra" : 5000,
+              "base_value_id" : 31,
+              "base_value_name" : "Add Jambon",
+              "product_packaging_id" : 4474,
+              "linked_product_id" : 2502,
+              "linked_product_name" : "Jambon Topping",
+              "linked_product_price" : 5000
+            },
+            {
+              "id" : 57,
+              "name" : "Add Shredded Chicken",
+              "price_extra" : 10000,
+              "base_value_id" : 32,
+              "base_value_name" : "Add Shredded Chicken",
+              "product_packaging_id" : 4475,
+              "linked_product_id" : 2503,
+              "linked_product_name" : "Shredded Chicken Topping",
+              "linked_product_price" : 10000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id" : 2690,
+      "product_name" : "(B3) Mixed Noodles Cha Siu BBQ Pork",
+      "short_description" : "Mixed noodles with Cha Siu BBQ Pork",
+      "long_description" : "Delicious mixed noodles with sweet and rich Cha Siu BBQ Pork, fresh bok choy and traditional Vietnamese spices. A bowl of authentic flavorful noodles.",
+      "category_id" : 15,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2669,
+      "product_name" : "(B4) Sichuan Grilled Mushroom Mixed Noodles",
+      "short_description" : "Vegetarian grilled mushroom mixed noodles",
+      "long_description" : "Healthy vegetarian noodle dish with grilled mushrooms, fresh bok choy. Plant-based protein with rich, delicious flavor and satisfying texture.",
+      "category_id" : 15,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2657,
+      "product_name" : "(B5) Five Spice Beef Noodles",
+      "short_description" : "Fragrant Five Spice Beef Noodles",
+      "long_description" : "A fragrant beef noodle dish with tender beef in rich five-spice seasoning. Complex flavors with warm spices, fresh bok choy, and chewy delicious noodles. The pinnacle of rustic cuisine!",
+      "category_id" : 15,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2552,
+      "product_name" : "(B6) Salad Mix",
+      "short_description" : "Salad rau xanh tươi mát",
+      "long_description" : "Salad rau xanh tươi mát với ngò và xà lách tươi cùng nước sốt Việt truyền thống. Nhẹ nhàng, dinh dưỡng và tươi mát - món phụ hoàn hảo hoặc bữa ăn nhẹ.",
+      "category_id" : 11,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2499,
+      "product_name" : "Topping Pate",
+      "short_description" : "Thêm pate cho món ăn",
+      "long_description" : "Pate kiểu Việt đậm đà, béo ngậy hoàn hảo để thêm hương vị cho bánh mì hoặc mì. Kết cấu mềm mịn với hương vị truyền thống chính hiệu.",
+      "category_id" : 5,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2500,
+      "product_name" : "Egg Topping",
+      "short_description" : "Add fresh egg to your dish",
+      "long_description" : "Fresh egg topping to upgrade any meal. Add protein and richness to your baguette or noodles. Perfectly cooked for optimal flavor and texture.",
+      "category_id" : 5,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2501,
+      "product_name" : "Vietnamese Pork Roll Topping",
+      "short_description" : "Vietnamese pork roll topping",
+      "long_description" : "Traditional Vietnamese pork roll topping. Its mild, delicate flavor is perfect for adding an authentic taste to baguettes or noodles.",
+      "category_id" : 5,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2502,
+      "product_name" : "Ham Topping",
+      "short_description" : "Ham topping for extra protein",
+      "long_description" : "Perfect quality ham slices to add protein and flavor to baguettes or noodles. Its mild, smooth flavor pairs wonderfully with Vietnamese spices.",
+      "category_id" : 5,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2503,
+      "product_name" : "Shredded Chicken Topping",
+      "short_description" : "Shredded Chicken Topping",
+      "long_description" : "Tender shredded chicken topping seasoned with Vietnamese spices. A perfect protein addition to any dish with authentic flavor and satisfying texture.",
+      "category_id" : 5,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2504,
+      "product_name" : "Topping Cha Siu BBQ Pork",
+      "short_description" : "Topping Cha Siu BBQ Pork",
+      "long_description" : "Sweet and savory Chinese-style Cha Siu BBQ Pork topping. Perfect smoky flavor to upgrade your baguette or noodles with added protein and flavor.",
+      "category_id" : 5,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2486,
+      "product_name" : "(B1) Mixed Sticky Rice",
+      "short_description" : "Mixed Sticky Rice with many toppings",
+      "long_description" : "Traditional Vietnamese Sticky Rice with mixed meats, sausage, and spices. Hearty, filling, and full of authentic flavor - a perfect rustic dish.",
+      "category_id" : 15,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2487,
+      "product_name" : "(B2) Shredded Chicken Sticky Rice",
+      "short_description" : "Sticky rice with shredded chicken",
+      "long_description" : "Delicious sticky rice with tender shredded chicken and traditional seasoning. A satisfying combination of texture and flavor in authentic Vietnamese style.",
+      "category_id" : 15,
+      "attributes" : []
+    },
+    {
+      "product_id" : 1181,
+      "product_name" : "Pickles",
+      "short_description" : "Adjust sourness",
+      "long_description" : "Customize the sourness of your dish according to personal preference. Perfect for adjusting traditional Vietnamese flavors to suit your taste.",
+      "category_id" : null,
+      "attributes" : []
+    },
+    {
+      "product_id" : 1293,
+      "product_name" : "With Sugar",
+      "short_description" : "Option to add sugar/sweetener",
+      "long_description" : "Option to add sugar or sweetener to drinks. Customize the sweetness for drinks such as coffee, tea, or fresh juice to perfectly match your preference.",
+      "category_id" : 5,
+      "attributes" : []
+    },
+    {
+      "product_id" : 2735,
+      "product_name" : "Watermelon Chia Seed Juice",
+      "short_description" : "Watermelon juice with chia seeds",
+      "long_description" : "Fresh watermelon juice infused with nutritious chia seeds. Sweet and refreshing, hydrating, and full of vitamins and fiber. The perfect healthy drink for hot weather.",
+      "category_id" : 3,
+      "attributes" : []
+    }
+  ]
+}

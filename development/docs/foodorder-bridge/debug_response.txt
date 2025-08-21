@@ -1,0 +1,43 @@
+```json
+{
+  "source_language": "vi",
+  "categories": [
+    {
+      "category_id": 1,
+      "category_name": "Traditional Bánh Mì",
+      "description": "Traditional Vietnamese baguettes"
+    }
+  ],
+  "products": [
+    {
+      "product_id": 1186,
+      "product_name": "Plain Bánh Mì",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2715,
+      "product_name": "(C2) CMB Happy Lunchset",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 4,
+          "attribute_name": "Bánh Mì",
+          "display_type": "radio",
+          "attribute_values": [
+            {
+              "value_id": 2,
+              "value_name": "Bánh Mì Mixed Meat",
+              "price_extra": 0.0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```

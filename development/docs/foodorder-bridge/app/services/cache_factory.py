@@ -1,8 +1,10 @@
 import os
 from typing import Union
+from pathlib import Path
 from app.services.odoo_cache_service import OdooCacheService
 from app.services.firestore_cache_service import FirestoreCacheService
 from app.services.firestore_translation_service import FirestoreTranslationService
+from app.services.vertex_only_translation_service import VertexOnlyTranslationService
 
 
 class HybridCacheService:
@@ -44,6 +46,26 @@ class HybridCacheService:
                 print("⚠️ Running on Cloud Run without Firestore - cache won't persist!")
             else:
                 print("✅ Using file-based cache for local development")
+        
+        # Initialize pure Vertex AI Gemini 2.0 Flash translation service
+        try:
+            from app.config import get_settings
+            settings = get_settings()
+            
+            self.vertex_translation_service = VertexOnlyTranslationService(
+                project_id=settings.GOOGLE_CLOUD_PROJECT,
+                location=settings.VERTEX_AI_LOCATION,
+                model_name=settings.VERTEX_AI_MODEL
+            )
+            
+            if self.vertex_translation_service.is_enabled():
+                print(f"✅ Pure Vertex AI translation service initialized: {settings.VERTEX_AI_MODEL}")
+            else:
+                print("⚠️ Vertex AI translation service not available")
+            
+        except Exception as e:
+            print(f"❌ Failed to initialize Vertex AI translation service: {e}")
+            self.vertex_translation_service = None
     
     def _is_running_on_cloud_run(self) -> bool:
         """Detect if running on Google Cloud Run"""
@@ -76,7 +98,7 @@ class HybridCacheService:
                 # Save to translation-optimized collections
                 if self.translation_service:
                     try:
-                        self.translation_service.save_product_translations(products)
+                        self.translation_service.save_product_translations(products, product_attributes)
                         self.translation_service.save_category_translations(categories)
                         self.translation_service.save_translation_metadata(firestore_metadata)
                         print("✅ Translations saved to optimized Firestore collections")
@@ -229,11 +251,24 @@ class HybridCacheService:
     
     def get_translation_status(self) -> dict:
         """Get translation service status"""
-        return self.odoo_service.get_translation_status()
+        if self.vertex_translation_service:
+            return {
+                'service_info': self.vertex_translation_service.get_service_info(),
+                'enabled': self.vertex_translation_service.is_enabled()
+            }
+        else:
+            return {'service_info': {}, 'enabled': False}
     
     def clear_translation_cache(self, older_than_days: int = None):
         """Clear translation cache"""
-        return self.odoo_service.clear_translation_cache(older_than_days=older_than_days)
+        if self.vertex_translation_service:
+            self.vertex_translation_service.clear_cache()
+        else:
+            print("⚠️ No translation service available to clear cache")
+    
+    def get_vertex_translation_service(self):
+        """Get the new Vertex AI translation service"""
+        return self.vertex_translation_service
     
     def get_translation_service(self):
         """Get the Firestore translation service"""

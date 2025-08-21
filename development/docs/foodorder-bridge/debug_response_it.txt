@@ -1,0 +1,150 @@
+```json
+{
+  "source_language": "vi",
+  "categories": [
+    {
+      "category_id": 1,
+      "category_name": "Traditional Vietnamese Baguettes",
+      "description": "Traditional Vietnamese sandwiches with fresh ingredients"
+    },
+    {
+      "category_id": 15,
+      "category_name": "Mixed Noodles & Sticky Rice",
+      "description": "Mixed noodle dishes with various toppings"
+    },
+    {
+      "category_id": 3,
+      "category_name": "Beverages",
+      "description": "Refreshing beverages including coffee, tea, and soft drinks"
+    },
+    {
+      "category_id": 11,
+      "category_name": "Salad",
+      "description": "Fresh and healthy salad options"
+    },
+    {
+      "category_id": 8,
+      "category_name": "Combos",
+      "description": "Value meal combinations with drinks and sides"
+    },
+    {
+      "category_id": 5,
+      "category_name": "Toppings",
+      "description": "Extra toppings and add-ons for your meals"
+    },
+    {
+      "category_id": 7,
+      "category_name": "Utensils & Other Items",
+      "description": "Utensils and additional items"
+    }
+  ],
+  "products": [
+    {
+      "product_id": 1186,
+      "product_name": "Baguette Only",
+      "short_description": "Traditional Vietnamese Baguette",
+      "long_description": "Fresh, crispy Vietnamese baguette with a golden crust and soft interior. Perfect as a side dish or as a base to create your own custom baguette combo.",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2715,
+      "product_name": "(C2) Happy Lunchset Combo",
+      "short_description": "Baguette + Drink + Optional Salad/Yogurt Combo",
+      "long_description": "The perfect lunch combo featuring a signature baguette, a refreshing drink, and your choice of fresh salad or creamy yogurt. Great value for a complete meal!",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 4,
+          "attribute_name": "Baguette",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 2,
+              "name": "Mixed Baguette",
+              "price_extra": 0.0,
+              "base_value_id": 2,
+              "base_value_name": "Mixed Baguette",
+              "product_packaging_id": 4451,
+              "linked_product_id": 2478,
+              "linked_product_name": "(A4) Mixed Baguette",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 7,
+              "name": "Shredded Chicken Baguette",
+              "price_extra": 0.0,
+              "base_value_id": 9,
+              "base_value_name": "Shredded Chicken Baguette",
+              "product_packaging_id": 4457,
+              "linked_product_id": 2485,
+              "linked_product_name": "(A9) Shredded Chicken with Garlic Butter Baguette",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 3,
+              "name": "Cha Siu BBQ Pork Baguette",
+              "price_extra": 0.0,
+              "base_value_id": 10,
+              "base_value_name": "Cha Siu BBQ Pork Baguette",
+              "product_packaging_id": 4456,
+              "linked_product_id": 2484,
+              "linked_product_name": "(A6) Cha Siu BBQ Pork Baguette",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 4,
+              "name": "Teriyaki Grilled Pork Baguette",
+              "price_extra": 0.0,
+              "base_value_id": 11,
+              "base_value_name": "Teriyaki Grilled Pork Baguette",
+              "product_packaging_id": 4452,
+              "linked_product_id": 2479,
+              "linked_product_name": "(A7) Teriyaki Grilled Pork Baguette",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 5,
+              "name": "Veggy Baguette",
+              "price_extra": 0.0,
+              "base_value_id": 12,
+              "base_value_name": "Veggy Baguette",
+              "product_packaging_id": 4453,
+              "linked_product_id": 2480,
+              "linked_product_name": "(A8) Vegetarian Szechuan Mushroom Baguette",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 71,
+              "name": "Pâté & Egg Baguette",
+              "price_extra": 0.0,
+              "base_value_id": 13,
+              "base_value_name": "Pâté & Egg Baguette",
+              "product_packaging_id": 4450,
+              "linked_product_id": 2477,
+              "linked_product_name": "(A2) Pâté & Egg Baguette",
+              "linked_product_price": 29000.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 5,
+          "attribute_name": "Softdrinks",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 8,
+              "name": "Coca Cola Zero",
+              "price_extra": 0.0,
+              "base_value_id": 14,
+              "base_value_name": "Coca Cola Zero",
+              "product_packaging_id": 4537,
+              "linked_product_id": 2550,
+              "linked_product_name": "Coca Cola Zero",
+              "linked_product_price": 20000.0
+            },
+            {
+              "id": 9,
+              "

@@ -35,12 +35,13 @@ class FirestoreTranslationService:
         # Translation collection names
         self.products_collection = f"{collection_prefix}_products"
         self.categories_collection = f"{collection_prefix}_categories"
+        self.toppings_collection = f"{collection_prefix}_toppings"
         self.metadata_collection = f"{collection_prefix}_metadata"
         
         # Supported languages
         self.supported_languages = ["vi", "en", "fr", "it", "es", "zh", "zh-TW", "th", "ja"]
         
-    def save_product_translations(self, products: List[Dict]) -> Dict[str, Any]:
+    def save_product_translations(self, products: List[Dict], product_attributes: Dict = None) -> Dict[str, Any]:
         """Save product translations to optimized Firestore collections"""
         try:
             timestamp = datetime.now(timezone.utc)
@@ -97,6 +98,11 @@ class FirestoreTranslationService:
                     batch.set(doc_ref, translation_doc)
                     saved_count += 1
             
+            # Process product attributes (toppings) if provided
+            topping_count = 0
+            if product_attributes:
+                topping_count = self._save_topping_translations(batch, product_attributes)
+            
             # Commit batch
             if saved_count > 0:
                 batch.commit()
@@ -104,6 +110,7 @@ class FirestoreTranslationService:
             
             return {
                 'products_saved': saved_count,
+                'toppings_saved': topping_count if product_attributes else 0,
                 'timestamp': timestamp
             }
             
@@ -357,3 +364,133 @@ class FirestoreTranslationService:
         except Exception as e:
             logger.error(f"❌ Error clearing translations: {e}")
             raise
+    
+    def _save_topping_translations(self, batch, product_attributes: Dict) -> int:
+        """Save topping translations from product attribute_lines data"""
+        try:
+            from app.services.translation_service import TranslationService
+            translation_service = TranslationService()
+            
+            if not translation_service.is_enabled():
+                logger.warning("Translation service not available for toppings")
+                return 0
+            
+            topping_count = 0
+            timestamp = datetime.now(timezone.utc)
+            
+            for product_id, attr_data in product_attributes.items():
+                attribute_lines = attr_data.get('attribute_lines', [])
+                
+                for attr_line in attribute_lines:
+                    attribute_name = attr_line.get('attribute_name', '')
+                    attribute_id = attr_line.get('attribute_id')
+                    
+                    if not attribute_name or not attribute_id:
+                        continue
+                    
+                    # Translate attribute name
+                    name_translations = {'vi': attribute_name}
+                    for lang in self.supported_languages:
+                        if lang != 'vi':
+                            translated_name = translation_service.translate_text(
+                                attribute_name, 
+                                lang, 
+                                'vi',
+                                context="Vietnamese Banh Mi Fast Food Menu - Toppings and Options"
+                            )
+                            name_translations[lang] = translated_name
+                    
+                    # Process attribute values (individual toppings)
+                    values_translations = []
+                    for value in attr_line.get('values', []):
+                        value_name = value.get('name', '')
+                        if not value_name:
+                            continue
+                            
+                        # Translate value name
+                        value_translations = {'vi': value_name}
+                        for lang in self.supported_languages:
+                            if lang != 'vi':
+                                translated_value = translation_service.translate_text(
+                                    value_name,
+                                    lang,
+                                    'vi', 
+                                    context="Vietnamese Banh Mi Fast Food Menu - Toppings and Options"
+                                )
+                                value_translations[lang] = translated_value
+                        
+                        values_translations.append({
+                            'id': value.get('id'),
+                            'base_name': value_name,
+                            'price_extra': value.get('price_extra', 0.0),
+                            'linked_product_id': value.get('linked_product_id'),
+                            'linked_product_name': value.get('linked_product_name', ''),
+                            'translations': value_translations
+                        })
+                    
+                    # Create topping document
+                    topping_doc = {
+                        'attribute_id': attribute_id,
+                        'product_id': int(product_id),
+                        'base_name': attribute_name,
+                        'display_type': attr_line.get('display_type', ''),
+                        'name_translations': name_translations,
+                        'values': values_translations,
+                        'last_updated': timestamp,
+                        'version': '1.0'
+                    }
+                    
+                    # Save to batch
+                    doc_id = f"{product_id}_{attribute_id}"
+                    doc_ref = self.db.collection(self.toppings_collection).document(doc_id)
+                    batch.set(doc_ref, topping_doc)
+                    topping_count += 1
+            
+            logger.info(f"✅ Prepared {topping_count} topping translations for batch save")
+            return topping_count
+            
+        except Exception as e:
+            logger.error(f"❌ Error saving topping translations: {e}")
+            return 0
+    
+    def get_product_toppings(self, product_id: Union[int, str], language: Optional[str] = None) -> List[Dict]:
+        """Get topping translations for a specific product"""
+        try:
+            # Query toppings for this product
+            toppings_ref = self.db.collection(self.toppings_collection)
+            query = toppings_ref.where('product_id', '==', int(product_id))
+            docs = query.stream()
+            
+            results = []
+            for doc in docs:
+                data = doc.to_dict()
+                
+                if language:
+                    # Return localized version
+                    localized_values = []
+                    for value in data.get('values', []):
+                        if language in value.get('translations', {}):
+                            localized_values.append({
+                                'id': value['id'],
+                                'name': value['translations'][language],
+                                'price_extra': value.get('price_extra', 0.0),
+                                'linked_product_id': value.get('linked_product_id'),
+                                'linked_product_name': value.get('linked_product_name', '')
+                            })
+                    
+                    if language in data.get('name_translations', {}):
+                        results.append({
+                            'attribute_id': data['attribute_id'],
+                            'name': data['name_translations'][language],
+                            'display_type': data.get('display_type', ''),
+                            'values': localized_values
+                        })
+                else:
+                    # Return full data
+                    results.append(data)
+            
+            return results
+            
+        except Exception as e:
+            logger.error(f"❌ Error getting product {product_id} toppings: {e}")
+            return []

@@ -125,6 +125,8 @@ class VietnameseFoodGlossary:
                 'đĩa': 'Plate',
                 'phần': 'Portion',
                 'suất': 'Serving',
+                'bánh mì không': 'Plain Bread',
+                'không': 'Plain',
             },
             'zh': {
                 'cà phê sữa đá': '越南冰奶咖啡',

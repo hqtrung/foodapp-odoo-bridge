@@ -8,8 +8,6 @@ from typing import Dict, List, Any, Optional
 from PIL import Image
 from io import BytesIO
 from app.services.cloud_storage_service import CloudStorageService
-from app.services.translation_service import TranslationService
-from app.services.translation_glossary import VietnameseFoodGlossary
 from app.services.connection_pool import get_connection_pool
 from app.config import get_settings
 
@@ -54,18 +52,7 @@ class OdooCacheService:
             print(f"⚠️ Cloud Storage service initialization failed: {e}")
             self.storage_service = None
             
-        # Initialize Translation services
-        try:
-            self.translation_service = TranslationService(cache_dir=str(self.cache_dir))
-            self.food_glossary = VietnameseFoodGlossary()
-            if self.translation_service.is_enabled():
-                print("✅ Translation service initialized")
-            else:
-                print("⚠️ Translation service available but not enabled")
-        except Exception as e:
-            print(f"⚠️ Translation service initialization failed: {e}")
-            self.translation_service = None
-            self.food_glossary = None
+        # Translation services removed - handled by separate service
         
     def reload_cache(self) -> Dict[str, Any]:
         """Fetch data from Odoo, save images locally, and update JSON cache"""
@@ -136,7 +123,8 @@ class OdooCacheService:
             [[['available_in_pos', '=', True]]],
             {'fields': ['id', 'name', 'pos_categ_id', 
                        'description_sale', 'image_512', 'barcode', 'product_tmpl_id',
-                       'available_in_pos', 'categ_id', 'product_tag_ids']}
+                       'available_in_pos', 'categ_id', 'product_tag_ids',
+                       'x_studio_short_description_1', 'x_studio_long_description_1']}
         )
         
         # Get unique template IDs to fetch list_price from product.template
@@ -192,6 +180,8 @@ class OdooCacheService:
                 'pos_categ_id': prod['pos_categ_id'],
                 'list_price': list_price,
                 'description_sale': prod['description_sale'],
+                'short_description': prod.get('x_studio_short_description_1') or '',
+                'long_description': prod.get('x_studio_long_description_1') or '',
                 'barcode': prod['barcode'],
                 'has_image': has_image,
                 'image_url': image_urls.get('large') if image_urls else None,  # Default large size for products
@@ -313,14 +303,8 @@ class OdooCacheService:
         products_with_attributes = self._enrich_products_with_attributes(basic_products, attributes_data['product_attributes'])
         products = self._enrich_products_with_frontend_fields(products_with_attributes, tag_mapping)
         
-        # Add translations to products
-        products = self._add_translations_to_products(products)
-        
         # Enrich categories with frontend-required fields
         enriched_categories = self._enrich_categories_with_frontend_fields(categories, products)
-        
-        # Add translations to categories
-        enriched_categories = self._add_translations_to_categories(enriched_categories)
         
         print(f"Processed {len(attributes)} attributes, {len(attribute_values)} attribute values")
         print(f"Enriched {len([p for p in products if p.get('attribute_lines')])} products with attributes")
@@ -660,16 +644,7 @@ class OdooCacheService:
         """Enrich products with frontend-required fields"""
         enriched_products = []
         
-        # Category-based preparation time mapping
-        category_prep_times = {
-            'combo': 20,
-            'bánh mì': 10,
-            'đồ uống': 5,
-            'mì trộn': 15,
-            'salad': 8,
-            'xôi': 12,
-            'default': 15
-        }
+        # preparation_time removed - simplified data structure
         
         # Category-based tags mapping
         category_tags = {
@@ -690,12 +665,7 @@ class OdooCacheService:
             if product.get('pos_categ_id') and len(product['pos_categ_id']) > 1:
                 category_name = product['pos_categ_id'][1].lower()
             
-            # Add critical fields
-            enriched_product['is_available'] = product.get('available_in_pos', True)
-            
-            # Add important fields
-            prep_time = category_prep_times.get(category_name, category_prep_times['default'])
-            enriched_product['preparation_time'] = prep_time
+            # is_available and preparation_time fields removed - simplified data structure
             
             # Get real tags from Odoo if available
             odoo_tags = []
@@ -734,12 +704,10 @@ class OdooCacheService:
             enriched_product['original_price'] = list_price
             enriched_product['discount_percentage'] = 0
             
-            # Add nice-to-have fields with defaults
-            enriched_product['allergens'] = []
-            enriched_product['nutritional_info'] = None
+            # allergens and nutritional_info fields removed - simplified data structure
             
             # Remove internal fields not needed by frontend
-            fields_to_remove = ['available_in_pos', 'categ_id']
+            fields_to_remove = ['available_in_pos', 'categ_id', 'description_sale']
             for field in fields_to_remove:
                 if field in enriched_product:
                     del enriched_product[field]
@@ -808,149 +776,3 @@ class OdooCacheService:
         
         return enriched_categories
     
-    def _add_translations_to_products(self, products: List[Dict]) -> List[Dict]:
-        """Add translations to products if translation service is available"""
-        if not self.translation_service or not self.translation_service.is_enabled():
-            print("⚠️ Translation service not available, skipping product translations")
-            return products
-            
-        print(f"Adding translations to {len(products)} products...")
-        translated_products = []
-        
-        try:
-            # Get supported languages
-            target_languages = self.translation_service.get_supported_languages().keys()
-            
-            for product in products:
-                try:
-                    # Preprocess text using Vietnamese food glossary
-                    original_name = product.get('name', '')
-                    original_desc = product.get('description_sale', '') or ''
-                    
-                    # Use translation service to add multilingual fields
-                    translated_product = self.translation_service.translate_product_data(
-                        product, 
-                        target_languages=list(target_languages)
-                    )
-                    
-                    # Apply Vietnamese food glossary postprocessing if available
-                    if self.food_glossary:
-                        for lang in target_languages:
-                            if lang == 'vi':  # Skip Vietnamese (source language)
-                                continue
-                                
-                            # Postprocess name translation
-                            if 'name_translations' in translated_product and lang in translated_product['name_translations']:
-                                translated_name = translated_product['name_translations'][lang]
-                                translated_product['name_translations'][lang] = self.food_glossary.postprocess_text(
-                                    original_name, translated_name, lang
-                                )
-                                
-                            # Postprocess description translation
-                            if 'description_translations' in translated_product and lang in translated_product['description_translations']:
-                                translated_desc = translated_product['description_translations'][lang]
-                                translated_product['description_translations'][lang] = self.food_glossary.postprocess_text(
-                                    original_desc, translated_desc, lang
-                                )
-                    
-                    translated_products.append(translated_product)
-                    
-                except Exception as e:
-                    print(f"⚠️ Failed to translate product {product.get('id', 'unknown')}: {e}")
-                    # Add empty translations on failure
-                    product['name_translations'] = {'vi': product.get('name', '')}
-                    product['description_translations'] = {'vi': product.get('description_sale', '') or ''}
-                    translated_products.append(product)
-                    
-            print(f"✅ Successfully added translations to {len(translated_products)} products")
-            return translated_products
-            
-        except Exception as e:
-            print(f"⚠️ Product translation failed: {e}")
-            # Return original products with minimal translation structure
-            for product in products:
-                product['name_translations'] = {'vi': product.get('name', '')}
-                product['description_translations'] = {'vi': product.get('description_sale', '') or ''}
-            return products
-    
-    def _add_translations_to_categories(self, categories: List[Dict]) -> List[Dict]:
-        """Add translations to categories if translation service is available"""
-        if not self.translation_service or not self.translation_service.is_enabled():
-            print("⚠️ Translation service not available, skipping category translations")
-            return categories
-            
-        print(f"Adding translations to {len(categories)} categories...")
-        translated_categories = []
-        
-        try:
-            # Get supported languages
-            target_languages = self.translation_service.get_supported_languages().keys()
-            
-            for category in categories:
-                try:
-                    # Use translation service to add multilingual fields
-                    translated_category = self.translation_service.translate_category_data(
-                        category,
-                        target_languages=list(target_languages)
-                    )
-                    
-                    # Apply Vietnamese food glossary postprocessing if available
-                    if self.food_glossary:
-                        original_name = category.get('name', '')
-                        original_desc = category.get('description', '') or ''
-                        
-                        for lang in target_languages:
-                            if lang == 'vi':  # Skip Vietnamese (source language)
-                                continue
-                                
-                            # Postprocess name translation
-                            if 'name_translations' in translated_category and lang in translated_category['name_translations']:
-                                translated_name = translated_category['name_translations'][lang]
-                                translated_category['name_translations'][lang] = self.food_glossary.postprocess_text(
-                                    original_name, translated_name, lang
-                                )
-                                
-                            # Postprocess description translation
-                            if 'description_translations' in translated_category and lang in translated_category['description_translations']:
-                                translated_desc = translated_category['description_translations'][lang]
-                                translated_category['description_translations'][lang] = self.food_glossary.postprocess_text(
-                                    original_desc, translated_desc, lang
-                                )
-                    
-                    translated_categories.append(translated_category)
-                    
-                except Exception as e:
-                    print(f"⚠️ Failed to translate category {category.get('id', 'unknown')}: {e}")
-                    # Add empty translations on failure
-                    category['name_translations'] = {'vi': category.get('name', '')}
-                    category['description_translations'] = {'vi': category.get('description', '') or ''}
-                    translated_categories.append(category)
-                    
-            print(f"✅ Successfully added translations to {len(translated_categories)} categories")
-            return translated_categories
-            
-        except Exception as e:
-            print(f"⚠️ Category translation failed: {e}")
-            # Return original categories with minimal translation structure
-            for category in categories:
-                category['name_translations'] = {'vi': category.get('name', '')}
-                category['description_translations'] = {'vi': category.get('description', '') or ''}
-            return categories
-
-    def get_translation_status(self) -> Dict[str, Any]:
-        """Get translation service status and cache statistics"""
-        if not self.translation_service:
-            return {
-                "service_enabled": False,
-                "error": "Translation service not initialized"
-            }
-        
-        return self.translation_service.get_translation_status()
-    
-    def clear_translation_cache(self, older_than_days: int = None):
-        """Clear translation cache, optionally only entries older than specified days"""
-        if not self.translation_service:
-            print("⚠️ Translation service not available")
-            return
-        
-        self.translation_service.clear_cache(older_than_days=older_than_days)

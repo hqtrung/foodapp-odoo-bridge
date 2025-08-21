@@ -1,0 +1,1187 @@
+{
+  "source_language": "vi",
+  "categories": [
+    {
+      "category_id": 1,
+      "category_name": "伝統バインミー",
+      "description": "新鮮な食材を使った伝統的なベトナムサンドイッチ"
+    },
+    {
+      "category_id": 15,
+      "category_name": "混ぜ麺とベトナムおこわ",
+      "description": "様々なトッピングが乗った混ぜ麺料理"
+    },
+    {
+      "category_id": 3,
+      "category_name": "ドリンク",
+      "description": "コーヒー、紅茶、ソフトドリンクを含む爽やかな飲み物"
+    },
+    {
+      "category_id": 11,
+      "category_name": "サラダ",
+      "description": "新鮮でヘルシーなサラダの選択肢"
+    },
+    {
+      "category_id": 8,
+      "category_name": "コンボ",
+      "description": "ドリンクとサイドメニューが付いたお得なコンボ"
+    },
+    {
+      "category_id": 5,
+      "category_name": "トッピング",
+      "description": "お料理の追加トッピング"
+    },
+    {
+      "category_id": 7,
+      "category_name": "その他",
+      "description": "食器や追加品"
+    }
+  ],
+  "products": [
+    {
+      "product_id": 1186,
+      "product_name": "プレーンバゲット",
+      "short_description": "伝統的なベトナムバゲット",
+      "long_description": "新鮮で美味しいベトナムバゲット。皮は黄金色でサクサク、中はふんわり柔らか。サイドディッシュとして、またはお好みのバゲットコンボを作るベースとして完璧です。",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2715,
+      "product_name": "(C2) CMB ハッピーランチセット",
+      "short_description": "Baguette + ドリンク + サラダ/ヨーグルトの選択コンボ",
+      "long_description": "特製Baguette、ソフトドリンク、そして新鮮なサラダまたは濃厚なヨーグルトを選べる完璧なランチコンボ。充実した食事に最適な価値！",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 4,
+          "attribute_name": "Baguette",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 2,
+              "name": "Mixed Baguette",
+              "price_extra": 0.0,
+              "base_value_id": 2,
+              "base_value_name": "Mixed Baguette",
+              "product_packaging_id": 4451,
+              "linked_product_id": 2478,
+              "linked_product_name": "(A4) Mixed Baguette",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 7,
+              "name": "鶏肉のほぐし身Baguette",
+              "price_extra": 0.0,
+              "base_value_id": 9,
+              "base_value_name": "鶏肉のほぐし身Baguette",
+              "product_packaging_id": 4457,
+              "linked_product_id": 2485,
+              "linked_product_name": "(A9) 鶏肉のほぐし身ガーリックバターBaguette",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 3,
+              "name": "Cha Siu BBQ Pork Baguette",
+              "price_extra": 0.0,
+              "base_value_id": 10,
+              "base_value_name": "Cha Siu BBQ Pork Baguette",
+              "product_packaging_id": 4456,
+              "linked_product_id": 2484,
+              "linked_product_name": "(A6) Cha Siu BBQ Pork Baguette",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 4,
+              "name": "照り焼きポークBaguette",
+              "price_extra": 0.0,
+              "base_value_id": 11,
+              "base_value_name": "照り焼きポークBaguette",
+              "product_packaging_id": 4452,
+              "linked_product_id": 2479,
+              "linked_product_name": "(A7) 照り焼きポークBaguette",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 5,
+              "name": "ベジBaguette",
+              "price_extra": 0.0,
+              "base_value_id": 12,
+              "base_value_name": "ベジBaguette",
+              "product_packaging_id": 4453,
+              "linked_product_id": 2480,
+              "linked_product_name": "(A8) 四川風キノコベジBaguette",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 71,
+              "name": "パテと卵のBaguette",
+              "price_extra": 0.0,
+              "base_value_id": 13,
+              "base_value_name": "パテと卵のBaguette",
+              "product_packaging_id": 4450,
+              "linked_product_id": 2477,
+              "linked_product_name": "(A2) パテと卵のBaguette",
+              "linked_product_price": 29000.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 5,
+          "attribute_name": "ソフトドリンク",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 8,
+              "name": "コカ・コーラ ゼロ",
+              "price_extra": 0.0,
+              "base_value_id": 14,
+              "base_value_name": "コカ・コーラ ゼロ",
+              "product_packaging_id": 4537,
+              "linked_product_id": 2550,
+              "linked_product_name": "コカ・コーラ ゼロ",
+              "linked_product_price": 20000.0
+            },
+            {
+              "id": 9,
+              "name": "ペプシ",
+              "price_extra": 0.0,
+              "base_value_id": 15,
+              "base_value_name": "ペプシ",
+              "product_packaging_id": 4662,
+              "linked_product_id": 2658,
+              "linked_product_name": "ペプシ 320ml (缶)",
+              "linked_product_price": 20000.0
+            },
+            {
+              "id": 10,
+              "name": "ペプシ ブラック",
+              "price_extra": 0.0,
+              "base_value_id": 16,
+              "base_value_name": "ペプシ ブラック",
+              "product_packaging_id": 4694,
+              "linked_product_id": 2677,
+              "linked_product_name": "ペプシ ブラック 320ml (缶)",
+              "linked_product_price": 20000.0
+            },
+            {
+              "id": 11,
+              "name": "セブンアップ",
+              "price_extra": 0.0,
+              "base_value_id": 17,
+              "base_value_name": "セブンアップ",
+              "product_packaging_id": 4665,
+              "linked_product_id": 2659,
+              "linked_product_name": "セブンアップ 320ml (缶)",
+              "linked_product_price": 20000.0
+            },
+            {
+              "id": 68,
+              "name": "烏龍茶 TeaPlus",
+              "price_extra": 0.0,
+              "base_value_id": 18,
+              "base_value_name": "烏龍茶 TeaPlus",
+              "product_packaging_id": 4531,
+              "linked_product_id": 2544,
+              "linked_product_name": "烏龍茶 Tea Plus (ボトル 450ml)",
+              "linked_product_price": 20000.0
+            },
+            {
+              "id": 69,
+              "name": "リバイブ 塩レモン",
+              "price_extra": 0.0,
+              "base_value_id": 34,
+              "base_value_name": "リバイブ 塩レモン",
+              "product_packaging_id": 4777,
+              "linked_product_id": 2725,
+              "linked_product_name": "リバイブ 塩レモン",
+              "linked_product_price": 20000.0
+            },
+            {
+              "id": 70,
+              "name": "リバイブ",
+              "price_extra": 0.0,
+              "base_value_id": 35,
+              "base_value_name": "リバイブ",
+              "product_packaging_id": 4780,
+              "linked_product_id": 2726,
+              "linked_product_name": "リバイブ カロリーゼロ",
+              "linked_product_price": 20000.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 6,
+          "attribute_name": "サラダとヨーグルト付き",
+          "display_type": "check_box",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 30,
+              "name": "サラダ",
+              "price_extra": 15000.0,
+              "base_value_id": 19,
+              "base_value_name": "サラダ",
+              "product_packaging_id": 4540,
+              "linked_product_id": 2552,
+              "linked_product_name": "(B6) ミックスサラダ",
+              "linked_product_price": 25000.0
+            },
+            {
+              "id": 31,
+              "name": "ヨーグルト",
+              "price_extra": 15000.0,
+              "base_value_id": 20,
+              "base_value_name": "ヨーグルト",
+              "product_packaging_id": 4534,
+              "linked_product_id": 2547,
+              "linked_product_name": "(D5) ヨーグルト",
+              "linked_product_price": 20000.0
+            },
+            {
+              "id": 32,
+              "name": "なし",
+              "price_extra": 0.0,
+              "base_value_id": 27,
+              "base_value_name": "なし"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2718,
+      "product_name": "(C1) CMB Express Lunchset",
+      "short_description": "Trưa nhanh: mì/cơm + cà phê + salad/sữa chua",
+      "long_description": "Combo trưa express với mì/cơm Việt Nam đậm đà, cà phê thơm lừng và salad tươi hoặc sữa chua. Nhanh gọn, ngon miệng và đầy đủ dinh dưỡng!",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 6,
+          "attribute_name": "Kèm Salad Sữa Chua",
+          "display_type": "check_box",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 28,
+              "name": "Salad",
+              "price_extra": 0.0,
+              "base_value_id": 19,
+              "base_value_name": "Salad",
+              "product_packaging_id": 4540,
+              "linked_product_id": 2552,
+              "linked_product_name": "(B6) Salad Mix",
+              "linked_product_price": 25000.0
+            },
+            {
+              "id": 29,
+              "name": "Sữa chua",
+              "price_extra": 0.0,
+              "base_value_id": 20,
+              "base_value_name": "Sữa chua",
+              "product_packaging_id": 4534,
+              "linked_product_id": 2547,
+              "linked_product_name": "(D5) Sữa chua",
+              "linked_product_price": 20000.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 7,
+          "attribute_name": "Món Trưa",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 23,
+              "name": "Mì Trộn Xá Xíu",
+              "price_extra": 0.0,
+              "base_value_id": 21,
+              "base_value_name": "Mì Trộn Xá Xíu",
+              "product_packaging_id": 4713,
+              "linked_product_id": 2690,
+              "linked_product_name": "(B3) Mì Trộn Xá Xíu",
+              "linked_product_price": 45000.0
+            },
+            {
+              "id": 24,
+              "name": "Bò Kho",
+              "price_extra": 0.0,
+              "base_value_id": 22,
+              "base_value_name": "Bò Kho",
+              "product_packaging_id": 4455,
+              "linked_product_id": 2482,
+              "linked_product_name": "(A11) Bánh Mì Bò Kho",
+              "linked_product_price": 49000.0
+            },
+            {
+              "id": 25,
+              "name": "Xíu Mại Đà Lạt",
+              "price_extra": 0.0,
+              "base_value_id": 23,
+              "base_value_name": "Xíu Mại Đà Lạt",
+              "product_packaging_id": 4401,
+              "linked_product_id": 2450,
+              "linked_product_name": "Bánh Mì Xíu Mại Đà Lạt",
+              "linked_product_price": 49000.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 8,
+          "attribute_name": "Cà Phê",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 26,
+              "name": "Cà Phê Sữa Đá",
+              "price_extra": 0.0,
+              "base_value_id": 24,
+              "base_value_name": "Cà Phê Sữa Đá",
+              "product_packaging_id": 4461,
+              "linked_product_id": 2489,
+              "linked_product_name": "(D7) Cà Phê Sữa Đá",
+              "linked_product_price": 29000.0
+            },
+            {
+              "id": 27,
+              "name": "Cà Phê Đá",
+              "price_extra": 0.0,
+              "base_value_id": 25,
+              "base_value_name": "Cà Phê Đá",
+              "product_packaging_id": 4460,
+              "linked_product_id": 2488,
+              "linked_product_name": "(D6) Cà Phê Đen Đá",
+              "linked_product_price": 25000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2717,
+      "product_name": "(C3) CMB エナジーモーニング",
+      "short_description": "エナジーモーニング：Baguette + ベトナムコーヒー",
+      "long_description": "エナジーモーニングコンボで一日を正しく始めましょう！お好みのBaguetteと濃厚なベトナムコーヒーで、忙しい一日にぴったりのエネルギー源を。",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 4,
+          "attribute_name": "Baguette",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 15,
+              "name": "Mixed Baguette",
+              "price_extra": 0.0,
+              "base_value_id": 2,
+              "base_value_name": "Mixed Baguette",
+              "product_packaging_id": 4451,
+              "linked_product_id": 2478,
+              "linked_product_name": "(A4) Mixed Baguette",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 16,
+              "name": "ほぐしチキンバゲット",
+              "price_extra": 0.0,
+              "base_value_id": 9,
+              "base_value_name": "ほぐしチキンバゲット",
+              "product_packaging_id": 4457,
+              "linked_product_id": 2485,
+              "linked_product_name": "(A9) ほぐしチキンガーリックバターバゲット",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 17,
+              "name": "Cha Siu BBQ Pork Baguette",
+              "price_extra": 0.0,
+              "base_value_id": 10,
+              "base_value_name": "Cha Siu BBQ Pork Baguette",
+              "product_packaging_id": 4456,
+              "linked_product_id": 2484,
+              "linked_product_name": "(A6) Cha Siu BBQ Pork Baguette",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 18,
+              "name": "照り焼きポークバゲット",
+              "price_extra": 0.0,
+              "base_value_id": 11,
+              "base_value_name": "照り焼きポークバゲット",
+              "product_packaging_id": 4452,
+              "linked_product_id": 2479,
+              "linked_product_name": "(A7) 照り焼きポークバゲット",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 19,
+              "name": "ベジバゲット",
+              "price_extra": 0.0,
+              "base_value_id": 12,
+              "base_value_name": "ベジバゲット",
+              "product_packaging_id": 4453,
+              "linked_product_id": 2480,
+              "linked_product_name": "(A8) ベジ四川マッシュルームバゲット",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 20,
+              "name": "パテエッグバゲット",
+              "price_extra": 0.0,
+              "base_value_id": 13,
+              "base_value_name": "パテエッグバゲット",
+              "product_packaging_id": 4450,
+              "linked_product_id": 2477,
+              "linked_product_name": "(A2) パテエッグバゲット",
+              "linked_product_price": 29000.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 8,
+          "attribute_name": "コーヒー",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 21,
+              "name": "アイスミルクコーヒー",
+              "price_extra": 0.0,
+              "base_value_id": 24,
+              "base_value_name": "アイスミルクコーヒー",
+              "product_packaging_id": 4461,
+              "linked_product_id": 2489,
+              "linked_product_name": "(D7) アイスミルクコーヒー",
+              "linked_product_price": 29000.0
+            },
+            {
+              "id": 22,
+              "name": "アイスコーヒー",
+              "price_extra": 0.0,
+              "base_value_id": 25,
+              "base_value_name": "アイスコーヒー",
+              "product_packaging_id": 4460,
+              "linked_product_id": 2488,
+              "linked_product_name": "(D6) アイスブラックコーヒー",
+              "linked_product_price": 25000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2716,
+      "product_name": "(C4) CMB クイックモーニング",
+      "short_description": "クイックモーニング: バゲットスティック + コーヒー",
+      "long_description": "手軽に持ち運べる便利な朝食！サクサクのバゲットスティックに美味しい具材、そして濃厚なベトナムコーヒーがセット。忙しい朝に素早く、美味しく、エネルギー満タンに！",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 8,
+          "attribute_name": "コーヒー",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 13,
+              "name": "アイスミルクコーヒー",
+              "price_extra": 0.0,
+              "base_value_id": 24,
+              "base_value_name": "アイスミルクコーヒー",
+              "product_packaging_id": 4461,
+              "linked_product_id": 2489,
+              "linked_product_name": "(D7) アイスミルクコーヒー",
+              "linked_product_price": 29000.0
+            },
+            {
+              "id": 14,
+              "name": "アイスコーヒー",
+              "price_extra": 0.0,
+              "base_value_id": 25,
+              "base_value_name": "アイスコーヒー",
+              "product_packaging_id": 4460,
+              "linked_product_id": 2488,
+              "linked_product_name": "(D6) アイスブラックコーヒー",
+              "linked_product_price": 25000.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 9,
+          "attribute_name": "バゲットスティック",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 12,
+              "name": "バゲットスティック",
+              "price_extra": 0.0,
+              "base_value_id": 26,
+              "base_value_name": "バゲットスティック",
+              "product_packaging_id": 4454,
+              "linked_product_id": 2481,
+              "linked_product_name": "(A5) パテと豚肉フレークのバゲットスティック",
+              "linked_product_price": 25000.0
+            },
+            {
+              "id": 72,
+              "name": "ベジタリアンマッシュルームバゲットスティック",
+              "price_extra": 0.0,
+              "base_value_id": 36,
+              "base_value_name": "ベジタリアンマッシュルームバゲットスティック",
+              "product_packaging_id": 4783,
+              "linked_product_id": 2728,
+              "linked_product_name": "(A5) ベジタリアンマッシュルームバゲットスティック",
+              "linked_product_price": 25000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2736,
+      "product_name": "アイスシェイクヨーグルト",
+      "short_description": "アイスシェイクヨーグルト - クリーミーで爽やか",
+      "long_description": "なめらかでクリーミーな口当たりの爽やかなベトナム風アイスシェイクヨーグルト。マイルドな酸味と程よい甘さで、一日中いつでも楽しめる理想的なクールダウン飲料です。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2737,
+      "product_name": "コーヒーシェイクヨーグルト",
+      "short_description": "コーヒー味のシェイクヨーグルト",
+      "long_description": "濃厚なヨーグルトとベトナムの豊かなコーヒー、氷を組み合わせたユニークなドリンク。なめらかで爽やか、そしてエネルギッシュ。酸味とカフェインの完璧な融合です。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2546,
+      "product_name": "ビア サイゴン スペシャル (缶 330ml)",
+      "short_description": "ビア サイゴン スペシャル 缶 330ml",
+      "long_description": "ビア サイゴン スペシャル 330ml缶入りプレミアムビール。爽やかで軽やか、クリーンな後味でフレッシュ。スパイシーなベトナム料理や暑い気候にぴったりのパートナーです。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2488,
+      "product_name": "(D6) アイスブラックコーヒー",
+      "short_description": "ベトナムアイスブラックコーヒー",
+      "long_description": "本格的なベトナムアイスブラックコーヒー。伝統的なフィルター抽出方法を使用し、濃厚で芳醇な香り。ミルクなしの純粋なコーヒーの味 - コーヒー愛好家に最適です。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2489,
+      "product_name": "(D7) ベトナムアイスミルクコーヒー",
+      "short_description": "ベトナムアイスミルクコーヒー コンデンスミルク入り",
+      "long_description": "伝統的なベトナムアイスミルクコーヒー、甘いコンデンスミルク入り。濃厚で滑らか、コーヒーの苦味とクリーミーな甘さのバランスが完璧です。ベトナムで最も愛されているドリンク！",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2490,
+      "product_name": "(D9) エスプレッソ",
+      "short_description": "濃厚なイタリアンエスプレッソ",
+      "long_description": "濃厚で力強い風味のエスプレッソショット。厚いクレマが特徴の豊かな味わい。ストロングコーヒー愛好家や、いつでも素早いエネルギー補給が必要な方に最適です。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2491,
+      "product_name": "(D8) Americano",
+      "short_description": "Espresso pha loãng với nước nóng",
+      "long_description": "Americano cổ điển làm từ espresso đậm đà và nước nóng. Hương vị cà phê sạch, mịn màng với độ đậm vừa phải nhưng sâu lắng hơn cà phê phin thông thường.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2492,
+      "product_name": "(D10) アイスラテ",
+      "short_description": "アイスラテとフレッシュミルク",
+      "long_description": "エスプレッソとフレッシュミルクを氷で割った、クリーミーなアイスラテ。なめらかでクリーミー、完璧なバランスです。伝統的なベトナムコーヒー文化のモダンなスタイルです。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2493,
+      "product_name": "(D1) 黄金メロンティー",
+      "short_description": "メロンティー - 甘く爽やかで、喉の渇きを癒します",
+      "long_description": "黄金メロンティーは、自然なフルーツの風味で爽やかです。まろやかな甘さで、香りが良く、素晴らしいリフレッシュ効果があります。炭酸飲料の代わりに、軽くて健康的な選択肢です。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2494,
+      "product_name": "(D2) 冬瓜茶チアシード",
+      "short_description": "冬瓜茶とチアシード",
+      "long_description": "健康に良い冬瓜茶に栄養豊富なチアシードを加えました。ほんのり甘く、さわやかで食物繊維が豊富です。健康を気遣うお客様にぴったりのウェルネスドリンクです。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2675,
+      "product_name": "(D3) 生搾りオレンジジュース",
+      "short_description": "生搾りオレンジジュース - 純粋で自然な",
+      "long_description": "100% 生搾りオレンジジュースは、ビタミンCと自然な甘さがいっぱいです。添加物なし - 一口ごとに純粋でフレッシュなオレンジの味わいだけ。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2547,
+      "product_name": "(D5) ヨーグルト",
+      "short_description": "ベトナム伝統ヨーグルト",
+      "long_description": "本格的なベトナム風ヨーグルト。なめらかでクリーミーな食感とさわやかな酸味。伝統的な製法で毎日新鮮に作られています。健康的でプロバイオティクスが豊富です。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2725,
+      "product_name": "Revive 塩レモン",
+      "short_description": "スポーツドリンク 塩レモン味",
+      "long_description": "アイソトニックドリンク Revive さわやかな塩レモン風味。電解質とミネラル配合で水分補給に最適。運動後や暑い季節に理想的です。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2498,
+      "product_name": "Aquafina 500ml",
+      "short_description": "Nước tinh khiết đóng chai 500ml",
+      "long_description": "Nước tinh khiết Aquafina cao cấp trong chai 500ml tiện lợi. Sạch, tinh khiết và tươi mát. Hoàn hảo để giữ nước cho cơ thể suốt cả ngày hoặc kèm theo bữa ăn.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2544,
+      "product_name": "烏龍茶 ティー・プラス (450mlボトル)",
+      "short_description": "烏龍茶 450mlボトル",
+      "long_description": "高級烏龍茶が450mlボトルに入っており、本格的な中国茶の風味をお楽しみいただけます。軽やかで、爽やかで、新鮮な味わいで、天然の抗酸化物質も含まれています。伝統的な味わいと現代的な利便性が融合した一品です。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2545,
+      "product_name": "レッドブル エナジードリンク (250ml缶)",
+      "short_description": "レッドブル エナジードリンク 250ml",
+      "long_description": "250ml缶入りのオリジナル レッドブル エナジードリンク。カフェインとタウリン配合で、エネルギーと集中力を高めます。忙しい日や夜更かしに最適なドリンクです。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2550,
+      "product_name": "コカ・コーラ ゼロ",
+      "short_description": "カロリーゼロのコカ・コーラ",
+      "long_description": "カロリーゼロ、砂糖ゼロのクラシックなコカ・コーラの味。罪悪感なく楽しめる爽やかなコーラの味。カロリー摂取量を気にしながらも、コーラの味が恋しい方に最適です。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2658,
+      "product_name": "ペプシ 320ml (缶)",
+      "short_description": "ペプシコーラ缶 320ml",
+      "long_description": "濃厚で爽やかな味わいのクラシックな320ml缶入りペプシコーラ。まろやかな甘さで、炭酸入り、そしてエネルギーに満ちています。スパイシーなベトナム料理や普段の食事に完璧なパートナーです。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2659,
+      "product_name": "7Up 320ml (缶)",
+      "short_description": "7Up レモン缶 320ml",
+      "long_description": "320ml缶入りの7Upレモンソーダ。クリアで爽やか、天然の柑橘系の風味でカフェインフリー。軽やかで炭酸があり、完璧な口直しになります。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2677,
+      "product_name": "ペプシブラック 320ml (缶)",
+      "short_description": "ペプシブラック シュガーフリー 320ml",
+      "long_description": "ペプシブラック 320ml缶 - 濃厚なコーラ風味でシュガーフリー。力強い味わいと洗練されたスタイル。カロリーを気にせず、しっかりとした味わいを求める方に。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2726,
+      "product_name": "Revive ゼロカロリー",
+      "short_description": "ゼロカロリースポーツドリンク",
+      "long_description": "アイソトニックドリンクReviveは、カロリーゼロでありながら電解質が豊富で水分補給に最適です。追加の砂糖なしで水分補給に完璧。健康を気遣うアクティブなライフスタイルに理想的です。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2730,
+      "product_name": "バナナ",
+      "short_description": "新鮮でおいしいバナナ",
+      "long_description": "カリウムと天然糖が豊富な新鮮で熟したバナナ。健康的なスナックや素晴らしい天然エネルギー源。甘くて美味しく、栄養価が高く、常に満足感があります。",
+      "category_id": 11,
+      "attributes": []
+    },
+    {
+      "product_id": 2477,
+      "product_name": "(A2) Baguette パテ 卵",
+      "short_description": "Baguette パテと卵",
+      "long_description": "ベトナムの伝統的なBaguetteに、濃厚なパテと新鮮な卵を添えました。サクサクのBaguetteに新鮮なコリアンダーとレタス、伝統的な調味料を使用しています。最高の素朴な料理です！",
+      "category_id": 1,
+      "attributes": [
+        {
+          "attribute_id": 10,
+          "attribute_name": "Baguette トッピング",
+          "display_type": "check_box",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 48,
+              "name": "パテ追加",
+              "price_extra": 5000.0,
+              "base_value_id": 28,
+              "base_value_name": "パテ追加",
+              "product_packaging_id": 4471,
+              "linked_product_id": 2499,
+              "linked_product_name": "トッピング パテ",
+              "linked_product_price": 10000.0
+            },
+            {
+              "id": 49,
+              "name": "Cha Siu BBQ Pork 追加",
+              "price_extra": 10000.0,
+              "base_value_id": 29,
+              "base_value_name": "Cha Siu BBQ Pork 追加",
+              "product_packaging_id": 4476,
+              "linked_product_id": 2504,
+              "linked_product_name": "トッピング Cha Siu BBQ Pork",
+              "linked_product_price": 10000.0
+            },
+            {
+              "id": 50,
+              "name": "チャ追加",
+              "price_extra": 5000.0,
+              "base_value_id": 30,
+              "base_value_name": "チャ追加",
+              "product_packaging_id": 4473,
+              "linked_product_id": 2501,
+              "linked_product_name": "トッピング チャルーア",
+              "linked_product_price": 5000.0
+            },
+            {
+              "id": 51,
+              "name": "ジャンボン追加",
+              "price_extra": 5000.0,
+              "base_value_id": 31,
+              "base_value_name": "ジャンボン追加",
+              "product_packaging_id": 4474,
+              "linked_product_id": 2502,
+              "linked_product_name": "トッピング ジャンボン",
+              "linked_product_price": 5000.0
+            },
+            {
+              "id": 52,
+              "name": "裂き鶏追加",
+              "price_extra": 10000.0,
+              "base_value_id": 32,
+              "base_value_name": "裂き鶏追加",
+              "product_packaging_id": 4475,
+              "linked_product_id": 2503,
+              "linked_product_name": "トッピング 裂き鶏",
+              "linked_product_price": 10000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2478,
+      "product_name": "(A4) ミックスバゲット",
+      "short_description": "様々な種類のお肉が入ったミックスバゲット",
+      "long_description": "パテ、ベトナムハム、ジャンボン、チャーシューBBQポークのミックスが入った究極のベトナムバゲット。新鮮なコリアンダーとレタスがたっぷり。最も愛されている伝統的な選択肢！",
+      "category_id": 1,
+      "attributes": [
+        {
+          "attribute_id": 10,
+          "attribute_name": "バゲットトッピング",
+          "display_type": "check_box",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 58,
+              "name": "パテ追加",
+              "price_extra": 5000.0,
+              "base_value_id": 28,
+              "base_value_name": "パテ追加",
+              "product_packaging_id": 4471,
+              "linked_product_id": 2499,
+              "linked_product_name": "パテトッピング",
+              "linked_product_price": 10000.0
+            },
+            {
+              "id": 59,
+              "name": "チャーシューBBQポーク追加",
+              "price_extra": 10000.0,
+              "base_value_id": 29,
+              "base_value_name": "チャーシューBBQポーク追加",
+              "product_packaging_id": 4476,
+              "linked_product_id": 2504,
+              "linked_product_name": "チャーシューBBQポークトッピング",
+              "linked_product_price": 10000.0
+            },
+            {
+              "id": 60,
+              "name": "チャ追加",
+              "price_extra": 5000.0,
+              "base_value_id": 30,
+              "base_value_name": "チャ追加",
+              "product_packaging_id": 4473,
+              "linked_product_id": 2501,
+              "linked_product_name": "チャールアトッピング",
+              "linked_product_price": 5000.0
+            },
+            {
+              "id": 61,
+              "name": "ジャンボン追加",
+              "price_extra": 5000.0,
+              "base_value_id": 31,
+              "base_value_name": "ジャンボン追加",
+              "product_packaging_id": 4474,
+              "linked_product_id": 2502,
+              "linked_product_name": "ジャンボントッピング",
+              "linked_product_price": 5000.0
+            },
+            {
+              "id": 62,
+              "name": "裂き鶏追加",
+              "price_extra": 10000.0,
+              "base_value_id": 32,
+              "base_value_name": "裂き鶏追加",
+              "product_packaging_id": 4475,
+              "linked_product_id": 2503,
+              "linked_product_name": "裂き鶏トッピング",
+              "linked_product_price": 10000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2479,
+      "product_name": "(A7) 照り焼き豚肉バゲット",
+      "short_description": "照り焼き豚肉バゲット",
+      "long_description": "濃厚なパテと柔らかくて美味しい照り焼き豚肉、新鮮なコリアンダーとレタス、そして伝統的なベトナムのスパイスを組み合わせたフュージョンバゲット。甘く、濃厚で、非常に美味しい！",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2480,
+      "product_name": "(A8) 四川風きのこベジバゲット",
+      "short_description": "きのこベジタリアンバゲット",
+      "long_description": "ヘルシーなベジタリアンチョイス。風味豊かな焼ききのこ、新鮮なパクチーとレタス入り。風味豊かな植物性プロテイン。ベジタリアン愛好家に最適です！",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2481,
+      "product_name": "(A5) スティックバゲット パテと肉でんぶ",
+      "short_description": "スティックバゲット パテと肉でんぶ",
+      "long_description": "サクサクのスティックバゲットに、濃厚なパテとふんわりとした肉でんぶがたっぷり入っています。本格的なベトナムの味を便利なサイズで楽しめる、持ち運びに最適な一品です。",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2728,
+      "product_name": "(A5) ベジタリアンきのこスティックバゲット",
+      "short_description": "ベジタリアンきのこスティックバゲット",
+      "long_description": "味付けきのこ、生のパクチーが入ったベジタリアン スティックバゲット。持ち運びに便利なサイズで、豊かな風味。軽食に最適な植物性食品です。",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2482,
+      "product_name": "(A11) 煮込み牛肉バゲット",
+      "short_description": "ベトナム風煮込み牛肉バゲット",
+      "long_description": "柔らかくて美味しいベトナム風煮込み牛肉の具材、新鮮なコリアンダーとレタスが入った風味豊かなバゲット。濃厚で温かい風味は、肌寒い日や、がっつりしたものが食べたい時にぴったりです。",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2483,
+      "product_name": "(A10) Baguette Shumai",
+      "short_description": "ベトナム風シュウマイバゲット",
+      "long_description": "美味しいバゲットに、濃厚なソースに浸かった柔らかいベトナム風シュウマイ、新鮮なパクチーとレタスを挟みました。ジューシーで風味豊か、そして心地よい食体験をお楽しみください。",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2484,
+      "product_name": "(A6) Baguette Cha Siu BBQ Pork",
+      "short_description": "Baguette Cha Siu BBQ Pork BBQ",
+      "long_description": "クラシックなバゲットに、甘くて濃厚な中華風のCha Siu BBQ Pork、新鮮な野菜、伝統的な調味料を添えました。香ばしいスモーキーな風味は、甘さと塩味の完璧なバランスです。",
+      "category_id": 1,
+      "attributes": [
+        {
+          "attribute_id": 10,
+          "attribute_name": "Baguette Topping",
+          "display_type": "check_box",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 63,
+              "name": "パテ追加",
+              "price_extra": 5000.0,
+              "base_value_id": 28,
+              "base_value_name": "パテ追加",
+              "product_packaging_id": 4471,
+              "linked_product_id": 2499,
+              "linked_product_name": "パテトッピング",
+              "linked_product_price": 10000.0
+            },
+            {
+              "id": 64,
+              "name": "Cha Siu BBQ Pork追加",
+              "price_extra": 10000.0,
+              "base_value_id": 29,
+              "base_value_name": "Cha Siu BBQ Pork追加",
+              "product_packaging_id": 4476,
+              "linked_product_id": 2504,
+              "linked_product_name": "Cha Siu BBQ Porkトッピング",
+              "linked_product_price": 10000.0
+            },
+            {
+              "id": 65,
+              "name": "ベトナムハム追加",
+              "price_extra": 5000.0,
+              "base_value_id": 30,
+              "base_value_name": "ベトナムハム追加",
+              "product_packaging_id": 4473,
+              "linked_product_id": 2501,
+              "linked_product_name": "ベトナムハムトッピング",
+              "linked_product_price": 5000.0
+            },
+            {
+              "id": 66,
+              "name": "ジャンボン追加",
+              "price_extra": 5000.0,
+              "base_value_id": 31,
+              "base_value_name": "ジャンボン追加",
+              "product_packaging_id": 4474,
+              "linked_product_id": 2502,
+              "linked_product_name": "ジャンボントッピング",
+              "linked_product_price": 5000.0
+            },
+            {
+              "id": 67,
+              "name": "ほぐし鶏追加",
+              "price_extra": 10000.0,
+              "base_value_id": 32,
+              "base_value_name": "ほぐし鶏追加",
+              "product_packaging_id": 4475,
+              "linked_product_id": 2503,
+              "linked_product_name": "ほぐし鶏トッピング",
+              "linked_product_price": 10000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2485,
+      "product_name": "(A9) ガーリックバター裂き鶏バゲット",
+      "short_description": "ガーリックバター裂き鶏バゲット",
+      "long_description": "柔らかくほぐした鶏肉を香ばしいガーリックバターで和え、新鮮なコリアンダーとレタスを添えました。ガーリックの完璧なバランスとクリーミーな食感が特徴の濃厚な味わいです。",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2689,
+      "product_name": "(A3) パテと卵のBaguette ダブル",
+      "short_description": "パテと卵のBaguette ダブル",
+      "long_description": "クラシックなパテと卵のBaguetteのスーパーサイズ版で、具材がダブルになっています。新鮮なコリアンダーとレタス入り。濃厚で満腹感があり、食欲旺盛な方に最適です。最高の味と満足感！",
+      "category_id": 1,
+      "attributes": [
+        {
+          "attribute_id": 10,
+          "attribute_name": "Baguetteトッピング",
+          "display_type": "check_box",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 53,
+              "name": "パテ追加",
+              "price_extra": 5000.0,
+              "base_value_id": 28,
+              "base_value_name": "パテ追加",
+              "product_packaging_id": 4471,
+              "linked_product_id": 2499,
+              "linked_product_name": "パテトッピング",
+              "linked_product_price": 10000.0
+            },
+            {
+              "id": 54,
+              "name": "Cha Siu BBQ Pork追加",
+              "price_extra": 10000.0,
+              "base_value_id": 29,
+              "base_value_name": "Cha Siu BBQ Pork追加",
+              "product_packaging_id": 4476,
+              "linked_product_id": 2504,
+              "linked_product_name": "Cha Siu BBQ Porkトッピング",
+              "linked_product_price": 10000.0
+            },
+            {
+              "id": 55,
+              "name": "ベトナムハム追加",
+              "price_extra": 5000.0,
+              "base_value_id": 30,
+              "base_value_name": "ベトナムハム追加",
+              "product_packaging_id": 4473,
+              "linked_product_id": 2501,
+              "linked_product_name": "ベトナムハムトッピング",
+              "linked_product_price": 5000.0
+            },
+            {
+              "id": 56,
+              "name": "ジャンボン追加",
+              "price_extra": 5000.0,
+              "base_value_id": 31,
+              "base_value_name": "ジャンボン追加",
+              "product_packaging_id": 4474,
+              "linked_product_id": 2502,
+              "linked_product_name": "ジャンボントッピング",
+              "linked_product_price": 5000.0
+            },
+            {
+              "id": 57,
+              "name": "ほぐし鶏追加",
+              "price_extra": 10000.0,
+              "base_value_id": 32,
+              "base_value_name": "ほぐし鶏追加",
+              "product_packaging_id": 4475,
+              "linked_product_id": 2503,
+              "linked_product_name": "ほぐし鶏トッピング",
+              "linked_product_price": 10000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2690,
+      "product_name": "(B3) 混ぜ麺 チャーシューBBQポーク",
+      "short_description": "チャーシューBBQポーク混ぜ麺",
+      "long_description": "甘くて濃厚なチャーシューBBQポーク、新鮮なチンゲンサイ、伝統的なベトナムのスパイスを使った美味しい混ぜ麺。本格的な風味豊かな麺のボウルです。",
+      "category_id": 15,
+      "attributes": []
+    },
+    {
+      "product_id": 2669,
+      "product_name": "(B4) 四川焼きキノコ混ぜ麺",
+      "short_description": "ベジタリアン焼きキノコ混ぜ麺",
+      "long_description": "焼きキノコと新鮮なチンゲンサイを添えたヘルシーなベジタリアン麺。濃厚で風味豊かな味わいと満足感のある食感の植物性タンパク質。",
+      "category_id": 15,
+      "attributes": []
+    },
+    {
+      "product_id": 2657,
+      "product_name": "(B5) 五香牛肉麺",
+      "short_description": "香り高い五香牛肉麺",
+      "long_description": "香り高い牛肉麺の一皿は、濃厚な五香スパイスで味付けされた柔らかい牛肉と。温かいスパイス、新鮮なチンゲンサイ、そしてコシのある美味しい麺が織りなす複雑な風味。庶民の味の極み！",
+      "category_id": 15,
+      "attributes": []
+    },
+    {
+      "product_id": 2552,
+      "product_name": "(B6) サラダミックス",
+      "short_description": "新鮮なグリーンサラダ",
+      "long_description": "新鮮なグリーンサラダに、コリアンダーと新鮮なレタス、伝統的なベトナムドレッシングを添えました。軽くて栄養豊富で爽やか - 完璧なサイドディッシュまたは軽食です。",
+      "category_id": 11,
+      "attributes": []
+    },
+    {
+      "product_id": 2499,
+      "product_name": "トッピングパテ",
+      "short_description": "料理にパテを追加",
+      "long_description": "ベトナム風の濃厚でクリーミーなパテは、Baguetteや麺に風味を加えるのに最適です。なめらかな舌触りで、本格的な伝統の味。",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2500,
+      "product_name": "卵トッピング",
+      "short_description": "料理に新鮮な卵を追加",
+      "long_description": "新鮮な卵トッピングは、どんな食事もアップグレードします。バゲットや麺にタンパク質とコクを追加します。最適な風味と食感のために完璧に調理されています。",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2501,
+      "product_name": "チャールアトッピング",
+      "short_description": "ベトナムチャールアトッピング",
+      "long_description": "ベトナムの伝統的なチャールアトッピングです。軽やかで繊細な風味は、バゲットや麺料理に本格的な風味を加えるのに最適です。",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2502,
+      "product_name": "トッピング ジャンボン",
+      "short_description": "トッピング ジャンボン プロテイン追加",
+      "long_description": "完璧な品質のジャンボンスライスは、Baguetteや麺にプロテインと風味を加えるのに最適です。軽やかでなめらかな味わいは、ベトナムのスパイスと素晴らしい組み合わせです。",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2503,
+      "product_name": "裂き鶏トッピング",
+      "short_description": "裂き鶏トッピング",
+      "long_description": "柔らかくベトナムスパイスで味付けされた裂き鶏トッピング。本格的な風味と満足のいく食感で、どんな料理にもぴったりのタンパク質補給です。",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2504,
+      "product_name": "Topping Cha Siu BBQ Pork",
+      "short_description": "Topping Cha Siu BBQ Pork BBQ",
+      "long_description": "Topping Cha Siu BBQ Pork BBQ, sweet and rich Chinese style. Perfect smoky aroma to upgrade Baguette or noodles with added protein and flavor.",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2486,
+      "product_name": "(B1) ソイ Mixed",
+      "short_description": "ソイ Mixed 多くのトッピング入り",
+      "long_description": "伝統的なベトナムのソイ Mixed 肉、ソーセージ、スパイス入り。ボリューム満点で、お腹いっぱいになり、本格的な風味豊かな、完璧な素朴な一品です。",
+      "category_id": 15,
+      "attributes": []
+    },
+    {
+      "product_id": 2487,
+      "product_name": "(B2) ほぐし鶏肉のベトナムおこわ",
+      "short_description": "ほぐし鶏肉入りベトナムおこわ",
+      "long_description": "柔らかいほぐし鶏肉と伝統的なスパイスを使った美味しいベトナムおこわです。本格的なベトナムスタイルで、食感と風味の満足のいく組み合わせをお楽しみいただけます。",
+      "category_id": 15,
+      "attributes": []
+    },
+    {
+      "product_id": 1181,
+      "product_name": "ピクルス",
+      "short_description": "酸味調整",
+      "long_description": "お好みに合わせて料理の酸味を調整できます。伝統的なベトナムの味をあなたの好みに合わせるのに最適です。",
+      "category_id": null,
+      "attributes": []
+    },
+    {
+      "product_id": 1293,
+      "product_name": "加糖",
+      "short_description": "砂糖・甘味料追加オプション",
+      "long_description": "お飲み物に砂糖または甘味料を追加するオプションです。コーヒー、紅茶、フレッシュジュースなどのお飲み物の甘さを、お客様のお好みに合わせて完璧に調整できます。",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2735,
+      "product_name": "チアシード入りスイカジュース",
+      "short_description": "スイカジュース チアシード入り",
+      "long_description": "新鮮なスイカジュースに栄養豊富なチアシードが加えられています。甘くてさわやかで、水分補給に最適、ビタミンと食物繊維が豊富です。暑い季節にぴったりの健康的な飲み物です。",
+      "category_id": 3,
+      "attributes": []
+    }
+  ]
+}

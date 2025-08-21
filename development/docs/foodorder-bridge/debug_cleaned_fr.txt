@@ -1,0 +1,689 @@
+{
+  "source_language": "vi",
+  "categories": [
+    {
+      "category_id": 1,
+      "category_name": "Traditional Vietnamese Baguettes",
+      "description": "Traditional Vietnamese sandwiches with fresh ingredients"
+    },
+    {
+      "category_id": 15,
+      "category_name": "Mixed Noodles & Sticky Rice",
+      "description": "Mixed noodle dishes with various toppings"
+    },
+    {
+      "category_id": 3,
+      "category_name": "Beverages",
+      "description": "Refreshing beverages including coffee, tea, and soft drinks"
+    },
+    {
+      "category_id": 11,
+      "category_name": "Salad",
+      "description": "Fresh and healthy salad options"
+    },
+    {
+      "category_id": 8,
+      "category_name": "COMBO",
+      "description": "Value meal combinations with drinks and sides"
+    },
+    {
+      "category_id": 5,
+      "category_name": "Topping",
+      "description": "Extra toppings and add-ons for your meals"
+    },
+    {
+      "category_id": 7,
+      "category_name": "Vật Phẩm",
+      "description": "Utensils and additional items"
+    }
+  ],
+  "products": [
+    {
+      "product_id": 1186,
+      "product_name": "Plain Baguette",
+      "short_description": "Traditional Vietnamese baguette",
+      "long_description": "Fresh and delicious Vietnamese baguette with a crispy golden crust and soft, fluffy interior. Perfect as a side dish or as a base to create your own custom baguette combo.",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2715,
+      "product_name": "(C2) CMB Happy Lunchset",
+      "short_description": "Baguette + drink + salad/yogurt of your choice",
+      "long_description": "Perfect lunch combo with a signature baguette, refreshing drink, and a choice of fresh salad or creamy yogurt. Great value for a complete meal!",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 4,
+          "attribute_name": "Baguette",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 2,
+              "name": "Mixed Baguette (Thập Cẩm)",
+              "price_extra": 0.0,
+              "base_value_id": 2,
+              "base_value_name": "Bánh Mì Thập Cẩm",
+              "product_packaging_id": 4451,
+              "linked_product_id": 2478,
+              "linked_product_name": "(A4) Bánh Mì Thập Cẩm",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 7,
+              "name": "Shredded Chicken Baguette (Gà Xé)",
+              "price_extra": 0.0,
+              "base_value_id": 9,
+              "base_value_name": "Bánh Mì Gà Xé",
+              "product_packaging_id": 4457,
+              "linked_product_id": 2485,
+              "linked_product_name": "(A9) Bánh Mì Gà Xé Bơ Tỏi",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 3,
+              "name": "Cha Siu BBQ Pork Baguette (Xá Xíu)",
+              "price_extra": 0.0,
+              "base_value_id": 10,
+              "base_value_name": "Bánh Mì Xá Xíu",
+              "product_packaging_id": 4456,
+              "linked_product_id": 2484,
+              "linked_product_name": "(A6) Bánh Mì Xá Xíu",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 4,
+              "name": "Teriyaki Grilled Pork Baguette (Heo Nướng Teriyaki)",
+              "price_extra": 0.0,
+              "base_value_id": 11,
+              "base_value_name": "Bánh Mì Heo Nướng Teriyaki",
+              "product_packaging_id": 4452,
+              "linked_product_id": 2479,
+              "linked_product_name": "(A7) Bánh Mì Heo Nướng Teriyaki",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 5,
+              "name": "Veggy Baguette",
+              "price_extra": 0.0,
+              "base_value_id": 12,
+              "base_value_name": "Bánh Mì Veggy",
+              "product_packaging_id": 4453,
+              "linked_product_id": 2480,
+              "linked_product_name": "(A8) Bánh Mì Veggy Nấm Tứ Xuyên",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 71,
+              "name": "Pâté and Egg Baguette (Pate Trứng)",
+              "price_extra": 0.0,
+              "base_value_id": 13,
+              "base_value_name": "Bánh Mì Pate Trứng",
+              "product_packaging_id": 4450,
+              "linked_product_id": 2477,
+              "linked_product_name": "(A2) Bánh Mì Pate Trứng",
+              "linked_product_price": 29000.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 5,
+          "attribute_name": "Softdrinks",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 8,
+              "name": "Coca Cola Zero",
+              "price_extra": 0.0,
+              "base_value_id": 14,
+              "base_value_name": "Coca Cola Zero",
+              "product_packaging_id": 4537,
+              "linked_product_id": 2550,
+              "linked_product_name": "Coca Cola Zero",
+              "linked_product_price": 20000.0
+            },
+            {
+              "id": 9,
+              "name": "Pepsi",
+              "price_extra": 0.0,
+              "base_value_id": 15,
+              "base_value_name": "Pepsi",
+              "product_packaging_id": 4662,
+              "linked_product_id": 2658,
+              "linked_product_name": "Pepsi 320ml ( Lon)",
+              "linked_product_price": 20000.0
+            },
+            {
+              "id": 10,
+              "name": "Pepsi Black",
+              "price_extra": 0.0,
+              "base_value_id": 16,
+              "base_value_name": "Pepsi Black",
+              "product_packaging_id": 4694,
+              "linked_product_id": 2677,
+              "linked_product_name": "Pepsi Black 320ml ( Lon)",
+              "linked_product_price": 20000.0
+            },
+            {
+              "id": 11,
+              "name": "7-up",
+              "price_extra": 0.0,
+              "base_value_id": 17,
+              "base_value_name": "7-up",
+              "product_packaging_id": 4665,
+              "linked_product_id": 2659,
+              "linked_product_name": "7Up 320ml ( Lon)",
+              "linked_product_price": 20000.0
+            },
+            {
+              "id": 68,
+              "name": "Oolong Tea Plus",
+              "price_extra": 0.0,
+              "base_value_id": 18,
+              "base_value_name": "Trà Ô Long TeaPlus",
+              "product_packaging_id": 4531,
+              "linked_product_id": 2544,
+              "linked_product_name": "Trà Ô long Tea Plus ( chai 450ml)",
+              "linked_product_price": 20000.0
+            },
+            {
+              "id": 69,
+              "name": "Revive Salted Lemon",
+              "price_extra": 0.0,
+              "base_value_id": 34,
+              "base_value_name": "Revive chanh muối",
+              "product_packaging_id": 4777,
+              "linked_product_id": 2725,
+              "linked_product_name": "Revive Chanh muối",
+              "linked_product_price": 20000.0
+            },
+            {
+              "id": 70,
+              "name": "Revive",
+              "price_extra": 0.0,
+              "base_value_id": 35,
+              "base_value_name": "Revive",
+              "product_packaging_id": 4780,
+              "linked_product_id": 2726,
+              "linked_product_name": "Revive Không Calo",
+              "linked_product_price": 20000.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 6,
+          "attribute_name": "Include Salad Yogurt",
+          "display_type": "check_box",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 30,
+              "name": "Salad",
+              "price_extra": 15000.0,
+              "base_value_id": 19,
+              "base_value_name": "Salad",
+              "product_packaging_id": 4540,
+              "linked_product_id": 2552,
+              "linked_product_name": "(B6) Salad Mix",
+              "linked_product_price": 25000.0
+            },
+            {
+              "id": 31,
+              "name": "Yogurt",
+              "price_extra": 15000.0,
+              "base_value_id": 20,
+              "base_value_name": "Sữa chua",
+              "product_packaging_id": 4534,
+              "linked_product_id": 2547,
+              "linked_product_name": "(D5) Sữa chua",
+              "linked_product_price": 20000.0
+            },
+            {
+              "id": 32,
+              "name": "None",
+              "price_extra": 0.0,
+              "base_value_id": 27,
+              "base_value_name": "Không"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2718,
+      "product_name": "(C1) CMB Express Lunchset",
+      "short_description": "Quick lunch: noodles/rice + coffee + salad/yogurt",
+      "long_description": "Express lunch combo with flavorful Vietnamese noodles/rice, aromatic coffee, and fresh salad or yogurt. Quick, delicious, and nutritious!",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 6,
+          "attribute_name": "Include Salad Yogurt",
+          "display_type": "check_box",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 28,
+              "name": "Salad",
+              "price_extra": 0.0,
+              "base_value_id": 19,
+              "base_value_name": "Salad",
+              "product_packaging_id": 4540,
+              "linked_product_id": 2552,
+              "linked_product_name": "(B6) Salad Mix",
+              "linked_product_price": 25000.0
+            },
+            {
+              "id": 29,
+              "name": "Yogurt",
+              "price_extra": 0.0,
+              "base_value_id": 20,
+              "base_value_name": "Sữa chua",
+              "product_packaging_id": 4534,
+              "linked_product_id": 2547,
+              "linked_product_name": "(D5) Sữa chua",
+              "linked_product_price": 20000.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 7,
+          "attribute_name": "Lunch Dish",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 23,
+              "name": "Mixed Noodles with Cha Siu BBQ Pork (Mì Trộn Xá Xíu)",
+              "price_extra": 0.0,
+              "base_value_id": 21,
+              "base_value_name": "Mì Trộn Xá Xíu",
+              "product_packaging_id": 4713,
+              "linked_product_id": 2690,
+              "linked_product_name": "(B3) Mì Trộn Xá Xíu",
+              "linked_product_price": 45000.0
+            },
+            {
+              "id": 24,
+              "name": "Beef Stew (Bò Kho)",
+              "price_extra": 0.0,
+              "base_value_id": 22,
+              "base_value_name": "Bò Kho",
+              "product_packaging_id": 4455,
+              "linked_product_id": 2482,
+              "linked_product_name": "(A11) Bánh Mì Bò Kho",
+              "linked_product_price": 49000.0
+            },
+            {
+              "id": 25,
+              "name": "Da Lat Meatballs (Xíu Mại Đà Lạt)",
+              "price_extra": 0.0,
+              "base_value_id": 23,
+              "base_value_name": "Xíu Mại Đà Lạt",
+              "product_packaging_id": 4401,
+              "linked_product_id": 2450,
+              "linked_product_name": "Bánh Mì Xíu Mại Đà Lạt",
+              "linked_product_price": 49000.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 8,
+          "attribute_name": "Coffee",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 26,
+              "name": "Iced Coffee with Milk (Cà Phê Sữa Đá)",
+              "price_extra": 0.0,
+              "base_value_id": 24,
+              "base_value_name": "Cà Phê Sữa Đá",
+              "product_packaging_id": 4461,
+              "linked_product_id": 2489,
+              "linked_product_name": "(D7) Cà Phê Sữa Đá",
+              "linked_product_price": 29000.0
+            },
+            {
+              "id": 27,
+              "name": "Iced Black Coffee (Cà Phê Đá)",
+              "price_extra": 0.0,
+              "base_value_id": 25,
+              "base_value_name": "Cà Phê Đá",
+              "product_packaging_id": 4460,
+              "linked_product_id": 2488,
+              "linked_product_name": "(D6) Cà Phê Đen Đá",
+              "linked_product_price": 25000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2717,
+      "product_name": "(C3) CMB Energy Breakfast",
+      "short_description": "Energy morning: baguette + Vietnamese coffee",
+      "long_description": "Start your day right with an energy-packed breakfast combo! Choose your favorite baguette with strong Vietnamese coffee - the perfect energy boost for a busy day.",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 4,
+          "attribute_name": "Baguette",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 15,
+              "name": "Mixed Baguette (Thập Cẩm)",
+              "price_extra": 0.0,
+              "base_value_id": 2,
+              "base_value_name": "Bánh Mì Thập Cẩm",
+              "product_packaging_id": 4451,
+              "linked_product_id": 2478,
+              "linked_product_name": "(A4) Bánh Mì Thập Cẩm",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 16,
+              "name": "Shredded Chicken Baguette (Gà Xé)",
+              "price_extra": 0.0,
+              "base_value_id": 9,
+              "base_value_name": "Bánh Mì Gà Xé",
+              "product_packaging_id": 4457,
+              "linked_product_id": 2485,
+              "linked_product_name": "(A9) Bánh Mì Gà Xé Bơ Tỏi",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 17,
+              "name": "Cha Siu BBQ Pork Baguette (Xá Xíu)",
+              "price_extra": 0.0,
+              "base_value_id": 10,
+              "base_value_name": "Bánh Mì Xá Xíu",
+              "product_packaging_id": 4456,
+              "linked_product_id": 2484,
+              "linked_product_name": "(A6) Bánh Mì Xá Xíu",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 18,
+              "name": "Teriyaki Grilled Pork Baguette (Heo Nướng Teriyaki)",
+              "price_extra": 0.0,
+              "base_value_id": 11,
+              "base_value_name": "Bánh Mì Heo Nướng Teriyaki",
+              "product_packaging_id": 4452,
+              "linked_product_id": 2479,
+              "linked_product_name": "(A7) Bánh Mì Heo Nướng Teriyaki",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 19,
+              "name": "Veggy Baguette",
+              "price_extra": 0.0,
+              "base_value_id": 12,
+              "base_value_name": "Bánh Mì Veggy",
+              "product_packaging_id": 4453,
+              "linked_product_id": 2480,
+              "linked_product_name": "(A8) Bánh Mì Veggy Nấm Tứ Xuyên",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 20,
+              "name": "Pâté and Egg Baguette (Pate Trứng)",
+              "price_extra": 0.0,
+              "base_value_id": 13,
+              "base_value_name": "Bánh Mì Pate Trứng",
+              "product_packaging_id": 4450,
+              "linked_product_id": 2477,
+              "linked_product_name": "(A2) Bánh Mì Pate Trứng",
+              "linked_product_price": 29000.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 8,
+          "attribute_name": "Coffee",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 21,
+              "name": "Iced Coffee with Milk (Cà Phê Sữa Đá)",
+              "price_extra": 0.0,
+              "base_value_id": 24,
+              "base_value_name": "Cà Phê Sữa Đá",
+              "product_packaging_id": 4461,
+              "linked_product_id": 2489,
+              "linked_product_name": "(D7) Cà Phê Sữa Đá",
+              "linked_product_price": 29000.0
+            },
+            {
+              "id": 22,
+              "name": "Iced Black Coffee (Cà Phê Đá)",
+              "price_extra": 0.0,
+              "base_value_id": 25,
+              "base_value_name": "Cà Phê Đá",
+              "product_packaging_id": 4460,
+              "linked_product_id": 2488,
+              "linked_product_name": "(D6) Cà Phê Đen Đá",
+              "linked_product_price": 25000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2716,
+      "product_name": "(C4) CMB Express Breakfast",
+      "short_description": "Quick morning: baguette stick + coffee",
+      "long_description": "Convenient breakfast on the go! Crispy baguette stick with delicious filling and strong Vietnamese coffee. Quick, tasty, and full of energy for a busy morning.",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 8,
+          "attribute_name": "Coffee",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 13,
+              "name": "Iced Coffee with Milk (Cà Phê Sữa Đá)",
+              "price_extra": 0.0,
+              "base_value_id": 24,
+              "base_value_name": "Cà Phê Sữa Đá",
+              "product_packaging_id": 4461,
+              "linked_product_id": 2489,
+              "linked_product_name": "(D7) Cà Phê Sữa Đá",
+              "linked_product_price": 29000.0
+            },
+            {
+              "id": 14,
+              "name": "Iced Black Coffee (Cà Phê Đá)",
+              "price_extra": 0.0,
+              "base_value_id": 25,
+              "base_value_name": "Cà Phê Đá",
+              "product_packaging_id": 4460,
+              "linked_product_id": 2488,
+              "linked_product_name": "(D6) Cà Phê Đen Đá",
+              "linked_product_price": 25000.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 9,
+          "attribute_name": "Baguette Stick",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 12,
+              "name": "Baguette Stick",
+              "price_extra": 0.0,
+              "base_value_id": 26,
+              "base_value_name": "Bánh Mì Que",
+              "product_packaging_id": 4454,
+              "linked_product_id": 2481,
+              "linked_product_name": "(A5) Bánh Mì Que Pate Chà Bông",
+              "linked_product_price": 25000.0
+            },
+            {
+              "id": 72,
+              "name": "Veggie Mushroom Baguette Stick (Bánh Mì Que Nấm Chay)",
+              "price_extra": 0.0,
+              "base_value_id": 36,
+              "base_value_name": "Bánh Mì Que Nấm Chay",
+              "product_packaging_id": 4783,
+              "linked_product_id": 2728,
+              "linked_product_name": "(A5) Bánh Mì Que Nấm Chay",
+              "linked_product_price": 25000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2736,
+      "product_name": "Iced Blended Yogurt",
+      "short_description": "Iced blended yogurt - creamy and refreshing",
+      "long_description": "Refreshing Vietnamese-style iced blended yogurt with a smooth, creamy texture. Light, tangy, and just the right amount of sweetness - an ideal thirst quencher any time of day.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2737,
+      "product_name": "Iced Blended Yogurt CAFE",
+      "short_description": "Iced blended yogurt with coffee flavor",
+      "long_description": "Unique drink combining creamy yogurt with strong Vietnamese coffee and ice. Smooth, refreshing, and energizing - a perfect fusion of tanginess and caffeine.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2546,
+      "product_name": "Saigon Special Beer (330ml can)",
+      "short_description": "Saigon Special Beer 330ml can",
+      "long_description": "Premium Saigon Special beer in a 330ml can. Crisp, light, and refreshing with a clean finish. The perfect partner for spicy Vietnamese food and hot weather.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2488,
+      "product_name": "(D6) Iced Black Coffee",
+      "short_description": "Vietnamese iced black coffee",
+      "long_description": "Authentic Vietnamese iced black coffee. Strong and aromatic using the traditional phin brewing method. Pure coffee flavor without milk - perfect for coffee connoisseurs.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2489,
+      "product_name": "(D7) Iced Coffee with Milk",
+      "short_description": "Vietnamese iced coffee with condensed milk",
+      "long_description": "Classic Vietnamese iced coffee with sweet condensed milk. Strong, smooth, and a perfect balance of coffee bitterness and creamy sweetness. Vietnam's most beloved drink!",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2490,
+      "product_name": "(D9) Expresso",
+      "short_description": "Strong Italian espresso",
+      "long_description": "Concentrated espresso shot with a bold flavor. Rich taste with a thick crema. Perfect for those who love strong coffee or need a quick energy boost any time.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2491,
+      "product_name": "(D8) Americano",
+      "short_description": "Espresso diluted with hot water",
+      "long_description": "Classic Americano made from strong espresso and hot water. Clean, smooth coffee flavor with a moderate strength but more depth than regular phin coffee.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2492,
+      "product_name": "(D10) Iced Latte",
+      "short_description": "Iced latte with fresh milk",
+      "long_description": "Creamy iced latte made from espresso and fresh milk over ice. Smooth, rich, and perfectly balanced. A modern take on traditional Vietnamese coffee culture.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2493,
+      "product_name": "(D1) Golden Melon Tea",
+      "short_description": "Golden melon tea - sweet, cool, and refreshing",
+      "long_description": "Refreshing golden melon tea with natural fruit flavor. Mildly sweet, fragrant, and wonderfully thirst-quenching. A light and healthy alternative to sugary sodas.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2494,
+      "product_name": "(D2) Winter Melon Drink with Chia Seeds",
+      "short_description": "Winter melon drink with chia seeds",
+      "long_description": "Healthy winter melon drink infused with nutritious chia seeds. Lightly sweet, cooling, and rich in fiber. A perfect wellness drink for health-conscious customers.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2675,
+      "product_name": "(D3) Fresh Orange Juice",
+      "short_description": "Fresh orange juice - pure and natural",
+      "long_description": "100% freshly squeezed orange juice full of vitamin C and natural sweetness. No additives - just the pure and refreshing taste of fresh oranges in every sip.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2547,
+      "product_name": "(D5) Yogurt",
+      "short_description": "Traditional Vietnamese yogurt",
+      "long_description": "Authentic Vietnamese-style yogurt with a smooth, creamy texture and a tangy flavor. Made fresh daily using traditional methods. Good for your health, rich in probiotics.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2725,
+      "product_name": "Revive Salted Lemon",
+      "short_description": "Sports drink with salted lemon flavor",
+      "long_description": "Isotonic Revive sports drink with a refreshing salted lemon flavor. Perfect for rehydration with electrolytes and minerals. Ideal after exercise or in hot weather.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2498,
+      "product_name": "Aquafina 500ml",
+      "short_description": "500ml bottled purified water",
+      "long_description": "Premium Aquafina purified water in a convenient 500ml bottle. Clean, pure, and refreshing. Perfect for staying hydrated throughout the day or with meals.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2544,
+      "product_name": "Oolong Tea Plus (450ml bottle)",
+      "short_description": "Oolong Tea 450ml bottle",
+      "long_description": "Premium Oolong tea in a 450ml bottle with authentic Chinese tea flavor. Light, fragrant, and refreshing with natural antioxidants. Traditional taste meets modern convenience.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2545,
+      "product_name": "Red Bull Energy Drink (250ml can)",
+      "short_description": "Red Bull energy drink 250ml",
+      "long_description": "Original Red Bull energy drink in a 250ml can. Boosts energy and alertness with caffeine and taurine. The perfect drink for busy days and late nights.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2550,
+      "product_name": "Coca Cola Zero",
+      "short_description": "Coca Cola zero calories",
+      "long_description": "Classic Coca Cola flavor with zero calories and zero sugar. Refreshing cola taste without the guilt. Perfect for those watching their calorie intake but still craving Coke.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2658,
+      "product_name": "Pepsi 320ml (Can)",
+      "short_description": "Pepsi cola 320ml can",
+      "long_description": "Classic Pepsi cola in a 320ml can with a rich, refreshing flavor. Mildly sweet, carbonated, and energizing. The perfect partner for spicy Vietnamese food and everyday meals.",
+      "category_id": 3,
+      "attributes": []
+    }

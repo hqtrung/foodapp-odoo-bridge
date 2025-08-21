@@ -1,0 +1,1187 @@
+{
+  "source_language": "vi",
+  "categories": [
+    {
+      "category_id": 1,
+      "category_name": "传统越式法棍",
+      "description": "采用新鲜食材制作的传统越南三明治"
+    },
+    {
+      "category_id": 15,
+      "category_name": "拌面与糯米饭",
+      "description": "搭配各种配料的拌面菜肴"
+    },
+    {
+      "category_id": 3,
+      "category_name": "饮品",
+      "description": "清爽饮品，包括咖啡、茶和软饮料"
+    },
+    {
+      "category_id": 11,
+      "category_name": "沙拉",
+      "description": "新鲜健康的沙拉选择"
+    },
+    {
+      "category_id": 8,
+      "category_name": "套餐",
+      "description": "包含饮品和小吃的超值套餐组合"
+    },
+    {
+      "category_id": 5,
+      "category_name": "配料",
+      "description": "为您的餐点提供额外配料和附加品"
+    },
+    {
+      "category_id": 7,
+      "category_name": "物品",
+      "description": "餐具及其他附加物品"
+    }
+  ],
+  "products": [
+    {
+      "product_id": 1186,
+      "product_name": "原味法棍",
+      "short_description": "越南传统法棍",
+      "long_description": "新鲜美味的越南法棍，外皮金黄酥脆，内部柔软细腻。非常适合作为配菜，或作为基础，制作您自己喜欢的法棍组合。",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2715,
+      "product_name": "(C2) CMB 快乐午餐套餐",
+      "short_description": "Baguette 套餐 + 饮料 + 沙拉/酸奶可选",
+      "long_description": "完美的午餐套餐，搭配特色 Baguette、清凉饮料以及新鲜沙拉或浓郁酸奶可选。物超所值，一顿完整的餐点！",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 4,
+          "attribute_name": "Baguette",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 2,
+              "name": "Mixed Baguette",
+              "price_extra": 0.0,
+              "base_value_id": 2,
+              "base_value_name": "Mixed Baguette",
+              "product_packaging_id": 4451,
+              "linked_product_id": 2478,
+              "linked_product_name": "(A4) Mixed Baguette",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 7,
+              "name": "手撕鸡 Baguette",
+              "price_extra": 0.0,
+              "base_value_id": 9,
+              "base_value_name": "手撕鸡 Baguette",
+              "product_packaging_id": 4457,
+              "linked_product_id": 2485,
+              "linked_product_name": "(A9) 蒜香黄油手撕鸡 Baguette",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 3,
+              "name": "Cha Siu BBQ Pork Baguette",
+              "price_extra": 0.0,
+              "base_value_id": 10,
+              "base_value_name": "Cha Siu BBQ Pork Baguette",
+              "product_packaging_id": 4456,
+              "linked_product_id": 2484,
+              "linked_product_name": "(A6) Cha Siu BBQ Pork Baguette",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 4,
+              "name": "照烧烤猪肉 Baguette",
+              "price_extra": 0.0,
+              "base_value_id": 11,
+              "base_value_name": "照烧烤猪肉 Baguette",
+              "product_packaging_id": 4452,
+              "linked_product_id": 2479,
+              "linked_product_name": "(A7) 照烧烤猪肉 Baguette",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 5,
+              "name": "素食 Baguette",
+              "price_extra": 0.0,
+              "base_value_id": 12,
+              "base_value_name": "素食 Baguette",
+              "product_packaging_id": 4453,
+              "linked_product_id": 2480,
+              "linked_product_name": "(A8) 四川蘑菇素食 Baguette",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 71,
+              "name": "肉酱鸡蛋 Baguette",
+              "price_extra": 0.0,
+              "base_value_id": 13,
+              "base_value_name": "肉酱鸡蛋 Baguette",
+              "product_packaging_id": 4450,
+              "linked_product_id": 2477,
+              "linked_product_name": "(A2) 肉酱鸡蛋 Baguette",
+              "linked_product_price": 29000.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 5,
+          "attribute_name": "软饮料",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 8,
+              "name": "零度可乐",
+              "price_extra": 0.0,
+              "base_value_id": 14,
+              "base_value_name": "零度可乐",
+              "product_packaging_id": 4537,
+              "linked_product_id": 2550,
+              "linked_product_name": "零度可乐",
+              "linked_product_price": 20000.0
+            },
+            {
+              "id": 9,
+              "name": "百事可乐",
+              "price_extra": 0.0,
+              "base_value_id": 15,
+              "base_value_name": "百事可乐",
+              "product_packaging_id": 4662,
+              "linked_product_id": 2658,
+              "linked_product_name": "百事可乐 320毫升 (罐装)",
+              "linked_product_price": 20000.0
+            },
+            {
+              "id": 10,
+              "name": "百事可乐黑",
+              "price_extra": 0.0,
+              "base_value_id": 16,
+              "base_value_name": "百事可乐黑",
+              "product_packaging_id": 4694,
+              "linked_product_id": 2677,
+              "linked_product_name": "百事可乐黑 320毫升 (罐装)",
+              "linked_product_price": 20000.0
+            },
+            {
+              "id": 11,
+              "name": "七喜",
+              "price_extra": 0.0,
+              "base_value_id": 17,
+              "base_value_name": "七喜",
+              "product_packaging_id": 4665,
+              "linked_product_id": 2659,
+              "linked_product_name": "七喜 320毫升 (罐装)",
+              "linked_product_price": 20000.0
+            },
+            {
+              "id": 68,
+              "name": "乌龙茶 TeaPlus",
+              "price_extra": 0.0,
+              "base_value_id": 18,
+              "base_value_name": "乌龙茶 TeaPlus",
+              "product_packaging_id": 4531,
+              "linked_product_id": 2544,
+              "linked_product_name": "乌龙茶 Tea Plus (450毫升瓶装)",
+              "linked_product_price": 20000.0
+            },
+            {
+              "id": 69,
+              "name": "Revive 咸柠檬",
+              "price_extra": 0.0,
+              "base_value_id": 34,
+              "base_value_name": "Revive 咸柠檬",
+              "product_packaging_id": 4777,
+              "linked_product_id": 2725,
+              "linked_product_name": "Revive 咸柠檬",
+              "linked_product_price": 20000.0
+            },
+            {
+              "id": 70,
+              "name": "Revive",
+              "price_extra": 0.0,
+              "base_value_id": 35,
+              "base_value_name": "Revive",
+              "product_packaging_id": 4780,
+              "linked_product_id": 2726,
+              "linked_product_name": "Revive 零卡",
+              "linked_product_price": 20000.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 6,
+          "attribute_name": "附带沙拉酸奶",
+          "display_type": "check_box",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 30,
+              "name": "沙拉",
+              "price_extra": 15000.0,
+              "base_value_id": 19,
+              "base_value_name": "沙拉",
+              "product_packaging_id": 4540,
+              "linked_product_id": 2552,
+              "linked_product_name": "(B6) 混合沙拉",
+              "linked_product_price": 25000.0
+            },
+            {
+              "id": 31,
+              "name": "酸奶",
+              "price_extra": 15000.0,
+              "base_value_id": 20,
+              "base_value_name": "酸奶",
+              "product_packaging_id": 4534,
+              "linked_product_id": 2547,
+              "linked_product_name": "(D5) 酸奶",
+              "linked_product_price": 20000.0
+            },
+            {
+              "id": 32,
+              "name": "无",
+              "price_extra": 0.0,
+              "base_value_id": 27,
+              "base_value_name": "无"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2718,
+      "product_name": "(C1) CMB Express Lunchset",
+      "short_description": "Trưa nhanh: mì/cơm + cà phê + salad/sữa chua",
+      "long_description": "Combo trưa express với mì/cơm Việt Nam đậm đà, cà phê thơm lừng và salad tươi hoặc sữa chua. Nhanh gọn, ngon miệng và đầy đủ dinh dưỡng!",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 6,
+          "attribute_name": "Kèm Salad Sữa Chua",
+          "display_type": "check_box",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 28,
+              "name": "Salad",
+              "price_extra": 0.0,
+              "base_value_id": 19,
+              "base_value_name": "Salad",
+              "product_packaging_id": 4540,
+              "linked_product_id": 2552,
+              "linked_product_name": "(B6) Salad Mix",
+              "linked_product_price": 25000.0
+            },
+            {
+              "id": 29,
+              "name": "Sữa chua",
+              "price_extra": 0.0,
+              "base_value_id": 20,
+              "base_value_name": "Sữa chua",
+              "product_packaging_id": 4534,
+              "linked_product_id": 2547,
+              "linked_product_name": "(D5) Sữa chua",
+              "linked_product_price": 20000.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 7,
+          "attribute_name": "Món Trưa",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 23,
+              "name": "Mì Trộn Xá Xíu",
+              "price_extra": 0.0,
+              "base_value_id": 21,
+              "base_value_name": "Mì Trộn Xá Xíu",
+              "product_packaging_id": 4713,
+              "linked_product_id": 2690,
+              "linked_product_name": "(B3) Mì Trộn Xá Xíu",
+              "linked_product_price": 45000.0
+            },
+            {
+              "id": 24,
+              "name": "Bò Kho",
+              "price_extra": 0.0,
+              "base_value_id": 22,
+              "base_value_name": "Bò Kho",
+              "product_packaging_id": 4455,
+              "linked_product_id": 2482,
+              "linked_product_name": "(A11) Bánh Mì Bò Kho",
+              "linked_product_price": 49000.0
+            },
+            {
+              "id": 25,
+              "name": "Xíu Mại Đà Lạt",
+              "price_extra": 0.0,
+              "base_value_id": 23,
+              "base_value_name": "Xíu Mại Đà Lạt",
+              "product_packaging_id": 4401,
+              "linked_product_id": 2450,
+              "linked_product_name": "Bánh Mì Xíu Mại Đà Lạt",
+              "linked_product_price": 49000.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 8,
+          "attribute_name": "Cà Phê",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 26,
+              "name": "Cà Phê Sữa Đá",
+              "price_extra": 0.0,
+              "base_value_id": 24,
+              "base_value_name": "Cà Phê Sữa Đá",
+              "product_packaging_id": 4461,
+              "linked_product_id": 2489,
+              "linked_product_name": "(D7) Cà Phê Sữa Đá",
+              "linked_product_price": 29000.0
+            },
+            {
+              "id": 27,
+              "name": "Cà Phê Đá",
+              "price_extra": 0.0,
+              "base_value_id": 25,
+              "base_value_name": "Cà Phê Đá",
+              "product_packaging_id": 4460,
+              "linked_product_id": 2488,
+              "linked_product_name": "(D6) Cà Phê Đen Đá",
+              "linked_product_price": 25000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2717,
+      "product_name": "(C3) CMB 活力早餐",
+      "short_description": "充满活力的早晨: 法棍 + 越南咖啡",
+      "long_description": "以充满活力的早餐套餐开启新的一天！选择您喜爱的法棍，搭配浓郁的越南咖啡——忙碌一天的完美能量来源。",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 4,
+          "attribute_name": "法棍",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 15,
+              "name": "混合法棍",
+              "price_extra": 0.0,
+              "base_value_id": 2,
+              "base_value_name": "混合法棍",
+              "product_packaging_id": 4451,
+              "linked_product_id": 2478,
+              "linked_product_name": "(A4) 混合法棍",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 16,
+              "name": "手撕鸡法棍",
+              "price_extra": 0.0,
+              "base_value_id": 9,
+              "base_value_name": "手撕鸡法棍",
+              "product_packaging_id": 4457,
+              "linked_product_id": 2485,
+              "linked_product_name": "(A9) 蒜香黄油手撕鸡法棍",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 17,
+              "name": "叉烧法棍",
+              "price_extra": 0.0,
+              "base_value_id": 10,
+              "base_value_name": "叉烧法棍",
+              "product_packaging_id": 4456,
+              "linked_product_id": 2484,
+              "linked_product_name": "(A6) 叉烧法棍",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 18,
+              "name": "照烧烤猪肉法棍",
+              "price_extra": 0.0,
+              "base_value_id": 11,
+              "base_value_name": "照烧烤猪肉法棍",
+              "product_packaging_id": 4452,
+              "linked_product_id": 2479,
+              "linked_product_name": "(A7) 照烧烤猪肉法棍",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 19,
+              "name": "素食法棍",
+              "price_extra": 0.0,
+              "base_value_id": 12,
+              "base_value_name": "素食法棍",
+              "product_packaging_id": 4453,
+              "linked_product_id": 2480,
+              "linked_product_name": "(A8) 素食四川蘑菇法棍",
+              "linked_product_price": 35000.0
+            },
+            {
+              "id": 20,
+              "name": "肉酱鸡蛋法棍",
+              "price_extra": 0.0,
+              "base_value_id": 13,
+              "base_value_name": "肉酱鸡蛋法棍",
+              "product_packaging_id": 4450,
+              "linked_product_id": 2477,
+              "linked_product_name": "(A2) 肉酱鸡蛋法棍",
+              "linked_product_price": 29000.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 8,
+          "attribute_name": "咖啡",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 21,
+              "name": "越式冰奶咖啡",
+              "price_extra": 0.0,
+              "base_value_id": 24,
+              "base_value_name": "越式冰奶咖啡",
+              "product_packaging_id": 4461,
+              "linked_product_id": 2489,
+              "linked_product_name": "(D7) 越式冰奶咖啡",
+              "linked_product_price": 29000.0
+            },
+            {
+              "id": 22,
+              "name": "越式冰咖啡",
+              "price_extra": 0.0,
+              "base_value_id": 25,
+              "base_value_name": "越式冰咖啡",
+              "product_packaging_id": 4460,
+              "linked_product_id": 2488,
+              "linked_product_name": "(D6) 越式冰黑咖啡",
+              "linked_product_price": 25000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2716,
+      "product_name": "(C4) CMB 快速早餐",
+      "short_description": "快速早餐: Baguette Que + 咖啡",
+      "long_description": "方便的手持早餐！酥脆的 Baguette Que 配美味馅料，搭配浓郁的越南咖啡。快速、美味，为忙碌的早晨提供充足能量。",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 8,
+          "attribute_name": "咖啡",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 13,
+              "name": "冰奶咖啡",
+              "price_extra": 0.0,
+              "base_value_id": 24,
+              "base_value_name": "冰奶咖啡",
+              "product_packaging_id": 4461,
+              "linked_product_id": 2489,
+              "linked_product_name": "(D7) 冰奶咖啡",
+              "linked_product_price": 29000.0
+            },
+            {
+              "id": 14,
+              "name": "冰咖啡",
+              "price_extra": 0.0,
+              "base_value_id": 25,
+              "base_value_name": "冰咖啡",
+              "product_packaging_id": 4460,
+              "linked_product_id": 2488,
+              "linked_product_name": "(D6) 冰黑咖啡",
+              "linked_product_price": 25000.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 9,
+          "attribute_name": "Baguette Que",
+          "display_type": "radio",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 12,
+              "name": "Baguette Que",
+              "price_extra": 0.0,
+              "base_value_id": 26,
+              "base_value_name": "Baguette Que",
+              "product_packaging_id": 4454,
+              "linked_product_id": 2481,
+              "linked_product_name": "(A5) Baguette Que 肉松酱",
+              "linked_product_price": 25000.0
+            },
+            {
+              "id": 72,
+              "name": "Baguette Que 素蘑菇",
+              "price_extra": 0.0,
+              "base_value_id": 36,
+              "base_value_name": "Baguette Que 素蘑菇",
+              "product_packaging_id": 4783,
+              "linked_product_id": 2728,
+              "linked_product_name": "(A5) Baguette Que 素蘑菇",
+              "linked_product_price": 25000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2736,
+      "product_name": "冰摇酸奶",
+      "short_description": "冰摇酸奶 - 浓郁清爽",
+      "long_description": "越南风味冰摇酸奶，口感清爽柔滑，浓郁醇厚。酸甜适中，甜度恰到好处——是全天候理想的解暑饮品。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2737,
+      "product_name": "咖啡冰摇酸奶",
+      "short_description": "咖啡味冰摇酸奶",
+      "long_description": "这款独特的饮品将浓郁的越南咖啡、香醇的酸奶和冰块完美结合。口感顺滑，清新提神，充满活力——酸味与咖啡因的完美融合。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2546,
+      "product_name": "西贡特制啤酒 (330毫升罐装)",
+      "short_description": "西贡特制啤酒330毫升罐装",
+      "long_description": "西贡特制高级啤酒，330毫升罐装。清爽、柔和、新鲜，回味干净。是辛辣越南菜和炎热天气的完美搭配。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2488,
+      "product_name": "(D6) 冰黑咖啡",
+      "short_description": "越南冰黑咖啡",
+      "long_description": "正宗越南冰黑咖啡。浓郁芳香，采用传统滴漏式冲泡方法。纯正咖啡风味，不加牛奶 - 咖啡鉴赏家的完美选择。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2489,
+      "product_name": "(D7) 越式冰奶咖啡",
+      "short_description": "越南冰奶咖啡配炼乳",
+      "long_description": "经典越南冰奶咖啡配甜炼乳。浓郁、顺滑，完美平衡了咖啡的苦味与香甜的奶味。越南最受欢迎的饮品！",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2490,
+      "product_name": "(D9) Expresso",
+      "short_description": "Espresso Ý đậm đà",
+      "long_description": "Shot espresso đậm đặc với hương vị mạnh mẽ. Vị đậm đà với lớp crema dày. Hoàn hảo cho những ai yêu thích cà phê mạnh hoặc cần nạp năng lượng nhanh bất kỳ lúc nào.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2491,
+      "product_name": "(D8) Americano",
+      "short_description": "Espresso pha loãng với nước nóng",
+      "long_description": "Americano cổ điển làm từ espresso đậm đà và nước nóng. Hương vị cà phê sạch, mịn màng với độ đậm vừa phải nhưng sâu lắng hơn cà phê phin thông thường.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2492,
+      "product_name": "(D10) 冰拿铁",
+      "short_description": "冰拿铁配鲜奶",
+      "long_description": "醇厚的冰拿铁由浓缩咖啡和鲜奶加冰制成。顺滑、醇厚且完美平衡。传统越南咖啡文化的现代风格。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2493,
+      "product_name": "(D1) 黄金哈密瓜茶",
+      "short_description": "哈密瓜茶 - 香甜清爽，解渴",
+      "long_description": "清新黄金哈密瓜茶，带有天然水果风味。清甜、芳香清爽，并且非常解渴。一个清淡健康的替代选择，可替代碳酸饮料。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2494,
+      "product_name": "(D2) 奇亚籽冬瓜饮",
+      "short_description": "奇亚籽冬瓜饮",
+      "long_description": "这款有益健康的冬瓜饮，加入了营养丰富的奇亚籽。口感微甜，清爽宜人，富含膳食纤维。是注重健康的顾客的完美养生饮品。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2675,
+      "product_name": "(D3) 鲜橙汁",
+      "short_description": "鲜橙汁 - 纯净天然",
+      "long_description": "100% 鲜榨橙汁，富含维生素C和天然甜味。无添加剂 - 每一口都是纯净清新的鲜橙味。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2547,
+      "product_name": "(D5) 酸奶",
+      "short_description": "越南传统酸奶",
+      "long_description": "正宗越南风味酸奶，口感柔滑细腻，醇厚浓郁，酸甜适中。每日采用传统方法新鲜制作。有益健康，富含益生菌。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2725,
+      "product_name": "Revive 咸柠檬",
+      "short_description": "咸柠檬味运动饮料",
+      "long_description": "Revive 等渗饮料，带有清新的咸柠檬味。非常适合补充水分，含有电解质和矿物质。运动后或炎热天气下的理想选择。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2498,
+      "product_name": "Aquafina 500ml",
+      "short_description": "Nước tinh khiết đóng chai 500ml",
+      "long_description": "Nước tinh khiết Aquafina cao cấp trong chai 500ml tiện lợi. Sạch, tinh khiết và tươi mát. Hoàn hảo để giữ nước cho cơ thể suốt cả ngày hoặc kèm theo bữa ăn.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2544,
+      "product_name": "Tea Plus 乌龙茶 (450毫升瓶装)",
+      "short_description": "450毫升瓶装乌龙茶",
+      "long_description": "450毫升瓶装高级乌龙茶，带有正宗中华茶风味。口感清淡、芳香、清新，富含天然抗氧化剂。传统风味与现代便利的结合。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2545,
+      "product_name": "红牛能量饮料 (250毫升罐装)",
+      "short_description": "红牛能量 250毫升",
+      "long_description": "250毫升罐装原味红牛能量饮料。富含咖啡因和牛磺酸，增强能量和清醒度。是忙碌日子和熬夜的完美饮品。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2550,
+      "product_name": "可口可乐零度",
+      "short_description": "零卡可口可乐",
+      "long_description": "经典可口可乐风味，零卡零糖。清爽可乐风味，无负罪感。非常适合那些关注卡路里摄入但又渴望可乐风味的人。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2658,
+      "product_name": "百事可乐 320毫升 (罐)",
+      "short_description": "百事可乐罐装 320毫升",
+      "long_description": "320毫升罐装经典百事可乐，口感浓郁，清新爽口。甜而不腻，气泡十足，充满活力。是辛辣越南菜和日常用餐的完美搭配。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2659,
+      "product_name": "7Up 320毫升 (罐装)",
+      "short_description": "7Up 柠檬罐装 320毫升",
+      "long_description": "320毫升罐装7Up柠檬汽水。清澈、清新、不含咖啡因，带有天然柑橘柠檬味。轻盈有气泡 - 完美清洁味蕾。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2677,
+      "product_name": "百事可乐黑 320毫升 (罐)",
+      "short_description": "百事可乐黑 无糖 320毫升",
+      "long_description": "百事可乐黑 320毫升罐装 - 浓郁可乐风味，无糖。口感强劲，风格精致。适合那些想要完整风味而无卡路里的人。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2726,
+      "product_name": "Revive 零卡",
+      "short_description": "零卡运动饮料",
+      "long_description": "Revive 等渗饮料，零卡路里但富含电解质，可补充水分。非常适合补水，不含额外糖分。是关注健康的活跃生活方式的理想选择。",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2730,
+      "product_name": "香蕉",
+      "short_description": "新鲜美味的香蕉",
+      "long_description": "新鲜成熟的香蕉富含钾和天然糖分。健康的零食或极佳的天然能量来源。香甜可口，营养丰富，令人满足。",
+      "category_id": 11,
+      "attributes": []
+    },
+    {
+      "product_id": 2477,
+      "product_name": "(A2) Baguette 肉酱鸡蛋",
+      "short_description": "Baguette 肉酱和鸡蛋",
+      "long_description": "经典越南Baguette配有浓郁肉酱和新鲜鸡蛋，搭配酥脆Baguette。配有新鲜香菜和生菜以及传统调味料。最美味的家常菜！",
+      "category_id": 1,
+      "attributes": [
+        {
+          "attribute_id": 10,
+          "attribute_name": "Baguette 配料",
+          "display_type": "check_box",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 48,
+              "name": "加肉酱",
+              "price_extra": 5000.0,
+              "base_value_id": 28,
+              "base_value_name": "加肉酱",
+              "product_packaging_id": 4471,
+              "linked_product_id": 2499,
+              "linked_product_name": "配料肉酱",
+              "linked_product_price": 10000.0
+            },
+            {
+              "id": 49,
+              "name": "加 Cha Siu BBQ Pork",
+              "price_extra": 10000.0,
+              "base_value_id": 29,
+              "base_value_name": "加 Cha Siu BBQ Pork",
+              "product_packaging_id": 4476,
+              "linked_product_id": 2504,
+              "linked_product_name": "配料 Cha Siu BBQ Pork",
+              "linked_product_price": 10000.0
+            },
+            {
+              "id": 50,
+              "name": "加肉卷",
+              "price_extra": 5000.0,
+              "base_value_id": 30,
+              "base_value_name": "加肉卷",
+              "product_packaging_id": 4473,
+              "linked_product_id": 2501,
+              "linked_product_name": "配料越南肉卷",
+              "linked_product_price": 5000.0
+            },
+            {
+              "id": 51,
+              "name": "加火腿",
+              "price_extra": 5000.0,
+              "base_value_id": 31,
+              "base_value_name": "加火腿",
+              "product_packaging_id": 4474,
+              "linked_product_id": 2502,
+              "linked_product_name": "配料火腿",
+              "linked_product_price": 5000.0
+            },
+            {
+              "id": 52,
+              "name": "加手撕鸡",
+              "price_extra": 10000.0,
+              "base_value_id": 32,
+              "base_value_name": "加手撕鸡",
+              "product_packaging_id": 4475,
+              "linked_product_id": 2503,
+              "linked_product_name": "配料手撕鸡",
+              "linked_product_price": 10000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2478,
+      "product_name": "(A4) 综合法棍",
+      "short_description": "综合法棍，多种肉类",
+      "long_description": "极致越南法棍，内含综合肝酱、越南肉卷、火腿和叉烧肉。充满新鲜香菜和生菜。最受欢迎的传统选择！",
+      "category_id": 1,
+      "attributes": [
+        {
+          "attribute_id": 10,
+          "attribute_name": "法棍配料",
+          "display_type": "check_box",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 58,
+              "name": "加肝酱",
+              "price_extra": 5000.0,
+              "base_value_id": 28,
+              "base_value_name": "加肝酱",
+              "product_packaging_id": 4471,
+              "linked_product_id": 2499,
+              "linked_product_name": "肝酱配料",
+              "linked_product_price": 10000.0
+            },
+            {
+              "id": 59,
+              "name": "加叉烧肉",
+              "price_extra": 10000.0,
+              "base_value_id": 29,
+              "base_value_name": "加叉烧肉",
+              "product_packaging_id": 4476,
+              "linked_product_id": 2504,
+              "linked_product_name": "叉烧肉配料",
+              "linked_product_price": 10000.0
+            },
+            {
+              "id": 60,
+              "name": "加越南肉卷",
+              "price_extra": 5000.0,
+              "base_value_id": 30,
+              "base_value_name": "加越南肉卷",
+              "product_packaging_id": 4473,
+              "linked_product_id": 2501,
+              "linked_product_name": "越南猪肉香肠配料",
+              "linked_product_price": 5000.0
+            },
+            {
+              "id": 61,
+              "name": "加火腿",
+              "price_extra": 5000.0,
+              "base_value_id": 31,
+              "base_value_name": "加火腿",
+              "product_packaging_id": 4474,
+              "linked_product_id": 2502,
+              "linked_product_name": "火腿配料",
+              "linked_product_price": 5000.0
+            },
+            {
+              "id": 62,
+              "name": "加鸡丝",
+              "price_extra": 10000.0,
+              "base_value_id": 32,
+              "base_value_name": "加鸡丝",
+              "product_packaging_id": 4475,
+              "linked_product_id": 2503,
+              "linked_product_name": "鸡丝配料",
+              "linked_product_price": 10000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2479,
+      "product_name": "(A7) Baguette 照烧烤猪肉",
+      "short_description": "Baguette 照烧烤猪肉",
+      "long_description": "融合法棍配浓郁肉酱和鲜嫩照烧烤猪肉，新鲜香菜和生菜以及传统越南香料。香甜浓郁，美味无比！",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2480,
+      "product_name": "(A8) Baguette 素食 四川蘑菇",
+      "short_description": "素食蘑菇法棍",
+      "long_description": "健康的素食选择，搭配浓郁的烤蘑菇、香菜和新鲜生菜。美味的植物蛋白。素食爱好者的完美选择！",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2481,
+      "product_name": "(A5) 法棍棒肉酱肉松",
+      "short_description": "法棍棒肉酱 & 肉松",
+      "long_description": "酥脆的法棍棒，内馅是浓郁的肉酱和松软的肉松。完美的便携选择，带有正宗的越南风味，尺寸方便。",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2728,
+      "product_name": "(A5) 素食蘑菇棒Baguette",
+      "short_description": "素食蘑菇棒Baguette",
+      "long_description": "素食棒Baguette，配以调味蘑菇和新鲜香菜。方便手持尺寸，风味十足。快速用餐的完美素食选择。",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2482,
+      "product_name": "(A11) Baguette 炖牛肉",
+      "short_description": "越南炖牛肉 Baguette",
+      "long_description": "这款 Baguette 馅料是浓郁软嫩的越南炖牛肉，配以新鲜香菜和生菜。浓郁温暖的味道，非常适合寒冷天气或想吃丰盛餐点时。",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2483,
+      "product_name": "(A10) Baguette 肉丸",
+      "short_description": "越南肉丸 Baguette",
+      "long_description": "美味的 Baguette 配有软嫩的越南肉丸，浸在浓郁的酱汁中，搭配香菜和新鲜生菜。多汁，风味十足，带来舒适的用餐体验。",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2484,
+      "product_name": "(A6) Baguette Cha Siu BBQ Pork",
+      "short_description": "Baguette Cha Siu BBQ Pork 烧烤",
+      "long_description": "经典 Baguette 配有中式香甜浓郁的 Cha Siu BBQ Pork、新鲜蔬菜和传统调料。烟熏风味完美平衡甜咸之间。",
+      "category_id": 1,
+      "attributes": [
+        {
+          "attribute_id": 10,
+          "attribute_name": "Baguette 配料",
+          "display_type": "check_box",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 63,
+              "name": "加肉酱",
+              "price_extra": 5000.0,
+              "base_value_id": 28,
+              "base_value_name": "加肉酱",
+              "product_packaging_id": 4471,
+              "linked_product_id": 2499,
+              "linked_product_name": "配料肉酱",
+              "linked_product_price": 10000.0
+            },
+            {
+              "id": 64,
+              "name": "加 Cha Siu BBQ Pork",
+              "price_extra": 10000.0,
+              "base_value_id": 29,
+              "base_value_name": "加 Cha Siu BBQ Pork",
+              "product_packaging_id": 4476,
+              "linked_product_id": 2504,
+              "linked_product_name": "配料 Cha Siu BBQ Pork",
+              "linked_product_price": 10000.0
+            },
+            {
+              "id": 65,
+              "name": "加肉卷",
+              "price_extra": 5000.0,
+              "base_value_id": 30,
+              "base_value_name": "加肉卷",
+              "product_packaging_id": 4473,
+              "linked_product_id": 2501,
+              "linked_product_name": "配料越南猪肉卷",
+              "linked_product_price": 5000.0
+            },
+            {
+              "id": 66,
+              "name": "加火腿",
+              "price_extra": 5000.0,
+              "base_value_id": 31,
+              "base_value_name": "加火腿",
+              "product_packaging_id": 4474,
+              "linked_product_id": 2502,
+              "linked_product_name": "配料火腿",
+              "linked_product_price": 5000.0
+            },
+            {
+              "id": 67,
+              "name": "加手撕鸡",
+              "price_extra": 10000.0,
+              "base_value_id": 32,
+              "base_value_name": "加手撕鸡",
+              "product_packaging_id": 4475,
+              "linked_product_id": 2503,
+              "linked_product_name": "配料手撕鸡",
+              "linked_product_price": 10000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2485,
+      "product_name": "(A9) 法棍手撕鸡蒜香黄油",
+      "short_description": "法棍手撕鸡蒜香黄油",
+      "long_description": "鲜嫩的手撕鸡肉，浸润在香浓的蒜香黄油中，搭配新鲜香菜和生菜。浓郁的口感，蒜香完美平衡，质地醇厚。",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2689,
+      "product_name": "(A3) Baguette 肝酱蛋双份",
+      "short_description": "Baguette 肝酱蛋双份",
+      "long_description": "经典肝酱蛋Baguette的超大份版本，份量加倍。配有新鲜香菜和生菜。味道浓郁，饱足感强，非常适合胃口大的人。带来极致的美味和满足感！",
+      "category_id": 1,
+      "attributes": [
+        {
+          "attribute_id": 10,
+          "attribute_name": "Baguette 配料",
+          "display_type": "check_box",
+          "create_variant": "no_variant",
+          "values": [
+            {
+              "id": 53,
+              "name": "加肝酱",
+              "price_extra": 5000.0,
+              "base_value_id": 28,
+              "base_value_name": "加肝酱",
+              "product_packaging_id": 4471,
+              "linked_product_id": 2499,
+              "linked_product_name": "肝酱配料",
+              "linked_product_price": 10000.0
+            },
+            {
+              "id": 54,
+              "name": "加 Cha Siu BBQ Pork",
+              "price_extra": 10000.0,
+              "base_value_id": 29,
+              "base_value_name": "加 Cha Siu BBQ Pork",
+              "product_packaging_id": 4476,
+              "linked_product_id": 2504,
+              "linked_product_name": "Cha Siu BBQ Pork 配料",
+              "linked_product_price": 10000.0
+            },
+            {
+              "id": 55,
+              "name": "加越南火腿",
+              "price_extra": 5000.0,
+              "base_value_id": 30,
+              "base_value_name": "加越南火腿",
+              "product_packaging_id": 4473,
+              "linked_product_id": 2501,
+              "linked_product_name": "越南火腿配料",
+              "linked_product_price": 5000.0
+            },
+            {
+              "id": 56,
+              "name": "加火腿",
+              "price_extra": 5000.0,
+              "base_value_id": 31,
+              "base_value_name": "加火腿",
+              "product_packaging_id": 4474,
+              "linked_product_id": 2502,
+              "linked_product_name": "火腿配料",
+              "linked_product_price": 5000.0
+            },
+            {
+              "id": 57,
+              "name": "加手撕鸡",
+              "price_extra": 10000.0,
+              "base_value_id": 32,
+              "base_value_name": "加手撕鸡",
+              "product_packaging_id": 4475,
+              "linked_product_id": 2503,
+              "linked_product_name": "手撕鸡配料",
+              "linked_product_price": 10000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2690,
+      "product_name": "(B3) 捞面叉烧",
+      "short_description": "捞面配叉烧",
+      "long_description": "美味捞面配甜美浓郁的叉烧、新鲜白菜和传统越南香料。一碗地道美味的面条。",
+      "category_id": 15,
+      "attributes": []
+    },
+    {
+      "product_id": 2669,
+      "product_name": "(B4) 四川烤蘑菇拌面",
+      "short_description": "素烤蘑菇拌面",
+      "long_description": "健康的素面，配烤蘑菇和新鲜小白菜。植物蛋白，味道浓郁可口，口感令人满足。",
+      "category_id": 15,
+      "attributes": []
+    },
+    {
+      "product_id": 2657,
+      "product_name": "(B5) 五香牛肉面",
+      "short_description": "香气扑鼻的五香牛肉面",
+      "long_description": "香气扑鼻的牛肉面，搭配嫩牛肉浸润在浓郁的五香调料中。复杂的风味带有温暖的香料，新鲜的白菜和有嚼劲的面条。这是家常菜的巅峰之作！",
+      "category_id": 15,
+      "attributes": []
+    },
+    {
+      "product_id": 2552,
+      "product_name": "(B6) 混合沙拉",
+      "short_description": "清爽新鲜蔬菜沙拉",
+      "long_description": "清爽新鲜蔬菜沙拉，搭配新鲜香菜和生菜，以及传统越南酱汁。清淡、营养、清爽——完美的配菜或小吃。",
+      "category_id": 11,
+      "attributes": []
+    },
+    {
+      "product_id": 2499,
+      "product_name": "Pate 配料",
+      "short_description": "为菜肴添加Pate",
+      "long_description": "越南风味Pate，浓郁、肥美，非常适合为 Baguette 或 面条增添风味。质地柔滑，带有正宗的传统风味。",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2500,
+      "product_name": "鸡蛋配料",
+      "short_description": "为您的餐点添加新鲜鸡蛋。",
+      "long_description": "新鲜鸡蛋配料，可升级任何餐点。为法棍或面条增加蛋白质和浓郁风味。完美烹制，带来最佳风味和口感。",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2501,
+      "product_name": "越式猪肉香肠配料",
+      "short_description": "越式猪肉香肠配料",
+      "long_description": "传统越式猪肉香肠配料。口感清淡、细腻，非常适合为法棍或面条增添地道风味。",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2502,
+      "product_name": "火腿配料",
+      "short_description": "火腿配料，增加蛋白质",
+      "long_description": "完美品质的火腿片，为 Baguette 或面条增添蛋白质和风味。口感清淡、顺滑，与越南香料完美搭配。",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2503,
+      "product_name": "手撕鸡配料",
+      "short_description": "手撕鸡配料",
+      "long_description": "软嫩的越南风味手撕鸡配料。完美的蛋白质补充，为任何菜肴带来正宗风味和令人满足的口感。",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2504,
+      "product_name": "叉烧配料",
+      "short_description": "叉烧烧烤配料",
+      "long_description": "中式香甜浓郁的叉烧烧烤配料。完美的烟熏风味，非常适合升级法棍或面条，增加蛋白质和风味。",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2486,
+      "product_name": "(B1) 混合糯米饭",
+      "short_description": "混合糯米饭配有多种配料",
+      "long_description": "传统越南糯米饭配有混合肉类、香肠和香料。丰盛、饱足且充满地道风味——完美的家常菜。",
+      "category_id": 15,
+      "attributes": []
+    },
+    {
+      "product_id": 2487,
+      "product_name": "(B2) 鸡丝糯米饭",
+      "short_description": "鸡丝糯米饭",
+      "long_description": "美味的糯米饭搭配嫩鸡丝和传统香料。口感和风味的完美结合，纯正越南风味。",
+      "category_id": 15,
+      "attributes": []
+    },
+    {
+      "product_id": 1181,
+      "product_name": "泡菜",
+      "short_description": "调整酸度",
+      "long_description": "根据个人喜好调整菜肴的酸度。非常适合调整传统越南风味以符合您的口味。",
+      "category_id": null,
+      "attributes": []
+    },
+    {
+      "product_id": 1293,
+      "product_name": "加糖",
+      "short_description": "添加糖/甜味剂选项",
+      "long_description": "选择在饮品中添加糖或甜味剂。根据您的喜好，定制咖啡、茶或鲜榨果汁等饮品的甜度，使其完美符合您的口味。",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2735,
+      "product_name": "奇亚籽西瓜汁",
+      "short_description": "奇亚籽西瓜汁",
+      "long_description": "新鲜西瓜汁补充了营养丰富的奇亚籽。清甜爽口，补水，富含维生素和膳食纤维。是炎热天气下完美的健康饮品。",
+      "category_id": 3,
+      "attributes": []
+    }
+  ]
+}

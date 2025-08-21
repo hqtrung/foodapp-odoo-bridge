@@ -1,0 +1,709 @@
+{
+  "timestamp": "20250820_234257",
+  "statistics": {
+    "total_products": 63,
+    "products_translated": 0,
+    "total_translations": 0,
+    "failed_translations": 0,
+    "processing_time": 0,
+    "languages_processed": []
+  },
+  "languages": [
+    "en"
+  ],
+  "products": [
+    {
+      "id": 1186,
+      "code": null,
+      "name": "Bánh Mì Không",
+      "translations": {
+        "en": {
+          "name": "Banh Mi Only",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2715,
+      "code": null,
+      "name": "(C2) CMB Happy Lunchset",
+      "translations": {
+        "en": {
+          "name": "(C2) CMB Happy Lunchset",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2718,
+      "code": null,
+      "name": "(C1) CMB Express Lunchset",
+      "translations": {
+        "en": {
+          "name": "(C1) CMB Express Lunchset",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2717,
+      "code": null,
+      "name": "(C3) CMB Sáng Năng Lượng",
+      "translations": {
+        "en": {
+          "name": "(C3) CMB Morning Energy",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2716,
+      "code": null,
+      "name": "(C4) CMB Sáng Tốc Hành",
+      "translations": {
+        "en": {
+          "name": "(C4) CMB Morning Express",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 1287,
+      "code": null,
+      "name": "Discount",
+      "translations": {
+        "en": {
+          "name": "Discount",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2736,
+      "code": null,
+      "name": "Sữa Chua Lắc Đá",
+      "translations": {
+        "en": {
+          "name": "Iced Yogurt Shake",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2737,
+      "code": null,
+      "name": "Sữa Chua Lắc Đá CAFE",
+      "translations": {
+        "en": {
+          "name": "Iced Yogurt Shake with Coffee",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2546,
+      "code": null,
+      "name": "Bia Sài Gòn Special ( lon 330ml)",
+      "translations": {
+        "en": {
+          "name": "Saigon Special Beer (330ml can)",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2488,
+      "code": null,
+      "name": "(D6) Cà Phê Đen Đá",
+      "translations": {
+        "en": {
+          "name": "(D6) Iced Black Coffee",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2489,
+      "code": null,
+      "name": "(D7) Cà Phê Sữa Đá",
+      "translations": {
+        "en": {
+          "name": "(D7) Iced Coffee with Milk",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2490,
+      "code": null,
+      "name": "(D9) Expresso",
+      "translations": {
+        "en": {
+          "name": "(D9) Expresso",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2491,
+      "code": null,
+      "name": "(D8) Americano",
+      "translations": {
+        "en": {
+          "name": "(D8) Americano",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2492,
+      "code": null,
+      "name": "(D10) Latte Đá",
+      "translations": {
+        "en": {
+          "name": "(D10) Iced Latte",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2493,
+      "code": null,
+      "name": "(D1) Trà Dưa Lưới Hoàng Kim",
+      "translations": {
+        "en": {
+          "name": "(D1) Golden Honeydew Melon Tea",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2494,
+      "code": null,
+      "name": "(D2) Sâm Bí Đao Hạt Chia",
+      "translations": {
+        "en": {
+          "name": "(D2) Winter Melon & Chia Seed Drink",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2564,
+      "code": null,
+      "name": "(D4) Dừa xiêm",
+      "translations": {
+        "en": {
+          "name": "(D4) Coconut Juice",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2675,
+      "code": null,
+      "name": "(D3) Nước cam tươi",
+      "translations": {
+        "en": {
+          "name": "(D3) Fresh Orange Juice",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2547,
+      "code": null,
+      "name": "(D5) Sữa chua",
+      "translations": {
+        "en": {
+          "name": "(D5) Yogurt",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2725,
+      "code": null,
+      "name": "Revive Chanh muối",
+      "translations": {
+        "en": {
+          "name": "Revive Salted Lemon",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2498,
+      "code": null,
+      "name": "Aquafina 500ml",
+      "translations": {
+        "en": {
+          "name": "Aquafina 500ml",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2544,
+      "code": null,
+      "name": "Trà Ô long Tea Plus ( chai 450ml)",
+      "translations": {
+        "en": {
+          "name": "Tea Plus Oolong Tea (450ml bottle)",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2545,
+      "code": null,
+      "name": "Nước tăng lực Redbull ( lon 250ml)",
+      "translations": {
+        "en": {
+          "name": "Redbull Energy Drink (250ml can)",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2550,
+      "code": null,
+      "name": "Coca Cola Zero",
+      "translations": {
+        "en": {
+          "name": "Coca Cola Zero",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2658,
+      "code": null,
+      "name": "Pepsi 320ml ( Lon)",
+      "translations": {
+        "en": {
+          "name": "Pepsi 320ml (Can)",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2659,
+      "code": null,
+      "name": "7Up 320ml ( Lon)",
+      "translations": {
+        "en": {
+          "name": "7Up 320ml (Can)",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2677,
+      "code": null,
+      "name": "Pepsi Black 320ml ( Lon)",
+      "translations": {
+        "en": {
+          "name": "Pepsi Black 320ml (Can)",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2726,
+      "code": null,
+      "name": "Revive Không Calo",
+      "translations": {
+        "en": {
+          "name": "Revive Zero Calorie",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2730,
+      "code": null,
+      "name": "Chuối Trái",
+      "translations": {
+        "en": {
+          "name": "Banana",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2477,
+      "code": null,
+      "name": "(A2) Bánh Mì Pate Trứng",
+      "translations": {
+        "en": {
+          "name": "(A2) Banh Mi with Pate and Egg",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2478,
+      "code": null,
+      "name": "(A4) Bánh Mì Thập Cẩm",
+      "translations": {
+        "en": {
+          "name": "(A4) Special Combination Banh Mi",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2479,
+      "code": null,
+      "name": "(A7) Bánh Mì Heo Nướng Teriyaki",
+      "translations": {
+        "en": {
+          "name": "(A7) Banh Mi with Teriyaki Grilled Pork",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2480,
+      "code": null,
+      "name": "(A8) Bánh Mì Veggy Nấm Tứ Xuyên",
+      "translations": {
+        "en": {
+          "name": "(A8) Veggie Banh Mi with Sichuan Mushrooms",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2481,
+      "code": null,
+      "name": "(A5) Bánh Mì Que Pate Chà Bông",
+      "translations": {
+        "en": {
+          "name": "(A5) Banh Mi Baguette with Pate and Pork Floss",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2728,
+      "code": null,
+      "name": "(A5) Bánh Mì Que Nấm Chay",
+      "translations": {
+        "en": {
+          "name": "(A5) Vegetarian Banh Mi Baguette with Mushrooms",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2482,
+      "code": null,
+      "name": "(A11) Bánh Mì Bò Kho",
+      "translations": {
+        "en": {
+          "name": "(A11) Banh Mi with Beef Stew",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2483,
+      "code": null,
+      "name": "(A10) Bánh Mì Xíu Mại",
+      "translations": {
+        "en": {
+          "name": "(A10) Banh Mi with Xiu Mai (Pork Meatballs)",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2484,
+      "code": null,
+      "name": "(A6) Bánh Mì Xá Xíu",
+      "translations": {
+        "en": {
+          "name": "(A6) Banh Mi with Char Siu Pork",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2485,
+      "code": null,
+      "name": "(A9) Bánh Mì Gà Xé Bơ Tỏi",
+      "translations": {
+        "en": {
+          "name": "(A9) Banh Mi with Shredded Chicken and Garlic Butter",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2689,
+      "code": null,
+      "name": "(A3) Bánh Mì Pate Trứng DOUBLE",
+      "translations": {
+        "en": {
+          "name": "(A3) DOUBLE Banh Mi with Pate and Egg",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2690,
+      "code": null,
+      "name": "(B3) Mì Trộn Xá Xíu",
+      "translations": {
+        "en": {
+          "name": "(B3) Char Siu Mixed Noodles",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2669,
+      "code": null,
+      "name": "(B4) Mì Trộn Nấm Nướng Tứ Xuyên",
+      "translations": {
+        "en": {
+          "name": "(B4) Sichuan Grilled Mushroom Mixed Noodles",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2657,
+      "code": null,
+      "name": "(B5) Mì Bò Ngũ Vị",
+      "translations": {
+        "en": {
+          "name": "(B5) Five-Spice Beef Noodles",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2552,
+      "code": null,
+      "name": "(B6) Salad Mix",
+      "translations": {
+        "en": {
+          "name": "(B6) Salad Mix",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2732,
+      "code": null,
+      "name": "Topping Gói xốt salad 15ml",
+      "translations": {
+        "en": {
+          "name": "Topping: Salad Dressing Packet 15ml",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2499,
+      "code": null,
+      "name": "Topping Pate",
+      "translations": {
+        "en": {
+          "name": "Topping: Pate",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2500,
+      "code": null,
+      "name": "Topping Trứng",
+      "translations": {
+        "en": {
+          "name": "Topping: Egg",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2501,
+      "code": null,
+      "name": "Topping Chả Lụa",
+      "translations": {
+        "en": {
+          "name": "Topping: Vietnamese Sausage (Cha Lua)",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2502,
+      "code": null,
+      "name": "Topping Jambon",
+      "translations": {
+        "en": {
+          "name": "Topping: Jambon",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2503,
+      "code": null,
+      "name": "Topping Gà Xé",
+      "translations": {
+        "en": {
+          "name": "Topping: Shredded Chicken",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2504,
+      "code": null,
+      "name": "Topping Xá Xíu",
+      "translations": {
+        "en": {
+          "name": "Topping: Char Siu",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2486,
+      "code": null,
+      "name": "(B1) Xôi Thập Cẩm",
+      "translations": {
+        "en": {
+          "name": "(B1) Mixed Sticky Rice",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2487,
+      "code": null,
+      "name": "(B2) Xôi Gà Xé",
+      "translations": {
+        "en": {
+          "name": "(B2) Shredded Chicken Sticky Rice",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 1315,
+      "code": null,
+      "name": "Phí ship",
+      "translations": {
+        "en": {
+          "name": "Delivery Fee",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 1366,
+      "code": null,
+      "name": "Thẻ Tích Tem X10",
+      "translations": {
+        "en": {
+          "name": "Stamp Accumulation Card X10",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 1181,
+      "code": null,
+      "name": "Đồ chua",
+      "translations": {
+        "en": {
+          "name": "Pickled Vegetables",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 1290,
+      "code": null,
+      "name": "Tương ớt",
+      "translations": {
+        "en": {
+          "name": "Chili Sauce",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 1289,
+      "code": null,
+      "name": "Không cay",
+      "translations": {
+        "en": {
+          "name": "Not Spicy",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 1323,
+      "code": null,
+      "name": "Không lạnh",
+      "translations": {
+        "en": {
+          "name": "Not Cold",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 1291,
+      "code": null,
+      "name": "Ướp lạnh",
+      "translations": {
+        "en": {
+          "name": "Iced",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 1297,
+      "code": null,
+      "name": "Tẩy đá",
+      "translations": {
+        "en": {
+          "name": "Iced",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 1293,
+      "code": null,
+      "name": "Có đường",
+      "translations": {
+        "en": {
+          "name": "Sweetened",
+          "description": null
+        }
+      }
+    },
+    {
+      "id": 2735,
+      "code": null,
+      "name": "Nước Ép Dưa Hấu Hạt Chia",
+      "translations": {
+        "en": {
+          "name": "Watermelon Juice with Chia Seeds",
+          "description": null
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "source_language": "vi",
+  "categories": [
+    {
+      "category_id": 1,
+      "category_name": "Traditional Bánh Mì",
+      "description": "Traditional Vietnamese sandwiches with fresh ingredients"
+    },
+    {
+      "category_id": 15,
+      "category_name": "Mixed Noodles & Sticky Rice",
+      "description": "Mixed noodle dishes with various toppings"
+    },
+    {
+      "category_id": 3,
+      "category_name": "Drinks",
+      "description": "Refreshing beverages including coffee, tea, and soft drinks"
+    },
+    {
+      "category_id": 11,
+      "category_name": "Salads",
+      "description": "Fresh and healthy salad options"
+    },
+    {
+      "category_id": 8,
+      "category_name": "COMBO",
+      "description": "Value meal combinations with drinks and sides"
+    },
+    {
+      "category_id": 5,
+      "category_name": "Toppings",
+      "description": "Extra toppings and add-ons for your meals"
+    },
+    {
+      "category_id": 7,
+      "category_name": "Items",
+      "description": "Utensils and additional items"
+    }
+  ],
+  "products": [
+    {
+      "product_id": 1186,
+      "product_name": "Plain Bánh Mì",
+      "short_description": "",
+      "long_description": "",
+      "category_id": 5,
+      "attributes": []
+    }
+  ]
+}

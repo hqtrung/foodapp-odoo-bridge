@@ -45,8 +45,16 @@ class Settings(BaseSettings):
     ENABLE_TRANSLATION: bool = True
     DEFAULT_LANGUAGE: str = "vi"
     SUPPORTED_LANGUAGES: list = ["vi", "en", "fr", "it", "es", "zh", "zh-TW", "th", "ja"]
-    GOOGLE_CLOUD_PROJECT: str = ""  # Required for Translation API
+    GOOGLE_CLOUD_PROJECT: str = ""  # Required for Translation API and Vertex AI
     TRANSLATION_CACHE_TTL_DAYS: int = 7
+    
+    # Translation settings - Vertex AI Gemini 2.0 Flash ONLY
+    USE_VERTEX_TRANSLATION: bool = True  # Use Vertex AI exclusively 
+    TRANSLATION_FALLBACK_ENABLED: bool = False  # No fallback - Vertex AI only
+    VERTEX_AI_LOCATION: str = "us-central1"  # Vertex AI region
+    VERTEX_AI_MODEL: str = "gemini-2.5-flash"  # Model: gemini-2.5-flash (fast) or gemini-2.5-pro (highest quality)
+    VERTEX_TRANSLATION_BATCH_SIZE: int = 25  # Optimal batch size for Gemini
+    VERTEX_TRANSLATION_TEMPERATURE: float = 0.2  # Lower = more consistent translations
     
     # Logging settings
     LOG_LEVEL: str = "INFO"

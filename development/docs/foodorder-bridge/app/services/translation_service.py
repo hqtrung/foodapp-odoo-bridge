@@ -78,10 +78,10 @@ class TranslationService:
         except Exception as e:
             logger.error(f"Failed to save translation cache: {e}")
             
-    def _get_cache_key(self, text: str, source_lang: str, target_lang: str) -> str:
+    def _get_cache_key(self, text: str, source_lang: str, target_lang: str, context: str = None) -> str:
         """Generate cache key for translation"""
         import hashlib
-        content = f"{text}:{source_lang}:{target_lang}"
+        content = f"{text}:{source_lang}:{target_lang}:{context or ''}"
         return hashlib.md5(content.encode('utf-8')).hexdigest()
         
     def _is_cache_valid(self, cache_entry: Dict, max_age_days: int = 7) -> bool:
@@ -95,14 +95,15 @@ class TranslationService:
         
         return (current_time - cache_time) < max_age_seconds
         
-    def translate_text(self, text: str, target_language: str, source_language: str = None) -> str:
+    def translate_text(self, text: str, target_language: str, source_language: str = None, context: str = None) -> str:
         """
-        Translate text to target language
+        Translate text to target language with Vietnamese food menu context
         
         Args:
             text: Text to translate
             target_language: Target language code (e.g., 'en', 'zh', 'th')
             source_language: Source language code (auto-detect if None)
+            context: Translation context to improve quality
             
         Returns:
             Translated text or original text if translation fails
@@ -122,9 +123,18 @@ class TranslationService:
         if target_language not in self.supported_languages:
             logger.warning(f"Unsupported target language: {target_language}")
             return text
-            
-        # Check cache first
-        cache_key = self._get_cache_key(text, source_language or 'auto', target_language)
+        
+        # Preserve original text for post-processing
+        original_text = text
+        
+        # Extract and preserve product codes (A1, A2, etc.)
+        import re
+        code_pattern = re.compile(r'\([A-Z]\d+\)')
+        product_codes = code_pattern.findall(text)
+        
+        # Check cache first (include context in cache key)
+        cache_context = context or "Vietnamese Banh Mi Fast Food Menu"
+        cache_key = self._get_cache_key(text, source_language or 'auto', target_language, cache_context)
         if cache_key in self.translation_cache:
             cache_entry = self.translation_cache[cache_key]
             if self._is_cache_valid(cache_entry):
@@ -132,9 +142,16 @@ class TranslationService:
                 return cache_entry['translation']
                 
         try:
+            # Add context to improve translation quality
+            if not context:
+                context = "Vietnamese Banh Mi Fast Food Menu"
+            
+            # Prepare text with context for better translation
+            contextual_text = f"Context: {context}. Text: {text}"
+            
             # Translate using Google Cloud Translation API
             result = self.translate_client.translate(
-                text,
+                contextual_text,
                 target_language=target_language,
                 source_language=source_language
             )
@@ -142,12 +159,22 @@ class TranslationService:
             translated_text = result['translatedText']
             detected_source = result.get('detectedSourceLanguage', source_language)
             
+            # Clean up the contextual wrapper from translation
+            if 'Text:' in translated_text:
+                translated_text = translated_text.split('Text:')[-1].strip()
+            
+            # Post-process to preserve product codes and case sensitivity
+            translated_text = self._postprocess_translation(
+                original_text, translated_text, target_language, product_codes
+            )
+            
             # Cache the translation
             self.translation_cache[cache_key] = {
                 'original': text,
                 'translation': translated_text,
                 'source_language': detected_source,
                 'target_language': target_language,
+                'context': cache_context,
                 'timestamp': time.time()
             }
             
@@ -246,6 +273,64 @@ class TranslationService:
         self._save_translation_cache()
         
         return results
+        
+    def _postprocess_translation(self, original_text: str, translated_text: str, 
+                               target_language: str, product_codes: list) -> str:
+        """
+        Post-process translation to preserve case sensitivity and product codes
+        
+        Args:
+            original_text: Original Vietnamese text
+            translated_text: Translated text from API
+            target_language: Target language code
+            product_codes: List of product codes found in original text
+            
+        Returns:
+            Post-processed translation
+        """
+        if not translated_text:
+            return translated_text
+            
+        # Import Vietnamese food glossary for corrections
+        try:
+            from app.services.translation_glossary import VietnameseFoodGlossary
+            glossary = VietnameseFoodGlossary()
+            
+            # Apply glossary corrections first
+            corrected_text = glossary.postprocess_text(original_text, translated_text, target_language)
+            if corrected_text != translated_text:
+                translated_text = corrected_text
+        except Exception as e:
+            logger.warning(f"Could not apply Vietnamese food glossary: {e}")
+            
+        # Preserve product codes at the beginning if they were lost
+        if product_codes:
+            # Check if any product code exists in the translation
+            has_code = any(code in translated_text for code in product_codes)
+            if not has_code:
+                # Add the first product code back at the beginning
+                translated_text = f"{product_codes[0]} {translated_text}"
+        
+        # Apply specific corrections for known mistranslations
+        corrections = {
+            'en': {
+                'bread without': 'plain bread',
+                'bread nothing': 'plain bread',
+                'banh mi without': 'plain banh mi',
+                'banh mi nothing': 'plain banh mi',
+            }
+        }
+        
+        if target_language in corrections:
+            for mistake, correction in corrections[target_language].items():
+                if mistake.lower() in translated_text.lower():
+                    # Apply case-insensitive replacement
+                    import re
+                    pattern = re.compile(re.escape(mistake), re.IGNORECASE)
+                    translated_text = pattern.sub(correction, translated_text)
+        
+        # Final cleanup
+        return translated_text.strip()
         
     def translate_product_data(self, product: Dict, target_languages: List[str] = None) -> Dict:
         """

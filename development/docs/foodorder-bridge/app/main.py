@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from pathlib import Path
-from app.controllers import menu
+from app.controllers import menu, translations
 from app.config import get_settings
 from app.exceptions import FoodOrderBridgeException
 from app.error_handlers import foodorder_exception_handler, general_exception_handler, http_exception_handler
@@ -67,6 +67,7 @@ app.mount("/images", StaticFiles(directory="public/images"), name="images")
 
 # Include routers
 app.include_router(menu.router)
+app.include_router(translations.router)
 
 
 @app.get("/")
@@ -82,7 +83,10 @@ async def root():
             "products": "/api/v1/products",
             "cache_reload": "/api/v1/cache/reload",
             "cache_status": "/api/v1/cache/status",
-            "test_connection": "/api/v1/cache/test-connection"
+            "test_connection": "/api/v1/cache/test-connection",
+            "translations_v2": "/api/v1/translations-v2",
+            "bulk_language_products": "/api/v1/translations-v2/products?language={language}",
+            "translation_status_v2": "/api/v1/translations-v2/status"
         }
     }
 

@@ -152,9 +152,7 @@ class CloudStorageService:
         """Generate and upload multiple image sizes"""
         sizes = {
             'small': 128,
-            'medium': 256, 
-            'large': 512,
-            'extra_large': 1024
+            'large': 512
         }
         
         urls = {}

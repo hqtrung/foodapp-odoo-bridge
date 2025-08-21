@@ -1,0 +1,847 @@
+{
+  "source_language": "vi",
+  "categories": [
+    {
+      "category_id": 1,
+      "category_name": "Bánh Mì Truyền Thống",
+      "description": "Traditional Vietnamese sandwiches with fresh ingredients"
+    },
+    {
+      "category_id": 15,
+      "category_name": "Mì trộn & Xôi",
+      "description": "Mixed noodle dishes with various toppings"
+    },
+    {
+      "category_id": 3,
+      "category_name": "Đồ Uống",
+      "description": "Refreshing beverages including coffee, tea, and soft drinks"
+    },
+    {
+      "category_id": 11,
+      "category_name": "Salad",
+      "description": "Fresh and healthy salad options"
+    },
+    {
+      "category_id": 8,
+      "category_name": "COMBO",
+      "description": "Value meal combinations with drinks and sides"
+    },
+    {
+      "category_id": 5,
+      "category_name": "Topping",
+      "description": "Extra toppings and add-ons for your meals"
+    },
+    {
+      "category_id": 7,
+      "category_name": "Vật Phẩm",
+      "description": "Utensils and additional items"
+    }
+  ],
+  "products": [
+    {
+      "product_id": 1186,
+      "product_name": "Bánh Mì Không",
+      "short_description": "Bánh mì Việt Nam truyền thống",
+      "long_description": "Bánh mì Việt Nam tươi ngon, vỏ giòn vàng óng, ruột mềm mịn. Hoàn hảo làm món phụ hoặc làm nền để tạo ra combo bánh mì tùy thích của riêng bạn.",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2715,
+      "product_name": "(C2) CMB Happy Lunchset",
+      "short_description": "Combo bánh mì + nước + salad/sữa chua tùy chọn",
+      "long_description": "Combo trưa hoàn hảo với bánh mì đặc trưng, nước giải khát và tùy chọn salad tươi mát hoặc sữa chua béo ngậy. Giá trị tuyệt vời cho bữa ăn trọn vẹn!",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 4,
+          "attribute_name": "Bánh Mì",
+          "display_type": "radio",
+          "attribute_values": [
+            {
+              "value_id": 2,
+              "value_name": "Bánh Mì Thập Cẩm",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 7,
+              "value_name": "Bánh Mì Gà Xé",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 3,
+              "value_name": "Bánh Mì Xá Xíu",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 4,
+              "value_name": "Bánh Mì Heo Nướng Teriyaki",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 5,
+              "value_name": "Bánh Mì Veggy",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 71,
+              "value_name": "Bánh Mì Pate Trứng",
+              "price_extra": 0.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 5,
+          "attribute_name": "Softdrinks",
+          "display_type": "radio",
+          "attribute_values": [
+            {
+              "value_id": 8,
+              "value_name": "Coca Cola Zero",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 9,
+              "value_name": "Pepsi",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 10,
+              "value_name": "Pepsi Black",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 11,
+              "value_name": "7-up",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 68,
+              "value_name": "Trà Ô Long TeaPlus",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 69,
+              "value_name": "Revive chanh muối",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 70,
+              "value_name": "Revive",
+              "price_extra": 0.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 6,
+          "attribute_name": "Kèm Salad Sữa Chua",
+          "display_type": "check_box",
+          "attribute_values": [
+            {
+              "value_id": 30,
+              "value_name": "Salad",
+              "price_extra": 15000.0
+            },
+            {
+              "value_id": 31,
+              "value_name": "Sữa chua",
+              "price_extra": 15000.0
+            },
+            {
+              "value_id": 32,
+              "value_name": "Không",
+              "price_extra": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2718,
+      "product_name": "(C1) CMB Express Lunchset",
+      "short_description": "Trưa nhanh: mì/cơm + cà phê + salad/sữa chua",
+      "long_description": "Combo trưa express với mì/cơm Việt Nam đậm đà, cà phê thơm lừng và salad tươi hoặc sữa chua. Nhanh gọn, ngon miệng và đầy đủ dinh dưỡng!",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 6,
+          "attribute_name": "Kèm Salad Sữa Chua",
+          "display_type": "check_box",
+          "attribute_values": [
+            {
+              "value_id": 28,
+              "value_name": "Salad",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 29,
+              "value_name": "Sữa chua",
+              "price_extra": 0.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 7,
+          "attribute_name": "Món Trưa",
+          "display_type": "radio",
+          "attribute_values": [
+            {
+              "value_id": 23,
+              "value_name": "Mì Trộn Xá Xíu",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 24,
+              "value_name": "Bò Kho",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 25,
+              "value_name": "Xíu Mại Đà Lạt",
+              "price_extra": 0.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 8,
+          "attribute_name": "Cà Phê",
+          "display_type": "radio",
+          "attribute_values": [
+            {
+              "value_id": 26,
+              "value_name": "Cà Phê Sữa Đá",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 27,
+              "value_name": "Cà Phê Đá",
+              "price_extra": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2717,
+      "product_name": "(C3) CMB Sáng Năng Lượng",
+      "short_description": "Sáng đầy năng lượng: bánh mì + cà phê Việt",
+      "long_description": "Bắt đầu ngày mới đúng cách với combo sáng đầy năng lượng! Chọn bánh mì yêu thích kèm cà phê Việt Nam đậm đà - nguồn năng lượng hoàn hảo cho ngày bận rộn.",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 4,
+          "attribute_name": "Bánh Mì",
+          "display_type": "radio",
+          "attribute_values": [
+            {
+              "value_id": 15,
+              "value_name": "Bánh Mì Thập Cẩm",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 16,
+              "value_name": "Bánh Mì Gà Xé",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 17,
+              "value_name": "Bánh Mì Xá Xíu",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 18,
+              "value_name": "Bánh Mì Heo Nướng Teriyaki",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 19,
+              "value_name": "Bánh Mì Veggy",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 20,
+              "value_name": "Bánh Mì Pate Trứng",
+              "price_extra": 0.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 8,
+          "attribute_name": "Cà Phê",
+          "display_type": "radio",
+          "attribute_values": [
+            {
+              "value_id": 21,
+              "value_name": "Cà Phê Sữa Đá",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 22,
+              "value_name": "Cà Phê Đá",
+              "price_extra": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2716,
+      "product_name": "(C4) CMB Sáng Tốc Hành",
+      "short_description": "Sáng nhanh: bánh mì que + cà phê",
+      "long_description": "Bữa sáng tiện lợi cầm tay! Bánh mì que giòn rụm với nhân thơm ngon kèm cà phê Việt Nam đậm đà. Nhanh gọn, ngon miệng và tràn đầy năng lượng cho buổi sáng bận rộn.",
+      "category_id": 8,
+      "attributes": [
+        {
+          "attribute_id": 8,
+          "attribute_name": "Cà Phê",
+          "display_type": "radio",
+          "attribute_values": [
+            {
+              "value_id": 13,
+              "value_name": "Cà Phê Sữa Đá",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 14,
+              "value_name": "Cà Phê Đá",
+              "price_extra": 0.0
+            }
+          ]
+        },
+        {
+          "attribute_id": 9,
+          "attribute_name": "Bánh Mì Que",
+          "display_type": "radio",
+          "attribute_values": [
+            {
+              "value_id": 12,
+              "value_name": "Bánh Mì Que",
+              "price_extra": 0.0
+            },
+            {
+              "value_id": 72,
+              "value_name": "Bánh Mì Que Nấm Chay",
+              "price_extra": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2736,
+      "product_name": "Sữa Chua Lắc Đá",
+      "short_description": "Sữa chua lắc đá - béo ngậy và tươi mát",
+      "long_description": "Sữa chua lắc đá kiểu Việt tươi mát với kết cấu mềm mịn, béo ngậy. Nhẹ nhàng, chua thanh và vừa phải độ ngọt - thức uống giải nhiệt lý tưởng mọi lúc trong ngày.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2737,
+      "product_name": "Sữa Chua Lắc Đá CAFE",
+      "short_description": "Sữa chua lắc đá vị cà phê",
+      "long_description": "Thức uống độc đáo kết hợp sữa chua béo ngậy với cà phê Việt đậm đà và đá. Mềm mịn, tươi mát và tràn đầy năng lượng - sự hòa quyện hoàn hảo của vị chua và caffeine.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2546,
+      "product_name": "Bia Sài Gòn Special ( lon 330ml)",
+      "short_description": "Bia Sài Gòn Special lon 330ml",
+      "long_description": "Bia Sài Gòn Special cao cấp trong lon 330ml. Thanh mát, nhẹ nhàng và tươi ngon với hậu vị sạch. Đối tác hoàn hảo cho món ăn Việt cay nóng và thời tiết nóng bức.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2488,
+      "product_name": "(D6) Cà Phê Đen Đá",
+      "short_description": "Cà phê đen đá Việt Nam",
+      "long_description": "Cà phê đen đá Việt Nam chính hiệu. Đậm đà, thơm lừng sử dụng phương pháp pha phin truyền thống. Hương vị cà phê thuần khiết không pha sữa - hoàn hảo cho người sành cà phê.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2489,
+      "product_name": "(D7) Cà Phê Sữa Đá",
+      "short_description": "Cà phê sữa đá Việt Nam với sữa đặc",
+      "long_description": "Cà phê sữa đá Việt Nam cổ điển với sữa đặc ngọt. Đậm đà, mịn màng và cân bằng hoàn hảo giữa vị đắng của cà phê và vị ngọt béo. Thức uống được yêu thích nhất Việt Nam!",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2490,
+      "product_name": "(D9) Expresso",
+      "short_description": "Espresso Ý đậm đà",
+      "long_description": "Shot espresso đậm đặc với hương vị mạnh mẽ. Vị đậm đà với lớp crema dày. Hoàn hảo cho những ai yêu thích cà phê mạnh hoặc cần nạp năng lượng nhanh bất kỳ lúc nào.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2491,
+      "product_name": "(D8) Americano",
+      "short_description": "Espresso pha loãng với nước nóng",
+      "long_description": "Americano cổ điển làm từ espresso đậm đà và nước nóng. Hương vị cà phê sạch, mịn màng với độ đậm vừa phải nhưng sâu lắng hơn cà phê phin thông thường.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2492,
+      "product_name": "(D10) Latte Đá",
+      "short_description": "Latte đá với sữa tươi",
+      "long_description": "Latte đá béo ngậy làm từ espresso và sữa tươi trên đá. Mịn màng, béo ngậy và cân bằng hoàn hảo. Phong cách hiện đại của văn hóa cà phê Việt Nam truyền thống.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2493,
+      "product_name": "(D1) Trà Dưa Lưới Hoàng Kim",
+      "short_description": "Trà dưa lưới - ngọt mát và giải khát",
+      "long_description": "Trà dưa lưới hoàng kim tươi mát với hương vị trái cây tự nhiên. Ngọt dịu, thơm mát và giải khát tuyệt vời. Lựa chọn nhẹ nhàng và tốt cho sức khỏe thay thế nước ngọt có ga.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2494,
+      "product_name": "(D2) Sâm Bí Đao Hạt Chia",
+      "short_description": "Nước sâm bí đao với hạt chia",
+      "long_description": "Nước sâm bí đao tốt cho sức khỏe được bổ sung hạt chia dinh dưỡng. Ngọt nhẹ, mát lành và giàu chất xơ. Thức uống wellness hoàn hảo cho khách hàng quan tâm đến sức khỏe.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2675,
+      "product_name": "(D3) Nước cam tươi",
+      "short_description": "Nước cam tươi - thuần khiết và tự nhiên",
+      "long_description": "Nước cam tươi vắt 100% tràn đầy vitamin C và vị ngọt tự nhiên. Không chất phụ gia - chỉ là hương vị cam tươi thuần khiết và tươi mát trong từng ngụm.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2547,
+      "product_name": "(D5) Sữa chua",
+      "short_description": "Sữa chua Việt Nam truyền thống",
+      "long_description": "Sữa chua kiểu Việt Nam chính hiệu với kết cấu mềm mịn, béo ngậy và vị chua thanh. Làm tươi hàng ngày theo phương pháp truyền thống. Tốt cho sức khỏe, giàu probiotic.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2725,
+      "product_name": "Revive Chanh muối",
+      "short_description": "Nước uống thể thao vị chanh muối",
+      "long_description": "Nước uống isotonic Revive với hương vị chanh muối tươi mát. Hoàn hảo cho việc bù nước với chất điện giải và khoáng chất. Lý tưởng sau tập thể dục hoặc thời tiết nóng.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2498,
+      "product_name": "Aquafina 500ml",
+      "short_description": "Nước tinh khiết đóng chai 500ml",
+      "long_description": "Nước tinh khiết Aquafina cao cấp trong chai 500ml tiện lợi. Sạch, tinh khiết và tươi mát. Hoàn hảo để giữ nước cho cơ thể suốt cả ngày hoặc kèm theo bữa ăn.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2544,
+      "product_name": "Trà Ô long Tea Plus ( chai 450ml)",
+      "short_description": "Trà Ô Long chai 450ml",
+      "long_description": "Trà Ô Long cao cấp trong chai 450ml với hương vị trà Trung Hoa chính hiệu. Nhẹ nhàng, thơm mát và tươi ngon với chất chống oxy hóa tự nhiên. Hương vị truyền thống gặp sự tiện lợi hiện đại.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2545,
+      "product_name": "Nước tăng lực Redbull ( lon 250ml)",
+      "short_description": "Red Bull tăng lực 250ml",
+      "long_description": "Nước tăng lực Red Bull nguyên bản trong lon 250ml. Tăng cường năng lượng và sự tỉnh táo với caffeine và taurine. Thức uống hoàn hảo cho những ngày bận rộn và đêm thức khuya.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2550,
+      "product_name": "Coca Cola Zero",
+      "short_description": "Coca Cola không calo",
+      "long_description": "Hương vị Coca Cola cổ điển với không calo và không đường. Vị cola tươi mát mà không có cảm giác tội lỗi. Hoàn hảo cho những ai theo dõi lượng calo nhưng vẫn thèm vị Coke.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2658,
+      "product_name": "Pepsi 320ml ( Lon)",
+      "short_description": "Pepsi cola lon 320ml",
+      "long_description": "Pepsi cola cổ điển trong lon 320ml với hương vị đậm đà, tươi mát. Ngọt dịu, có ga và tràn đầy năng lượng. Đối tác hoàn hảo cho món ăn Việt cay nóng và bữa ăn thường ngày.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2659,
+      "product_name": "7Up 320ml ( Lon)",
+      "short_description": "7Up chanh lon 320ml",
+      "long_description": "Nước ngọt chanh 7Up trong lon 320ml. Trong veo, tươi mát và không caffeine với hương vị cam chanh tự nhiên. Nhẹ nhàng và có ga - làm sạch vị giác hoàn hảo.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2677,
+      "product_name": "Pepsi Black 320ml ( Lon)",
+      "short_description": "Pepsi Black không đường 320ml",
+      "long_description": "Pepsi Black trong lon 320ml - hương vị cola đậm đà với không đường. Vị mạnh mẽ với phong cách tinh tế. Dành cho những ai muốn hương vị đầy đủ mà không có calo.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2726,
+      "product_name": "Revive Không Calo",
+      "short_description": "Nước uống thể thao không calo",
+      "long_description": "Nước uống isotonic Revive với không calo nhưng đầy đủ chất điện giải bù nước. Hoàn hảo cho việc hydrat hóa mà không có đường bổ sung. Lý tưởng cho lối sống năng động quan tâm sức khỏe.",
+      "category_id": 3,
+      "attributes": []
+    },
+    {
+      "product_id": 2730,
+      "product_name": "Chuối Trái",
+      "short_description": "Chuối tươi ngon",
+      "long_description": "Chuối tươi chín mọng giàu kali và đường tự nhiên. Món ăn vặt lành mạnh hoặc nguồn năng lượng tự nhiên tuyệt vời. Ngọt ngon, bổ dưỡng và luôn thỏa mãn.",
+      "category_id": 11,
+      "attributes": []
+    },
+    {
+      "product_id": 2477,
+      "product_name": "(A2) Bánh Mì Pate Trứng",
+      "short_description": "Bánh mì pate và trứng",
+      "long_description": "Bánh mì Việt Nam cổ điển với pate đậm đà và trứng tươi trên bánh mì giòn. Có ngò và xà lách tươi cùng gia vị truyền thống. Món ăn dân dã ngon nhất!",
+      "category_id": 1,
+      "attributes": [
+        {
+          "attribute_id": 10,
+          "attribute_name": "Topping Bánh mì",
+          "display_type": "check_box",
+          "attribute_values": [
+            {
+              "value_id": 48,
+              "value_name": "Thêm Pate",
+              "price_extra": 5000.0
+            },
+            {
+              "value_id": 49,
+              "value_name": "Thêm Xá Xíu",
+              "price_extra": 10000.0
+            },
+            {
+              "value_id": 50,
+              "value_name": "Thêm Chả",
+              "price_extra": 5000.0
+            },
+            {
+              "value_id": 51,
+              "value_name": "Thêm Jambon",
+              "price_extra": 5000.0
+            },
+            {
+              "value_id": 52,
+              "value_name": "Thêm Gà Xé",
+              "price_extra": 10000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2478,
+      "product_name": "(A4) Bánh Mì Thập Cẩm",
+      "short_description": "Bánh mì thập cẩm nhiều loại thịt",
+      "long_description": "Bánh mì Việt Nam đỉnh cao với thập cẩm Pate, Chả, Jambon và thịt Xá xíu. Đầy ngò và xà lách tươi. Lựa chọn truyền thống được yêu thích nhất!",
+      "category_id": 1,
+      "attributes": [
+        {
+          "attribute_id": 10,
+          "attribute_name": "Topping Bánh mì",
+          "display_type": "check_box",
+          "attribute_values": [
+            {
+              "value_id": 58,
+              "value_name": "Thêm Pate",
+              "price_extra": 5000.0
+            },
+            {
+              "value_id": 59,
+              "value_name": "Thêm Xá Xíu",
+              "price_extra": 10000.0
+            },
+            {
+              "value_id": 60,
+              "value_name": "Thêm Chả",
+              "price_extra": 5000.0
+            },
+            {
+              "value_id": 61,
+              "value_name": "Thêm Jambon",
+              "price_extra": 5000.0
+            },
+            {
+              "value_id": 62,
+              "value_name": "Thêm Gà Xé",
+              "price_extra": 10000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2479,
+      "product_name": "(A7) Bánh Mì Heo Nướng Teriyaki",
+      "short_description": "Bánh mì heo nướng teriyaki",
+      "long_description": "Bánh mì fusion với pate đậm đà và thịt heo nướng teriyaki mềm ngon, ngò và xà lách tươi cùng gia vị Việt truyền thống. Ngọt ngào, đậm đà và cực kỳ thơm ngon!",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2480,
+      "product_name": "(A8) Bánh Mì Veggy Nấm Tử Xuyên",
+      "short_description": "Bánh mì chay nấm",
+      "long_description": "Lựa chọn chay lành mạnh với nấm nướng đậm đà, ngò và xà lách tươi. Protein thực vật đầy hương vị thơm ngon. Hoàn hảo cho người yêu thích đồ chay!",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2481,
+      "product_name": "(A5) Bánh Mì Que Pate Chả Bông",
+      "short_description": "Bánh mì que pate & chả bông",
+      "long_description": "Bánh mì que giòn rụm nhân pate đậm đà và chả bông mềm mịn. Lựa chọn cầm tay hoàn hảo với hương vị Việt chính hiệu trong kích cỡ tiện lợi.",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2728,
+      "product_name": "(A5) Bánh Mì Que Nấm Chay",
+      "short_description": "Bánh mì que nấm chay",
+      "long_description": "Bánh mì que chay với nấm tẩm gia vị và ngò tươi. Kích cỡ cầm tay tiện lợi với hương vị đầy đủ. Lựa chọn thực vật hoàn hảo cho việc ăn nhanh.",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2482,
+      "product_name": "(A11) Bánh Mì Bò Kho",
+      "short_description": "Bánh mì bò kho Việt Nam",
+      "long_description": "Bánh mì đậm đà với nhân bò kho Việt Nam mềm ngon, ngò và xà lách tươi. Hương vị đậm đà, ấm áp hoàn hảo cho thời tiết se lạnh hoặc khi thèm món nặng.",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2483,
+      "product_name": "(A10) Bánh Mì Xíu Mại",
+      "short_description": "Bánh mì xíu mại Việt Nam",
+      "long_description": "Bánh mì ngon lành với xíu mại Việt Nam mềm trong nước sốt đậm đà, ngò và xà lách tươi. Mọng nước, đầy hương vị và trải nghiệm ăn thoải mái.",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2484,
+      "product_name": "(A6) Bánh Mì Xá Xíu",
+      "short_description": "Bánh mì xá xíu BBQ",
+      "long_description": "Bánh mì cổ điển với xá xíu kiểu Trung Hoa ngọt ngào đậm đà, rau sống và gia vị truyền thống. Hương vị khói thơm cân bằng hoàn hảo giữa ngọt và mặn.",
+      "category_id": 1,
+      "attributes": [
+        {
+          "attribute_id": 10,
+          "attribute_name": "Topping Bánh mì",
+          "display_type": "check_box",
+          "attribute_values": [
+            {
+              "value_id": 63,
+              "value_name": "Thêm Pate",
+              "price_extra": 5000.0
+            },
+            {
+              "value_id": 64,
+              "value_name": "Thêm Xá Xíu",
+              "price_extra": 10000.0
+            },
+            {
+              "value_id": 65,
+              "value_name": "Thêm Chả",
+              "price_extra": 5000.0
+            },
+            {
+              "value_id": 66,
+              "value_name": "Thêm Jambon",
+              "price_extra": 5000.0
+            },
+            {
+              "value_id": 67,
+              "value_name": "Thêm Gà Xé",
+              "price_extra": 10000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2485,
+      "product_name": "(A9) Bánh Mì Gà Xé Bơ Tỏi",
+      "short_description": "Bánh mì gà xé bơ tỏi",
+      "long_description": "Gà xé mềm tẩm bơ tỏi thơm lừng, ngò và xà lách tươi. Hương vị đậm đà với sự cân bằng hoàn hảo của tỏi và kết cấu béo ngậy.",
+      "category_id": 1,
+      "attributes": []
+    },
+    {
+      "product_id": 2689,
+      "product_name": "(A3) Bánh Mì Pate Trứng DOUBLE",
+      "short_description": "Bánh mì pate trứng gấp đôi",
+      "long_description": "Phiên bản siêu size của bánh mì pate trứng cổ điển với phần gấp đôi. Có ngò và xà lách tươi. Đậm đà, no bụng và hoàn hảo cho những ai có khẩu vị lớn. Hương vị và sự hài lòng tối đa!",
+      "category_id": 1,
+      "attributes": [
+        {
+          "attribute_id": 10,
+          "attribute_name": "Topping Bánh mì",
+          "display_type": "check_box",
+          "attribute_values": [
+            {
+              "value_id": 53,
+              "value_name": "Thêm Pate",
+              "price_extra": 5000.0
+            },
+            {
+              "value_id": 54,
+              "value_name": "Thêm Xá Xíu",
+              "price_extra": 10000.0
+            },
+            {
+              "value_id": 55,
+              "value_name": "Thêm Chả",
+              "price_extra": 5000.0
+            },
+            {
+              "value_id": 56,
+              "value_name": "Thêm Jambon",
+              "price_extra": 5000.0
+            },
+            {
+              "value_id": 57,
+              "value_name": "Thêm Gà Xé",
+              "price_extra": 10000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2690,
+      "product_name": "(B3) Mì Trộn Xá Xíu",
+      "short_description": "Mì trộn với xá xíu BBQ",
+      "long_description": "Mì trộn ngon lành với xá xíu BBQ ngọt ngào đậm đà, cải thìa tươi và gia vị Việt truyền thống. Tô mì đậm đà hương vị chính hiệu.",
+      "category_id": 15,
+      "attributes": []
+    },
+    {
+      "product_id": 2669,
+      "product_name": "(B4) Mì Trộn Nấm Nướng Tử Xuyên",
+      "short_description": "Mì trộn nấm nướng chay",
+      "long_description": "Dĩa mì chay lành mạnh với nấm nướng, cải thìa tươi. Protein thực vật với hương vị đậm đà thơm ngon và kết cấu thỏa mãn.",
+      "category_id": 15,
+      "attributes": []
+    },
+    {
+      "product_id": 2657,
+      "product_name": "(B5) Mì Bò Ngũ Vị",
+      "short_description": "Mì bò ngũ vị thơm lừng",
+      "long_description": "Dĩa mì bò thơm lừng với thịt bò mềm trong gia vị ngũ vị đậm đà. Hương vị phức hợp với gia vị ấm, cải thìa tươi và mì dai ngon. Đỉnh cao của món ăn dân dã!",
+      "category_id": 15,
+      "attributes": []
+    },
+    {
+      "product_id": 2552,
+      "product_name": "(B6) Salad Mix",
+      "short_description": "Salad rau xanh tươi mát",
+      "long_description": "Salad rau xanh tươi mát với ngò và xà lách tươi cùng nước sốt Việt truyền thống. Nhẹ nhàng, dinh dưỡng và tươi mát - món phụ hoàn hảo hoặc bữa ăn nhẹ.",
+      "category_id": 11,
+      "attributes": []
+    },
+    {
+      "product_id": 2499,
+      "product_name": "Topping Pate",
+      "short_description": "Thêm pate cho món ăn",
+      "long_description": "Pate kiểu Việt đậm đà, béo ngậy hoàn hảo để thêm hương vị cho bánh mì hoặc mì. Kết cấu mềm mịn với hương vị truyền thống chính hiệu.",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2500,
+      "product_name": "Topping Trứng",
+      "short_description": "Thêm trứng tươi cho món ăn",
+      "long_description": "Topping trứng tươi để nâng cấp bất kỳ bữa ăn nào. Thêm protein và độ đậm đà cho bánh mì hoặc mì. Chín hoàn hảo cho hương vị và kết cấu tối ưu.",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2501,
+      "product_name": "Topping Chả Lụa",
+      "short_description": "Topping chả lụa Việt Nam",
+      "long_description": "Topping chả lụa Việt Nam truyền thống. Hương vị nhẹ nhàng, tinh tế hoàn hảo để thêm hương vị chính hiệu cho bánh mì hoặc mì.",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2502,
+      "product_name": "Topping Jambon",
+      "short_description": "Topping jambon thêm protein",
+      "long_description": "Lát jambon chất lượng hoàn hảo để thêm protein và hương vị cho bánh mì hoặc mì. Vị nhẹ nhàng, mịn màng kết hợp tuyệt vời với gia vị Việt.",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2503,
+      "product_name": "Topping Gà Xé",
+      "short_description": "Topping gà xé",
+      "long_description": "Topping gà xé mềm tẩm gia vị Việt. Protein hoàn hảo bổ sung cho bất kỳ món nào với hương vị chính hiệu và kết cấu thỏa mãn.",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2504,
+      "product_name": "Topping Xá Xíu",
+      "short_description": "Topping xá xíu BBQ",
+      "long_description": "Topping xá xíu BBQ kiểu Trung Hoa ngọt ngào đậm đà. Hương vị khói thơm hoàn hảo để nâng cấp bánh mì hoặc mì với protein và hương vị thêm.",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2486,
+      "product_name": "(B1) Xôi Thập Cẩm",
+      "short_description": "Xôi thập cẩm với nhiều topping",
+      "long_description": "Xôi Việt truyền thống với thập cẩm thịt, xúc xích và gia vị. Thịnh soạn, no bụng và tràn đầy hương vị chính hiệu - món ăn dân dã hoàn hảo.",
+      "category_id": 15,
+      "attributes": []
+    },
+    {
+      "product_id": 2487,
+      "product_name": "(B2) Xôi Gà Xé",
+      "short_description": "Xôi với gà xé",
+      "long_description": "Xôi ngon lành với gà xé mềm và gia vị truyền thống. Sự kết hợp thỏa mãn của kết cấu và hương vị theo phong cách Việt Nam chính hiệu.",
+      "category_id": 15,
+      "attributes": []
+    },
+    {
+      "product_id": 1181,
+      "product_name": "Độ chua",
+      "short_description": "Điều chỉnh độ chua",
+      "long_description": "Tùy chỉnh độ chua của món ăn theo sở thích cá nhân. Hoàn hảo để điều chỉnh hương vị Việt truyền thống phù hợp với khẩu vị của bạn.",
+      "category_id": null,
+      "attributes": []
+    },
+    {
+      "product_id": 1293,
+      "product_name": "Có đường",
+      "short_description": "Tùy chọn thêm đường/chất ngọt",
+      "long_description": "Tùy chọn thêm đường hoặc chất ngọt vào đồ uống. Tùy chỉnh độ ngọt cho đồ uống như cà phê, trà hoặc nước ép tươi để phù hợp hoàn hảo với sở thích của bạn.",
+      "category_id": 5,
+      "attributes": []
+    },
+    {
+      "product_id": 2735,
+      "product_name": "Nước Ép Dưa Hấu Hạt Chia",
+      "short_description": "Nước ép dưa hấu với hạt chia",
+      "long_description": "Nước ép dưa hấu tươi mát được bổ sung hạt chia dinh dưỡng. Ngọt mát, hydrat hóa và đầy vitamin cùng chất xơ. Thức uống lành mạnh hoàn hảo cho thời tiết nóng.",
+      "category_id": 3,
+      "attributes": []
+    }
+  ]
+}
